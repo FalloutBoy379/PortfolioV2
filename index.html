@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ansh Mehta | Portfolio</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">Ansh Mehta</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#courses">Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#experience">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="resume.pdf">Resume</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero text-center">
+    <h1>Hello, I am Ansh Mehta</h1>
+    <div class="typewriter-container">
+      <span id="typewriter-text"></span>
+      <span class="blinking-cursor">|</span>
+    </div>
+    <p><a href="resume.pdf" class="btn btn-primary btn-download">Download Resume</a></p>
+  </section>
+
+  <!-- About Me Section -->
+  <section class="container my-5" id="about">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      I am a passionate Robotics and Embedded Systems Engineer with hands-on experience in developing innovative solutions, designing control systems, and solving complex engineering problems. My expertise includes designing robotic systems, embedded software, and advanced motion control.
+    </p>
+  </section>
+
+<!-- Projects Section -->
+<!-- Projects Section -->
+<section class="container my-5" id="projects">
+    <h2 class="section-title">Projects</h2>
+  
+    <!-- Row 1 -->
+    <div class="row projects mt-4">
+      <div class="col-md-4 project-card" data-category="robotics embedded">
+        <a href="motion_capture_robot.html" class="project-link">
+          <div class="card">
+            <div class="card-img-container">
+              <img src="assets/images/motion_capture_robot.jpg" class="card-img-top" alt="Motion Capture Calibration Robot">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Motion Capture Calibration Robot</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+  
+      <div class="col-md-4 project-card" data-category="robotics soft-robotics">
+        <a href="soft_robotic_starfish.html" class="project-link">
+          <div class="card">
+            <div class="card-img-container">
+              <img src="assets/images/soft_robotic_starfish.jpg" class="card-img-top" alt="Soft Robotic Starfish">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Soft Robotic Starfish</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+  
+      <div class="col-md-4 project-card" data-category="robotics rehabilitation">
+        <a href="wrist_rehabilitation_robot.html" class="project-link">
+          <div class="card">
+            <div class="card-img-container">
+                <video class="card-img-top" autoplay loop muted playsinline>
+                    <source src="assets/images/Wrist Rehab/Wrist_main - Made with Clipchamp.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Wrist Rehabilitation Robot</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  
+    <!-- Row 2 -->
+    <div class="row projects mt-4">
+      <div class="col-md-4 project-card" data-category="robotics swarm">
+        <a href="swarm_robotics_ros.html" class="project-link">
+          <div class="card">
+            <div class="card-img-container">
+              <img src="assets/images/swarm_robotics_ros.jpg" class="card-img-top" alt="Swarm Robotics using ROS">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Swarm Robotics using ROS</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+  
+      <div class="col-md-4 project-card" data-category="robotics FTC">
+        <a href="ftc_powerplay_robot.html" class="project-link">
+          <div class="card">
+            <div class="card-img-container">
+              <video class="card-img-top" autoplay loop muted playsinline>
+                <source src="assets/images/Matrix/Main.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">FTC Powerplay Robot - Matrix 20870</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+  
+      <div class="col-md-4 project-card" data-category="robotics ball-launcher">
+        <a href="ball_launching_mechanism.html" class="project-link">
+          <div class="card">
+            <div class="card-img-container">
+                <video class="card-img-top" autoplay loop muted playsinline>
+                    <source src="assets/images/FRC_Ball/FRC_Ball_Shooter_Video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Autonomous Ball Launching Mechanism</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  
+    <!-- Row 3 -->
+    <div class="row projects mt-4">
+      <div class="col-md-4 project-card" data-category="robotics robocon">
+        <a href="abu_robocon.html" class="project-link">
+          <div class="card">
+            <div class="card-img-container">
+              <img src="assets/images/abu_robocon.jpg" class="card-img-top" alt="ABU Robocon 2022">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">ABU Robocon 2022</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+  
+      <div class="col-md-4 project-card" data-category="robotics autonomous">
+        <a href="autonomous_mobile_robot.html" class="project-link">
+          <div class="card">
+            <div class="card-img-container">
+              <img src="assets/images/autonomous_mobile_robot.jpg" class="card-img-top" alt="Autonomous Mobile Robot">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Autonomous Mobile Robot</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+  
+      <div class="col-md-4 project-card" data-category="robotics electric-vehicle">
+        <a href="beast_electric_truck.html" class="project-link">
+          <div class="card">
+            <div class="card-img-container">
+              <img src="assets/images/beast_electric_truck.jpg" class="card-img-top" alt="BEAST Electric Delivery Truck">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">BEAST Electric Delivery Truck</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  
+    <!-- Row 4 -->
+    <div class="row projects mt-4">
+      <div class="col-md-4 project-card" data-category="robotics electric-shuttle">
+        <a href="isaac_electric_shuttle.html" class="project-link">
+          <div class="card">
+            <div class="card-img-container">
+                <video class="card-img-top" autoplay loop muted playsinline>
+                    <source src="assets/images/ISAAC/ISAAC Shuttle.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">ISAAC Electric Shuttle</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+  
+      <div class="col-md-4 project-card" data-category="robotics pneumatic-robot">
+        <a href="pneumatic_robot_dog.html" class="project-link">
+          <div class="card">
+            <div class="card-img-container">
+              <img src="assets/images/pneumatic_robot_dog.jpg" class="card-img-top" alt="Pneumatic Robot Dog">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Pneumatic Robot Dog</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+  
+      <!-- Autonomous BB Turret Project with Video -->
+      <div class="col-md-4 project-card" data-category="robotics bb-turret">
+        <a href="autonomous_bb_turret.html" class="project-link">
+          <div class="card">
+            <div class="card-img-container">
+              <video class="card-img-top" autoplay loop muted playsinline>
+                <source src="assets/images/Turret_Robu/Pellet_Trim.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Autonomous BB Turret</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  
+    <!-- Row 5 -->
+    <div class="row projects mt-4">
+      <div class="col-md-4 project-card" data-category="robotics 3d-printer">
+        <a href="zeta_dlp_3d_printer.html" class="project-link">
+          <div class="card">
+            <div class="card-img-container">
+              <img src="assets/images/zeta_dlp_3d_printer.jpg" class="card-img-top" alt="Zeta DLP 3D Printer">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Zeta DLP 3D Printer</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+  
+      <div class="col-md-4 project-card" data-category="robotics rehabilitation">
+        <a href="robotic_rehabilitation_companion.html" class="project-link">
+          <div class="card">
+            <div class="card-img-container">
+              <img src="assets/images/robotic_rehabilitation_companion.jpg" class="card-img-top" alt="Robotic Rehabilitation Companion">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Robotic Rehabilitation Companion</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+  
+      <div class="col-md-4 project-card" data-category="robotics humanoid">
+        <a href="humanoid_robot_leg.html" class="project-link">
+          <div class="card">
+            <div class="card-img-container">
+              <img src="assets/images/humanoid_robot_leg.jpg" class="card-img-top" alt="Humanoid Robot Leg">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Humanoid Robot Leg</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- Courses Section -->
+  <section class="container my-5" id="courses">
+    <h2 class="section-title">Courses</h2>
+    <ul>
+      <li>Advanced Control Systems</li>
+      <li>Robotics Engineering</li>
+      <li>Embedded Systems Design</li>
+      <li>Linear Systems and Optimization</li>
+    </ul>
+  </section>
+
+  <!-- Experiences Section -->
+  <section class="container my-5" id="experience">
+    <h2 class="section-title">Experience</h2>
+    <ul>
+      <li>Robotics Research Intern - Company ABC</li>
+      <li>Embedded Systems Engineer - Company XYZ</li>
+      <li>FIRST Tech Challenge Mentor</li>
+    </ul>
+  </section>
+
+  <script src="scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

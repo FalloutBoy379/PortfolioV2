@@ -1,0 +1,214 @@
+/* Global Styles */
+body {
+    background-color: #0d0d0d;
+    color: #e0e0e0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #111111;
+    border-bottom: 1px solid #333;
+  }
+  
+  .nav-link {
+    color: #e0e0e0 !important;
+    font-weight: 300;
+  }
+  
+  .navbar-brand {
+    font-weight: 600;
+    color: #00FFFF !important;
+  }
+  
+  .navbar-toggler {
+    border-color: #00FFFF;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-color: #111111;
+    padding: 120px 0;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #00FFFF;
+  }
+  
+  .typewriter-container {
+    display: inline-block;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #00FFFF;
+    min-height: 1.5rem;
+    color: #00FFFF;
+  }
+  
+  .blinking-cursor {
+    font-weight: bold;
+    font-size: 1.5rem;
+    animation: blink 0.7s infinite step-end;
+    color: transparent;
+  }
+  
+  @keyframes blink {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #00FFFF;
+    }
+  }
+  
+  .btn-download {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: 1px solid #00FFFF;
+    color: #00FFFF;
+    background: transparent;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn-download:hover {
+    background-color: #00FFFF;
+    color: #111111;
+  }
+  
+  /* Section Titles */
+  .section-title {
+    font-size: 2.5rem;
+    color: #00FFFF;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  /* Projects Section */
+  .filter-btn {
+    color: #00FFFF;
+    border: 1px solid #00FFFF;
+    background: transparent;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-btn:hover {
+    background-color: #00FFFF;
+    color: #111111;
+  }
+  
+/* Project Cards */
+.project-card {
+    background-color: #1a1a1a !important; /* Dark background */
+    border: 1px solid #333 !important;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    color: #e0e0e0 !important; /* Light text color */
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3) !important;
+    border-color: #00FFFF !important; /* Neon glow effect */
+  }
+  
+  /* Image container */
+  .card-img-container {
+    overflow: hidden;
+    background-color: #1a1a1a; /* Match background to card */
+    padding: 0 !important; /* Ensure no padding around the image */
+    border-bottom: 2px solid #00FFFF !important;
+  }
+  
+  .card-img-container img {
+    width: 100%;
+    border: none !important; /* Remove any border */
+    background-color: #1a1a1a !important; /* Ensure the background is the same as the card */
+    border-radius: 0 !important; /* Ensure no border-radius for the image */
+    display: block; /* Ensure the image displays correctly */
+  }
+  
+  .card-body {
+    background-color: #1a1a1a !important; /* Ensure dark background for the card body */
+    color: #e0e0e0 !important; /* Light text color */
+    padding: 20px !important;
+  }
+  
+  /* Text Styling for Titles and Descriptions */
+  .card-title {
+    color: #00FFFF !important;
+    font-size: 1.25rem !important;
+    margin-bottom: 15px !important;
+    font-weight: 600 !important;
+  }
+  
+  .card-text {
+    color: #e0e0e0 !important;
+    margin-bottom: 10px !important;
+    font-weight: 300 !important;
+  }
+  
+  .project-tech-stack {
+    color: #00FFFF !important;
+    font-weight: 500 !important;
+    font-size: 0.9rem !important;
+  }
+  
+  .tech-icon {
+    margin-right: 5px !important;
+    font-size: 1.2rem !important;
+  }
+  
+  /* Hover Effects for the Projects */
+  .project-card:hover .card-img-container {
+    border-color: #00FFFF !important;
+  }
+  
+  .project-card:hover .card-body {
+    color: #00FFFF !important;
+  }
+  
+  
+  /* Image container for hover effect */
+  .card-img-container {
+    overflow: hidden !important;
+    border-bottom: 2px solid #00FFFF !important;
+    transition: border-color 0.3s !important;
+  }
+  
+  .card-img-container img {
+    width: 100% !important;
+    transition: transform 0.3s !important;
+  }
+  
+  .card-img-container:hover img {
+    transform: scale(1.1) !important;
+  }
+  
+  /* Hover Effects for the Projects */
+  .project-card:hover .card-img-container {
+    border-color: #00FFFF !important;
+  }
+  
+  .project-card:hover .card-body {
+    color: #00FFFF !important;
+  }
+  
+  
+  
+  /* Misc */
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  ul li {
+    margin: 10px 0;
+    font-weight: 300;
+  }
+  
