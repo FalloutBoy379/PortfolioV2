@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motion Capture Calibration Robot | Ansh Mehta</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">Ansh Mehta</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="resume.pdf">Resume</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Project Title Section -->
+  <section class="container my-5">
+    <h2 class="section-title">Motion Capture Calibration Robot</h2>
+    <p class="lead">A detailed description of the Motion Capture Calibration Robot used for accurate motion tracking calibration in the OptiTrack MoCap room.</p>
+  </section>
+
+  <!-- Project Image/Video Section -->
+  <section class="container my-5">
+    <img src="assets/images/MCCR/PXL_20240806_055029847.jpg" class="img-fluid mb-4" alt="Motion Capture Calibration Robot">
+  </section>
+
+  <!-- Project Description Section -->
+  <section class="container my-5">
+    <h3>Overview</h3>
+    <p>
+      The Motion Capture Calibration Robot was developed to improve the accuracy of motion tracking systems within the OptiTrack setup. This robot consists of four control motors that adjust the position of a reflective sphere within a predefined workspace. Each motor controls the tension and length of the cables attached to the sphere, which can be positioned in 3D space using precise control algorithms.
+    </p>
+
+    <h3>Key Features</h3>
+    <ul>
+      <li>Precise calibration for motion capture systems</li>
+      <li>Supports 3 degrees of freedom control</li>
+      <li>Uses NEMA 17 stepper motors with TB6600 drivers</li>
+      <li>Control via an embedded system with real-time feedback</li>
+    </ul>
+
+    <h3>Challenges</h3>
+    <p>
+      One of the primary challenges was ensuring consistent cable tension to avoid sagging, which could affect accuracy. This was addressed by using load cells to monitor the tension in each cable and adjust the system in real-time.
+    </p>
+
+    <h3>Technical Specifications</h3>
+    <ul>
+      <li>Dimensions: 6x9 meters workspace</li>
+      <li>Motors: NEMA 17 stepper motors with micro-stepping enabled</li>
+      <li>Drivers: TB6600 motor drivers</li>
+      <li>Materials: Reflective sphere with tension-controlled cables</li>
+    </ul>
+  </section>
+
+  <!-- Technical Documents Section -->
+  <section class="container my-5">
+    <h3 class="section-title text-center">Technical Documents</h3>
+    <p class="text-center mb-4">Click below to download or view the technical documents related to this project.</p>
+
+    <div class="row justify-content-center">
+      <!-- Example Document 1 -->
+      <div class="col-md-4 text-center mb-4">
+        
+        <a href="assets/docs/D12-MAX-99-020216.pdf" class="document-link" target="_blank">
+          <img src="assets/icons/pdf.png" alt="Dyneema SK99 Technical Specifications PDF" class="document-icon">
+          <p class="document-title">Dyneema SK99 Technical Specifications</p>
+        </a>
+      </div>
+
+      <!-- Example Document 2 -->
+      <div class="col-md-4 text-center mb-4">
+        <a href="documents/project_whitepaper.pdf" class="document-link" target="_blank">
+          <img src="assets/icons/pdf-icon.png" alt="Whitepaper PDF" class="document-icon">
+          <p class="document-title">Whitepaper</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Projects Button -->
+  <section class="container my-5 text-center">
+    <a href="index.html#projects" class="btn btn-primary">Back to Projects</a>
+  </section>
+
+  <script src="scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

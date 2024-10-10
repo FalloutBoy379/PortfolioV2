@@ -218,3 +218,27 @@ body {
     font-weight: 300;
   }
   
+
+  /* Technical Documents Section */
+.document-link {
+  text-decoration: none;
+  color: #00FFFF;
+}
+
+.document-icon {
+  width: 80px; /* Set a fixed size for the icons */
+  margin-bottom: 10px;
+}
+
+.document-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.document-link:hover .document-title {
+  color: #111111;
+  background-color: #00FFFF;
+  padding: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
