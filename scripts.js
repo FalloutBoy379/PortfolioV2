@@ -34,3 +34,37 @@ const expertiseArray = [
     setTimeout(typeText, 500);  // Start typing after page loads
   });
   
+  // Video auto-play/pause on scroll based on focus
+const videos = document.querySelectorAll('video');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    const video = entry.target;
+    if (entry.isIntersecting) {
+      video.play();  // Play video when it comes into view
+    } else {
+      video.pause();  // Pause video when it goes out of view
+    }
+  });
+});
+
+// Observe each video
+videos.forEach(video => {
+  observer.observe(video);
+});
+
+// Smooth scrolling for menu links
+document.querySelectorAll('a.nav-link').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+    
+    window.scrollTo({
+      top: targetElement.offsetTop - 50,  // Adjust offset for the fixed navbar height
+      behavior: 'smooth'  // Enable smooth scroll
+    });
+  });
+});
+
+

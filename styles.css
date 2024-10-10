@@ -103,13 +103,13 @@ body {
   
 /* Project Cards */
 .project-card {
-    background-color: #1a1a1a !important; /* Dark background */
-    border: 1px solid #333 !important;
-    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s !important;
-    border-radius: 8px !important;
-    overflow: hidden !important;
-    color: #e0e0e0 !important; /* Light text color */
-  }
+  background-color: #1a1a1a !important; /* Dark background */
+  border: 1px solid #333 !important;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  color: #e0e0e0 !important; /* Light text color */
+}
   
   .project-card:hover {
     transform: translateY(-10px) !important;
@@ -152,6 +152,12 @@ body {
     margin-bottom: 10px !important;
     font-weight: 300 !important;
   }
+
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
   
   .project-tech-stack {
     color: #00FFFF !important;
