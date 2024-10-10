@@ -7,6 +7,7 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <base href="/">
 </head>
 <body>
 
@@ -31,20 +32,20 @@
           <a class="nav-link" href="#experience">Experience</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="resume.pdf">Resume</a>
+          <a class="nav-link" href="/assets/docs/Resume_Portfolio.pdf">Resume</a>
         </li>
       </ul>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero text-center">
+  <section class="hero text-center" id="home">
     <h1>Hello, I am Ansh Mehta</h1>
     <div class="typewriter-container">
       <span id="typewriter-text"></span>
       <span class="blinking-cursor">|</span>
     </div>
-    <p><a href="resume.pdf" class="btn btn-primary btn-download">Download Resume</a></p>
+    <p><a href="assets/docs/Resume_Portfolio.pdf" class="btn btn-primary btn-download">Download Resume</a></p>
   </section>
 
   <!-- About Me Section -->
@@ -324,22 +325,6 @@
       </div>
 
       <!-- Project 18 -->
-      <div class="col-md-4 project-card" data-category="robotics pneumatic-robot">
-        <a href="pneumatic_robot_dog.html" class="project-link">
-          <div class="card">
-            <div class="card-img-container">
-              <img src="assets/images/Mercury/image_2024-09-27_104021073.png" class="card-img-top" alt="Pneumatic Robot Quadruped">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Pneumatic Robot Quadruped</h5>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="row projects mt-4">
-      <!-- Project 19 -->
       <div class="col-md-4 project-card" data-category="robotics bb-turret">
         <a href="autonomous_bb_turret.html" class="project-link">
           <div class="card">
@@ -355,6 +340,23 @@
           </div>
         </a>
       </div>
+    </div>
+
+    <div class="row projects mt-4">
+      <!-- Project 19 -->
+      <div class="col-md-4 project-card" data-category="robotics pneumatic-robot">
+        <a href="pneumatic_robot_dog.html" class="project-link">
+          <div class="card">
+            <div class="card-img-container">
+              <img src="assets/images/Mercury/image_2024-09-27_104021073.png" class="card-img-top" alt="Pneumatic Robot Quadruped">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Pneumatic Robot Quadruped</h5>
+            </div>
+          </div>
+        </a>
+      </div>
+
 
       <!-- Project 20 -->
       <div class="col-md-4 project-card" data-category="robotics 3d-printer">
