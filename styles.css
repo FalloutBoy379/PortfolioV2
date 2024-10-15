@@ -95,6 +95,51 @@ body {
     text-align: center;
     margin-bottom: 40px;
   }
+
+  /* Bubbles for work done */
+.work-bubbles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 8px;  /* Reduce spacing between the bubbles */
+}
+
+.bubble {
+  display: inline-block;
+  padding: 2px 7px;  /* Reduce padding */
+  font-size: 0.7rem;  /* Smaller font size */
+  font-weight: 500;
+  border-radius: 18px;  /* Make the bubbles more oval-shaped */
+  color: #111111;
+  background-color: #00FFFF; /* Default bubble color */
+  transition: transform 0.3s ease;
+}
+
+.bubble:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Specific colors for each area of work */
+.bubble.electronics {
+  background-color: #FFA500; /* Orange */
+}
+
+.bubble.software {
+  background-color: #1E90FF; /* DodgerBlue */
+}
+
+.bubble.firmware {
+  background-color: #32CD32; /* LimeGreen */
+}
+
+.bubble.controls {
+  background-color: #FF4500; /* OrangeRed */
+}
+
+.bubble.mechanical {
+  background-color: #9370DB; /* MediumPurple */
+}
+
   
   /* Projects Section */
   .filter-btn {
@@ -251,6 +296,9 @@ body {
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
+
+
+
 
 /* Accordion (Courses Section) */
 #coursesAccordion .card {

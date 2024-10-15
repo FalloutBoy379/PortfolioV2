@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robot Maze Solver | Ansh Mehta</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">Ansh Mehta</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="resume.pdf">Resume</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Project Title Section -->
+  <section class="container my-5">
+    <h2 class="section-title">x86 Assembly - Maze Solving Robot</h2>
+    <p class="lead">A virtual robot programmed using emu8086 to autonomously solve any maze using a left-hand side following algorithm.</p>
+  </section>
+
+  <!-- Media Section -->
+  <section class="container my-5">
+    <div class="row">
+      <!-- Video -->
+      <div class="col-md-6">
+        <div class="embed-responsive embed-responsive-16by9 mb-4">
+          <video class="embed-responsive-item" controls muted>
+            <source src="assets/images/8086_Maze/8mb.video-TSK-UoRoZCAH.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <!-- Photo -->
+      <div class="col-md-6">
+        <img src="assets/images/maze_solver_screenshot.png" class="img-fluid" alt="Robot Maze Solver">
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Description Section -->
+  <section class="container my-5">
+    <h3>Overview</h3>
+    <p>
+      This project involves developing a virtual robot controlled by the emu8086 microprocessor. The robot autonomously navigates a maze using a left-hand side following algorithm. The maze is created within the emu8086 environment, and the robot follows predefined commands to move, turn, and examine the surroundings to solve the maze.
+    </p>
+
+    <h3>Key Features</h3>
+    <ul>
+      <li>Virtual robot controlled by assembly code written in emu8086</li>
+      <li>Implements left-hand side wall-following algorithm for maze solving</li>
+      <li>Efficient maze-solving method for simple mazes with outer walls</li>
+    </ul>
+
+    <h3>Challenges Addressed</h3>
+    <p>
+      The primary challenge addressed was to program a virtual robot that could reliably navigate and solve a given maze. The left-hand side wall-following algorithm was selected for its simplicity and effectiveness in mazes where all walls are connected to the outer boundary.
+    </p>
+
+    <h3>Technical Specifications</h3>
+    <ul>
+      <li>Software: emu8086</li>
+      <li>Algorithm: Left-hand side wall-following</li>
+      <li>Commands: Move forward, turn left, turn right, examine, switch on/off lamp</li>
+      <li>Input: Command registers via I/O ports in emu8086</li>
+    </ul>
+
+    <h3>Algorithm</h3>
+    <p>
+      The left-hand side wall-following algorithm ensures that the robot follows the wall on its left-hand side to navigate the maze. It examines objects in front of it using sensors and makes decisions accordingly (move forward, turn left, or turn right). The robot continues to follow this pattern until it reaches the goal (a lamp).
+    </p>
+  </section>
+
+  <!-- Technical Documents Section -->
+  <section class="container my-5">
+    <h3 class="section-title text-center">Technical Documents</h3>
+    <p class="text-center mb-4">Click below to download or view the technical documents related to this project.</p>
+
+    <div class="row justify-content-center">
+      <!-- Example Document 1 -->
+      <div class="col-md-4 text-center mb-4">
+        <a href="assets/docs/robot_maze_solver_report.pdf" class="document-link" target="_blank">
+          <img src="assets/icons/pdf.png" alt="Project Report PDF" class="document-icon">
+          <p class="document-title">Robot Maze Solver Report</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Projects Button -->
+  <section class="container my-5 text-center">
+    <a href="index.html#projects" class="btn btn-primary">Back to Projects</a>
+  </section>
+
+  <script src="scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

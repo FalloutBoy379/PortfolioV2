@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swarm Robotics | Ansh Mehta</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">Ansh Mehta</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="assets/docs/Resume_Portfolio.pdf">Resume</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Project Title Section -->
+  <section class="container my-5">
+    <h2 class="section-title">Swarm Robotics with ROS and AprilTag-based Localization</h2>
+    <p class="lead">A multi-robot system designed for coordinated movements to form a seven-segment display using real-time localization and control through ROS2 and AprilTag.</p>
+  </section>
+
+  <!-- Project Image Section -->
+  <section class="container my-5">
+    <img src="assets/images/Swarm Robot/Main.jpg" class="img-fluid mb-4" alt="Swarm Robotics System">
+  </section>
+
+  <!-- Project Videos Section -->
+  <section class="container my-5">
+    <div class="row">
+      <!-- Video 1 -->
+      <div class="col-md-6">
+        <div class="embed-responsive embed-responsive-16by9 mb-4">
+          <video class="embed-responsive-item" controls muted>
+            <source src="assets/images/Swarm Robot/PXL_20231208_213644645.TS.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <p class="text-center">Simulation using ROS Turtlesim</p>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="col-md-6">
+        <div class="embed-responsive embed-responsive-16by9 mb-4">
+          <video class="embed-responsive-item" controls muted>
+            <source src="assets/images/Swarm Robot/WhatsApp Video 2023-12-12 at 11.05.22_149fd1d9.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <p class="text-center">Test video, with some accuracy being showcased</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Description Section -->
+  <section class="container my-5">
+    <h3>Overview</h3>
+    <p>
+      This project aims to design and implement a swarm robotic system where six robots work in coordination to form a physical seven-segment display. The system explores multi-robot coordination and real-time localization using camera-based detection. Each robot moves to a specific point in space, representing segments of the display. 
+    </p>
+
+    <h3>Key Features</h3>
+    <ul>
+      <li>Utilizes six robots for coordinated movements</li>
+      <li>Real-time localization using AprilTags and an Intel Realsense camera</li>
+      <li>Multi-robot control via ROS2 and MicroROS</li>
+      <li>ESP32 and Arduino-based communication for robot control</li>
+    </ul>
+
+    <h3>System Architecture</h3>
+    <p>
+      The system is divided into multiple components:
+      <ul>
+        <li><strong>Camera Localization:</strong> The Intel Realsense camera, mounted overhead, detects the positions of the robots using AprilTags. The AprilTag node processes camera data and publishes the robots' positions relative to the camera frame.</li>
+        <li><strong>Path Planning:</strong> Using the camera data and user input, the path planner calculates the robots' target angles and velocities, guiding them to their designated positions.</li>
+        <li><strong>Robot Control:</strong> Each robot's movements are controlled using an ESP32 running MicroROS, which communicates commands to an Arduino for motor and servo control.</li>
+      </ul>
+    </p>
+
+    <h3>Technical Challenges</h3>
+    <p>
+      One challenge faced during the project was achieving accurate localization with the overhead camera. Originally, the camera was mounted at a calculated angle, but inaccuracies in detection led to repositioning it directly overhead. Another challenge was configuring the ESP32 to run MicroROS effectively, requiring custom configurations and power management.
+    </p>
+
+    <h3>Technical Specifications</h3>
+    <ul>
+      <li>Robots: Elegoo Smart Robot Car Kit V4.0 with ESP32 and Arduino</li>
+      <li>Localization: Intel Realsense D435 camera with AprilTags</li>
+      <li>Control: ROS2 for multi-robot communication</li>
+      <li>Programming: Python for path planning, MicroROS for robot communication</li>
+    </ul>
+  </section>
+
+  <!-- Technical Documents Section -->
+  <section class="container my-5">
+    <h3 class="section-title text-center">Technical Documents</h3>
+    <p class="text-center mb-4">Click below to download or view the technical documents related to this project.</p>
+
+    <div class="row justify-content-center">
+      <div class="col-md-4 text-center mb-4">
+        <a href="assets/docs/ec545_final_report.pdf" class="document-link" target="_blank">
+          <img src="assets/icons/pdf.png" alt="Project Report PDF" class="document-icon">
+          <p class="document-title">Project Report</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Back to Projects Button -->
+  <section class="container my-5 text-center">
+    <a href="index.html#projects" class="btn btn-primary">Back to Projects</a>
+  </section>
+
+  <script src="scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
