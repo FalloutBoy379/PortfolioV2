@@ -41,7 +41,7 @@
   <!-- Hero Section -->
   <section class="hero text-center" id="home">
     <h1>Hello, I am Ansh Mehta</h1>
-    <p class="hero-subtitle">and my expertise lies in</p> <!-- New line -->
+    <p class="hero-subtitle">and my expertise lies in</p>
     <div class="typewriter-container">
       <span id="typewriter-text"></span>
       <span class="blinking-cursor">|</span>
@@ -61,9 +61,19 @@
   <section class="container my-5" id="projects">
     <h2 class="section-title">Projects</h2>
 
+    <!-- Filter Options -->
+    <div class="filter-options text-center mb-4">
+      <span class="filter-btn" data-filter="all">All</span>
+      <span class="filter-btn" data-filter="electronics">Electronics</span>
+      <span class="filter-btn" data-filter="software">Software</span>
+      <span class="filter-btn" data-filter="firmware">Firmware</span>
+      <span class="filter-btn" data-filter="controls">Controls</span>
+      <span class="filter-btn" data-filter="mechanical">Mechanical</span>
+    </div>
+
     <div class="row projects mt-4">
       <!-- Project 1 -->
-      <div class="col-md-4 project-card" data-category="robotics embedded">
+      <div class="col-md-4 project-card" data-category="electronics software firmware controls mechanical">
         <a href="mccr.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -71,23 +81,20 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">Motion Capture Calibration Robot</h5>
+              <div class="work-bubbles mt-3">
+                <span class="bubble electronics">Electronics</span>
+                <span class="bubble software">Software</span>
+                <span class="bubble firmware">Firmware</span>
+                <span class="bubble controls">Controls</span>
+                <span class="bubble mechanical">Mechanical</span>
+              </div>
             </div>
           </div>
         </a>
-        
-        <!-- Bubbles to show work done -->
-        <div class="work-bubbles mt-3">
-          <span class="bubble electronics">Electronics</span>
-          <span class="bubble software">Software</span>
-          <span class="bubble firmware">Firmware</span>
-          <span class="bubble controls">Controls</span>
-          <span class="bubble mechanical">Mechanical</span>
-        </div>
       </div>
-      
 
       <!-- Project 2 -->
-      <div class="col-md-4 project-card" data-category="robotics soft-robotics">
+      <div class="col-md-4 project-card" data-category="electronics firmware mechanical">
         <a href="starfish.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -98,19 +105,18 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">Soft Robotic Starfish</h5>
+              <div class="work-bubbles mt-3">
+                <span class="bubble electronics">Electronics</span>
+                <span class="bubble firmware">Firmware</span>
+                <span class="bubble mechanical">Mechanical</span>
+              </div>
             </div>
           </div>
         </a>
-
-        <div class="work-bubbles mt-3">
-          <span class="bubble electronics">Electronics</span>
-          <span class="bubble firmware">Firmware</span>
-          <span class="bubble mechanical">Mechanical</span>
-        </div>
       </div>
 
       <!-- Project 3 -->
-      <div class="col-md-4 project-card" data-category="robotics rehabilitation">
+      <div class="col-md-4 project-card" data-category="electronics software firmware mechanical">
         <a href="wristrehab.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -121,21 +127,21 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">Wrist Rehabilitation Robot</h5>
+              <div class="work-bubbles mt-3">
+                <span class="bubble electronics">Electronics</span>
+                <span class="bubble software">Software</span>
+                <span class="bubble firmware">Firmware</span>
+                <span class="bubble mechanical">Mechanical</span>
+              </div>
             </div>
           </div>
         </a>
-        <div class="work-bubbles mt-3">
-          <span class="bubble electronics">Electronics</span>
-          <span class="bubble software">Software</span>
-          <span class="bubble firmware">Firmware</span>
-          <span class="bubble mechanical">Mechanical</span>
-        </div>
       </div>
     </div>
 
     <div class="row projects mt-4">
       <!-- Project 4 -->
-      <div class="col-md-4 project-card" data-category="robotics swarm">
+      <div class="col-md-4 project-card" data-category="software controls">
         <a href="swarm.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -143,17 +149,17 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">Swarm Robotics using ROS</h5>
+              <div class="work-bubbles mt-3">
+                <span class="bubble software">Software</span>
+                <span class="bubble controls">Controls</span>
+              </div>
             </div>
           </div>
         </a>
-        <div class="work-bubbles mt-3">
-          <span class="bubble software">Software</span>
-          <span class="bubble controls">Controls</span>
-        </div>
       </div>
 
       <!-- Project 5 -->
-      <div class="col-md-4 project-card" data-category="robotics FTC">
+      <div class="col-md-4 project-card" data-category="electronics software firmware controls">
         <a href="ftc_powerplay_robot.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -164,19 +170,19 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">FTC Powerplay Robot - Matrix 20870</h5>
+              <div class="work-bubbles mt-3">
+                <span class="bubble electronics">Electronics</span>
+                <span class="bubble software">Software</span>
+                <span class="bubble firmware">Firmware</span>
+                <span class="bubble controls">Controls</span>
+              </div>
             </div>
           </div>
         </a>
-        <div class="work-bubbles mt-3">
-          <span class="bubble electronics">Electronics</span>
-          <span class="bubble software">Software</span>
-          <span class="bubble firmware">Firmware</span>
-          <span class="bubble controls">Controls</span>
-        </div>
       </div>
 
       <!-- Project 6 -->
-      <div class="col-md-4 project-card" data-category="robotics ball-launcher">
+      <div class="col-md-4 project-card" data-category="firmware controls">
         <a href="ball_launching_mechanism.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -187,19 +193,19 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">Autonomous Ball Launching Mechanism</h5>
+              <div class="work-bubbles mt-3">
+                <span class="bubble firmware">Firmware</span>
+                <span class="bubble controls">Controls</span>
+              </div>
             </div>
           </div>
         </a>
-        <div class="work-bubbles mt-3">
-          <span class="bubble firmware">Firmware</span>
-          <span class="bubble controls">Controls</span>
-        </div>
       </div>
     </div>
 
     <div class="row projects mt-4">
       <!-- Project 7 -->
-      <div class="col-md-4 project-card" data-category="robotics robocon">
+      <div class="col-md-4 project-card" data-category="electronics software firmware controls">
         <a href="abu_robocon.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -210,19 +216,19 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">ABU Robocon 2022 - R2</h5>
+              <div class="work-bubbles mt-3">
+                <span class="bubble electronics">Electronics</span>
+                <span class="bubble software">Software</span>
+                <span class="bubble firmware">Firmware</span>
+                <span class="bubble controls">Controls</span>
+              </div>
             </div>
           </div>
         </a>
-        <div class="work-bubbles mt-3">
-          <span class="bubble electronics">Electronics</span>
-          <span class="bubble software">Software</span>
-          <span class="bubble firmware">Firmware</span>
-          <span class="bubble controls">Controls</span>
-        </div>
       </div>
 
       <!-- Project 8 -->
-      <div class="col-md-4 project-card" data-category="robotics robocon">
+      <div class="col-md-4 project-card" data-category="electronics software firmware controls">
         <a href="abu_robocon.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -233,19 +239,19 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">ABU Robocon 2022 - R1</h5>
+              <div class="work-bubbles mt-3">
+                <span class="bubble electronics">Electronics</span>
+                <span class="bubble software">Software</span>
+                <span class="bubble firmware">Firmware</span>
+                <span class="bubble controls">Controls</span>
+              </div>
             </div>
           </div>
         </a>
-        <div class="work-bubbles mt-3">
-          <span class="bubble electronics">Electronics</span>
-          <span class="bubble software">Software</span>
-          <span class="bubble firmware">Firmware</span>
-          <span class="bubble controls">Controls</span>
-        </div>
       </div>
 
       <!-- Project 9 -->
-      <div class="col-md-4 project-card" data-category="robotics robocon">
+      <div class="col-md-4 project-card" data-category="electronics software firmware controls">
         <a href="abu_robocon.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -256,39 +262,41 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">ABU Robocon 2021 - Throwing Robot</h5>
+              <div class="work-bubbles mt-3">
+                <span class="bubble electronics">Electronics</span>
+                <span class="bubble software">Software</span>
+                <span class="bubble firmware">Firmware</span>
+                <span class="bubble controls">Controls</span>
+              </div>
             </div>
           </div>
         </a>
-        <div class="work-bubbles mt-3">
-          <span class="bubble electronics">Electronics</span>
-          <span class="bubble software">Software</span>
-          <span class="bubble firmware">Firmware</span>
-          <span class="bubble controls">Controls</span>
-        </div>
       </div>
     </div>
 
     <div class="row projects mt-4">
-      <div class="col-md-4 project-card" data-category="robotics drones">
+      <!-- Project 10 -->
+      <div class="col-md-4 project-card" data-category="firmware">
         <a href="x86.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
               <video class="card-img-top" autoplay loop muted playsinline>
                 <source src="assets/images/8086_Maze/8mb.video-TSK-UoRoZCAH.mp4" type="video/mp4">
                 Your browser does not support the video tag.
-              </video></div>
+              </video>
+            </div>
             <div class="card-body">
               <h5 class="card-title">x86 Assembly - Maze Solving Robot</h5>
+              <div class="work-bubbles mt-3">
+                <span class="bubble firmware">Firmware</span>
+              </div>
             </div>
           </div>
         </a>
-        <div class="work-bubbles mt-3">
-          <span class="bubble firmware">Firmware</span>
-        </div>
       </div>
 
       <!-- Project 11 -->
-      <div class="col-md-4 project-card" data-category="robotics robocon">
+      <div class="col-md-4 project-card" data-category="electronics firmware controls">
         <a href="abu_robocon.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -296,18 +304,18 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">ABU Robocon 2020</h5>
+              <div class="work-bubbles mt-3">
+                <span class="bubble electronics">Electronics</span>
+                <span class="bubble firmware">Firmware</span>
+                <span class="bubble controls">Controls</span>
+              </div>
             </div>
           </div>
         </a>
-        <div class="work-bubbles mt-3">
-          <span class="bubble electronics">Electronics</span>
-          <span class="bubble firmware">Firmware</span>
-          <span class="bubble controls">Controls</span>
-        </div>
       </div>
 
       <!-- Project 12 -->
-      <div class="col-md-4 project-card" data-category="robotics 3d-printer">
+      <div class="col-md-4 project-card" data-category="electronics software firmware">
         <a href="zeta_dlp_3d_printer.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -318,23 +326,20 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">Zeta DLP 3D Printer</h5>
+              <div class="work-bubbles mt-3">
+                <span class="bubble electronics">Electronics</span>
+                <span class="bubble software">Software</span>
+                <span class="bubble firmware">Firmware</span>
+              </div>
             </div>
           </div>
         </a>
-        <div class="work-bubbles mt-3">
-          <span class="bubble electronics">Electronics</span>
-          <span class="bubble software">Software</span>
-          <span class="bubble firmware">Firmware</span>
-        </div>
       </div>
     </div>
 
     <div class="row projects mt-4">
       <!-- Project 13 -->
-
-
-      <!-- Project 14 -->
-      <div class="col-md-4 project-card" data-category="robotics articulated-arm">
+      <div class="col-md-4 project-card" data-category="electronics firmware controls mechanical">
         <a href="articulated_robotic_arm.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -342,19 +347,19 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">Articulated 6 DOF Robotic Arm</h5>
+              <div class="work-bubbles mt-3">
+                <span class="bubble electronics">Electronics</span>
+                <span class="bubble firmware">Firmware</span>
+                <span class="bubble controls">Controls</span>
+                <span class="bubble mechanical">Mechanical</span>
+              </div>
             </div>
           </div>
         </a>
-        <div class="work-bubbles mt-3">
-          <span class="bubble electronics">Electronics</span>
-          <span class="bubble firmware">Firmware</span>
-          <span class="bubble controls">Controls</span>
-          <span class="bubble mechanical">Mechanical</span>
-        </div>
       </div>
 
-      <!-- Project 15 -->
-      <div class="col-md-4 project-card" data-category="robotics autonomous">
+      <!-- Project 14 -->
+      <div class="col-md-4 project-card" data-category="electronics software firmware controls mechanical">
         <a href="autonomous_mobile_robot.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -362,19 +367,20 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">Autonomous Mobile Robot</h5>
+              <div class="work-bubbles mt-3">
+                <span class="bubble electronics">Electronics</span>
+                <span class="bubble software">Software</span>
+                <span class="bubble firmware">Firmware</span>
+                <span class="bubble controls">Controls</span>
+                <span class="bubble mechanical">Mechanical</span>
+              </div>
             </div>
           </div>
         </a>
-        <div class="work-bubbles mt-3">
-          <span class="bubble electronics">Electronics</span>
-          <span class="bubble software">Software</span>
-          <span class="bubble firmware">Firmware</span>
-          <span class="bubble controls">Controls</span>
-          <span class="bubble mechanical">Mechanical</span>
-        </div>
       </div>
 
-      <div class="col-md-4 project-card" data-category="robotics electric-vehicle">
+      <!-- Project 15 -->
+      <div class="col-md-4 project-card" data-category="electronics software firmware">
         <a href="beast_electric_truck.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -385,23 +391,20 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">BEAST Electric Delivery Truck</h5>
+              <div class="work-bubbles mt-3">
+                <span class="bubble electronics">Electronics</span>
+                <span class="bubble software">Software</span>
+                <span class="bubble firmware">Firmware</span>
+              </div>
             </div>
           </div>
         </a>
-        <div class="work-bubbles mt-3">
-          <span class="bubble electronics">Electronics</span>
-          <span class="bubble software">Software</span>
-          <span class="bubble firmware">Firmware</span>
-        </div>
       </div>
     </div>
 
     <div class="row projects mt-4">
       <!-- Project 16 -->
-
-
-      <!-- Project 17 -->
-      <div class="col-md-4 project-card" data-category="robotics electric-shuttle">
+      <div class="col-md-4 project-card" data-category="electronics software firmware">
         <a href="isaac_electric_shuttle.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -412,18 +415,18 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">ISAAC Electric Shuttle</h5>
+              <div class="work-bubbles mt-3">
+                <span class="bubble electronics">Electronics</span>
+                <span class="bubble software">Software</span>
+                <span class="bubble firmware">Firmware</span>
+              </div>
             </div>
           </div>
         </a>
-        <div class="work-bubbles mt-3">
-          <span class="bubble electronics">Electronics</span>
-          <span class="bubble software">Software</span>
-          <span class="bubble firmware">Firmware</span>
-        </div>
       </div>
 
-      <!-- Project 18 -->
-      <div class="col-md-4 project-card" data-category="robotics bb-turret">
+      <!-- Project 17 -->
+      <div class="col-md-4 project-card" data-category="software firmware controls">
         <a href="autonomous_bb_turret.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -434,16 +437,18 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">Autonomous BB Pellet Turret</h5>
+              <div class="work-bubbles mt-3">
+                <span class="bubble software">Software</span>
+                <span class="bubble firmware">Firmware</span>
+                <span class="bubble controls">Controls</span>
+              </div>
             </div>
           </div>
         </a>
-        <div class="work-bubbles mt-3">
-          <span class="bubble software">Software</span>
-          <span class="bubble firmware">Firmware</span>
-          <span class="bubble controls">Controls</span>
-        </div>
       </div>
-      <div class="col-md-4 project-card" data-category="robotics pneumatic-robot">
+
+      <!-- Project 18 -->
+      <div class="col-md-4 project-card" data-category="electronics firmware controls">
         <a href="pneumatic_robot_dog.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -451,26 +456,20 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">Pneumatic Robot Quadruped</h5>
+              <div class="work-bubbles mt-3">
+                <span class="bubble electronics">Electronics</span>
+                <span class="bubble firmware">Firmware</span>
+                <span class="bubble controls">Controls</span>
+              </div>
             </div>
           </div>
         </a>
-        <div class="work-bubbles mt-3">
-          <span class="bubble electronics">Electronics</span>
-          <span class="bubble firmware">Firmware</span>
-          <span class="bubble controls">Controls</span>
-        </div>
       </div>
     </div>
 
     <div class="row projects mt-4">
       <!-- Project 19 -->
-
-
-
-      <!-- Project 20 -->
-
-
-      <div class="col-md-4 project-card" data-category="robotics SCARA">
+      <div class="col-md-4 project-card" data-category="electronics firmware controls mechanical">
         <a href="scara_robot_arm.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -481,19 +480,19 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">SCARA Robotic Arm</h5>
+              <div class="work-bubbles mt-3">
+                <span class="bubble electronics">Electronics</span>
+                <span class="bubble firmware">Firmware</span>
+                <span class="bubble controls">Controls</span>
+                <span class="bubble mechanical">Mechanical</span>
+              </div>
             </div>
           </div>
         </a>
-        <div class="work-bubbles mt-3">
-          <span class="bubble electronics">Electronics</span>
-          <span class="bubble firmware">Firmware</span>
-          <span class="bubble controls">Controls</span>
-          <span class="bubble mechanical">Mechanical</span>
-        </div>
       </div>
 
-      <!-- Project 21 -->
-      <div class="col-md-4 project-card" data-category="robotics rehabilitation">
+      <!-- Project 20 -->
+      <div class="col-md-4 project-card" data-category="electronics firmware">
         <a href="robotic_rehabilitation_companion.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -501,17 +500,17 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">Robotic Rehabilitation Companion</h5>
+              <div class="work-bubbles mt-3">
+                <span class="bubble electronics">Electronics</span>
+                <span class="bubble firmware">Firmware</span>
+              </div>
             </div>
           </div>
         </a>
-        <div class="work-bubbles mt-3">
-          <span class="bubble electronics">Electronics</span>
-          <span class="bubble firmware">Firmware</span>
-        </div>
       </div>
 
-      <!-- Project 22 -->
-      <div class="col-md-4 project-card" data-category="robotics humanoid">
+      <!-- Project 21 -->
+      <div class="col-md-4 project-card" data-category="mechanical">
         <a href="humanoid_robot_leg.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -519,116 +518,109 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">Humanoid Robot Leg</h5>
+              <div class="work-bubbles mt-3">
+                <span class="bubble mechanical">Mechanical</span>
+              </div>
             </div>
           </div>
         </a>
-        <div class="work-bubbles mt-3">
-          <span class="bubble mechanical">Mechanical</span>
-        </div>
       </div>
     </div>
   </section>
 
   <!-- Courses Section -->
-<section class="container my-5" id="courses">
-  <h2 class="section-title">Courses</h2>
+  <section class="container my-5" id="courses">
+    <h2 class="section-title">Courses</h2>
 
-  <div id="coursesAccordion">
-    <!-- College 1 -->
-    <div class="card">
-      <div class="card-header" id="headingCollege1">
-        <h5 class="mb-0">
-          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseCollege1" aria-expanded="true" aria-controls="collapseCollege1">
-            Boston University, College of Engineering
-          </button>
-        </h5>
+    <div id="coursesAccordion">
+      <div class="card">
+        <div class="card-header" id="headingCollege1">
+          <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseCollege1" aria-expanded="true" aria-controls="collapseCollege1">
+              Boston University, College of Engineering
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseCollege1" class="collapse show" aria-labelledby="headingCollege1" data-parent="#coursesAccordion">
+          <div class="card-body">
+            <h3>MS Robotics and Autonomous Systems</h3>
+            <p><strong>GPA:</strong> 3.4/4.0</p>
+            <p><strong>Duration:</strong> September 2023 - December 2024</p>
+            <h4>Courses Taken:</h4>
+            <ul>
+              <li>Robot Motion Planning</li>
+              <li>Introduction to Embedded Systems</li>
+              <li>Cyberphysical systems</li>
+              <li>Learning from Data</li>
+              <li>Advanced Engineering Mathematics</li>
+              <li>Medical Robotics</li>
+              <li>Soft Robotics</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
-      <div id="collapseCollege1" class="collapse show" aria-labelledby="headingCollege1" data-parent="#coursesAccordion">
-        <div class="card-body">
-          <h3>MS Robotics and Autonomous Systems</h3>
-          <p><strong>GPA:</strong> 3.4/4.0</p>
-          <p><strong>Duration:</strong> September 2023 - December 2024</p>
-          <h4>Courses Taken:</h4>
-          <ul>
-            <li>Robot Motion Planning</li>
-            <li>Introduction to Embedded Systems</li>
-            <li>Cyberphysical systems</li>
-            <li>Learning from Data</li>
-            <li>Advanced Engineering Mathematics</li>
-            <li>Medical Robotics</li>
-            <li>Soft Robotics</li>
-          </ul>
+      <div class="card">
+        <div class="card-header" id="headingCollege2">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseCollege2" aria-expanded="false" aria-controls="collapseCollege2">
+              Mumbai University, K.J. Somaiya College of Engineering
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseCollege2" class="collapse" aria-labelledby="headingCollege2" data-parent="#coursesAccordion">
+          <div class="card-body">
+            <h3>BTech Electronics Engineering</h3>
+            <p><strong>GPA:</strong> 3.3/4.0</p>
+            <p><strong>Duration:</strong> August 2019 - May 2023</p>
+            <h4>Courses Taken:</h4>
+            <ul>
+              <li>Speech Processing and Applications</li>
+              <li>Embedded System Design</li>
+              <li>Robotics</li>
+              <li>3D Printing</li>
+              <li>Industrial Product Design</li>
+              <li>Industrial Standards</li>
+              <li>Digital Signal Processing</li>
+              <li>VLSI Design</li>
+              <li>Microprocessors and Peripherals</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- College 2 -->
-    <div class="card">
-      <div class="card-header" id="headingCollege2">
-        <h5 class="mb-0">
-          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseCollege2" aria-expanded="false" aria-controls="collapseCollege2">
-            Mumbai University, K.J. Somaiya College of Engineering
-          </button>
-        </h5>
-      </div>
+  <!-- Experience Section -->
+  <section class="container my-5" id="experience">
+    <h2 class="section-title">Experience</h2>
 
-      <div id="collapseCollege2" class="collapse" aria-labelledby="headingCollege2" data-parent="#coursesAccordion">
-        <div class="card-body">
-          <h3>BTech Electronics Engineering</h3>
-          <p><strong>GPA:</strong> 3.3/4.0</p>
-          <p><strong>Duration:</strong> August 2019 - May 2023</p>
-          <h4>Courses Taken:</h4>
-          <ul>
-            <li>Speech Processing and Applications</li>
-            <li>Embedded System Design</li>
-            <li>Robotics</li>
-            <li>3D Printing</li>
-            <li>Industrial Product Design</li>
-            <li>Industrial Standards</li>
-            <li>Digital Signal Processing</li>
-            <li>VLSI Design</li>
-            <li>Microprocessors and Peripherals</li>
-          </ul>
-        </div>
-      </div>
+    <div class="experience-item">
+      <h3>Gradute Teaching Assistant - EK307 (Circuits), Boston University</h3>
+      <p> Sept 2024 - Present</p>
+      <p><strong>Responsibilities:</strong></p>
+      <ul>
+        <li>Helped with grading and developing solutions for problems. </li>
+        <li>Held dedicated hours three times a week to answer questions and doubts.</li>
+      </ul>
     </div>
-  </div>
-</section>
 
-<!-- Experience Section -->
-<section class="container my-5" id="experience">
-  <h2 class="section-title">Experience</h2>
-
-  <!-- Experience 1 -->
-  <div class="experience-item">
-    <h3>Gradute Teaching Assistant - EK307 (Circuits), Boston University</h3>
-    <p> Sept 2024 - Present</p>
-    <p><strong>Responsibilities:</strong></p>
-    <ul>
-      <li>Helped with grading and developing solutions for problems. </li>
-      <li>Held dedicated hours three times a week to answer questions and doubts.</li>
-    </ul>
-  </div>
-
-  <!-- Experience 2 -->
-  <div class="experience-item">
-    <h3>Robotics Research Assistant, RASTIC, Boston University</h3>
-    <p> June 2024 - Present</p>
-    <p><strong>Responsibilities:</strong></p>
-    <ul>
-      <li>Designed embedded systems for robotic applications.</li>
-      <li>Optimized firmware for real-time performance.</li>
-    </ul>
-    <p><strong>Related Projects:</strong></p>
-    <ul>
-      <li><a href="mccr.html">Motion Capture Calibration Robot</a></li>
-    </ul>
-  </div>
-
-  <!-- Add more experiences as needed -->
-</section>
-
+    <div class="experience-item">
+      <h3>Robotics Research Assistant, RASTIC, Boston University</h3>
+      <p> June 2024 - Present</p>
+      <p><strong>Responsibilities:</strong></p>
+      <ul>
+        <li>Designed embedded systems for robotic applications.</li>
+        <li>Optimized firmware for real-time performance.</li>
+      </ul>
+      <p><strong>Related Projects:</strong></p>
+      <ul>
+        <li><a href="mccr.html">Motion Capture Calibration Robot</a></li>
+      </ul>
+    </div>
+  </section>
 
   <script src="scripts.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

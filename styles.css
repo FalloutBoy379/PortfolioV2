@@ -110,8 +110,8 @@ body {
   font-size: 0.7rem;  /* Smaller font size */
   font-weight: 500;
   border-radius: 18px;  /* Make the bubbles more oval-shaped */
-  color: #111111;
-  background-color: #00FFFF; /* Default bubble color */
+  color: #e7e2e2;
+  background-color: #3b4545; /* Default bubble color */
   transition: transform 0.3s ease;
 }
 
@@ -121,40 +121,66 @@ body {
 
 /* Specific colors for each area of work */
 .bubble.electronics {
-  background-color: #FFA500; /* Orange */
+  /* background-color: #FFA500; Orange */
 }
 
 .bubble.software {
-  background-color: #1E90FF; /* DodgerBlue */
+  /* background-color: #1E90FF; DodgerBlue */
 }
 
 .bubble.firmware {
-  background-color: #32CD32; /* LimeGreen */
+  /* background-color: #32CD32; LimeGreen */
 }
 
 .bubble.controls {
-  background-color: #FF4500; /* OrangeRed */
+  /* background-color: #FF4500; OrangeRed */
 }
 
 .bubble.mechanical {
-  background-color: #9370DB; /* MediumPurple */
+  /* background-color: #9370DB; MediumPurple */
 }
 
   
-  /* Projects Section */
-  .filter-btn {
-    color: #00FFFF;
-    border: 1px solid #00FFFF;
-    background: transparent;
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-  
-  .filter-btn:hover {
-    background-color: #00FFFF;
-    color: #111111;
-  }
-  
+/* Filter Buttons - Now styled like bubbles */
+.filter-btn {
+  display: inline-block;
+  padding: 2px 7px;  /* Same padding as the bubbles */
+  font-size: 0.75rem;  /* Same font size as the bubbles */
+  font-weight: 500;
+  border-radius: 18px;  /* Same rounded edges as the bubbles */
+  color: #e7e2e2;  /* Text color similar to bubbles */
+  background-color: #3b4545; /* Default button background color */
+  border: none;  /* Remove border */
+  cursor: pointer;  /* Change cursor to pointer on hover */
+  transition: transform 0.3s ease;
+  margin: 5px; /* Keep margin for spacing */
+}
+
+.filter-btn:hover {
+  transform: scale(1.05);  /* Slightly enlarge on hover, like the bubbles */
+}
+
+/* Specific colors for filter buttons based on work areas */
+.filter-btn.electronics {
+  /* background-color: #FFA500; Orange */
+}
+
+.filter-btn.software {
+  /* background-color: #1E90FF; DodgerBlue */
+}
+
+.filter-btn.firmware {
+  /* background-color: #32CD32; LimeGreen */
+}
+
+.filter-btn.controls {
+  /* background-color: #FF4500; OrangeRed */
+}
+
+.filter-btn.mechanical {
+  /* background-color: #9370DB; MediumPurple */
+}
+
 /* Project Cards */
 .project-card {
   background-color: #1a1a1a !important; /* Dark background */
