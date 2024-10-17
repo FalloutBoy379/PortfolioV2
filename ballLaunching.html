@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ball Launching Mechanism | Rapid React Robot</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">Rapid React Robot</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="resume.pdf">Resume</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Title Section -->
+  <section class="container my-5">
+    <h2 class="section-title">Ball Launching Mechanism - Rapid React Robot</h2>
+    <p class="lead">
+      An advanced ball launching system integrated into the Rapid React robot, equipped with turret control, precise trajectory estimation, and real-time camera feedback for goal tracking.
+    </p>
+  </section>
+
+  <!-- Video Section -->
+  <section class="container my-5 text-center">
+    <div class="embed-responsive embed-responsive-16by9">
+      <video class="embed-responsive-item" controls autoplay loop muted playsinline>
+        <source src="assets/images/FRC_Ball/FRC_Ball_Shooter.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <figcaption class="text-center mt-2">Video: Ball Launching Mechanism in Action</figcaption>
+  </section>
+
+  <!-- About Rapid React -->
+  <section class="container my-5">
+    <h3>About Rapid React Competition</h3>
+    <p>
+      Rapid React is a robotics competition under the FIRST Robotics Competition (FRC), where robots compete to score points by shooting inflatable balls (Cargo) into a central Hub. Teams also earn points by climbing within designated Hangar Zones. The competition emphasizes strategy, speed, and accuracy.
+    </p>
+  </section>
+
+  <!-- Ball Launching Mechanism -->
+  <section class="container my-5">
+    <h3>Ball Launching Mechanism Design</h3>
+    <p>
+      The ball launching mechanism of the robot was designed to ensure accurate shooting of cargo into the goal. It used several advanced components and algorithms, including:
+    </p>
+    <ul>
+      <li><strong>Turret for Yaw Angle Control:</strong> Enabled the shooter to rotate and aim precisely towards the target.</li>
+      <li><strong>Hood Angle Control:</strong> Adjusted the angle of the ball's release to optimize trajectory based on distance from the target.</li>
+      <li><strong>Flywheel RPM Control:</strong> Managed the velocity at which the ball was launched.</li>
+      <li><strong>Beam Break Sensors:</strong> Ensured accurate ball positioning within the shooter before launch.</li>
+      <li><strong>Limelight Camera Integration:</strong> Provided real-time feedback and automatic goal tracking.</li>
+    </ul>
+  </section>
+
+  <!-- Software & Algorithms -->
+  <section class="container my-5">
+    <h3>Software & Algorithms Used</h3>
+    <ul>
+      <li><strong>Polynomial Regression:</strong> Estimated the hood angle required for the given distance to the target.</li>
+      <li><strong>Inverse Kinematics:</strong> Controlled turret and hood angles to align the ball trajectory with the goal.</li>
+      <li><strong>PIDF Control:</strong> Used for precise control of the flywheel RPM, ensuring consistent ball velocity.</li>
+      <li><strong>NetworkTables:</strong> Shared real-time data between robot subsystems for synchronization.</li>
+    </ul>
+
+  </section>
+
+  <!-- Mechanical Design -->
+  <section class="container my-5">
+    <h3>Mechanical Design Features</h3>
+    <ul>
+      <li><strong>Tank Drive Chassis:</strong> Provided stability and agility during the match.</li>
+      <li><strong>Pneumatic Hopper System:</strong> Allowed efficient ball intake and handling.</li>
+      <li><strong>Color Sensor Integration:</strong> Ensured only alliance-specific cargo was processed for scoring.</li>
+      <li><strong>High-Power Flywheel:</strong> Achieved consistent launches at variable speeds.</li>
+    </ul>
+    <figure class="text-center my-4">
+      <img src="assets/images/FRC_Ball/Main.jpg" class="img-fluid" alt="Ball Launching Mechanism">
+      <figcaption>Ball Launching Mechanism</figcaption>
+    </figure>
+  </section>
+
+  <!-- Competition Highlights -->
+  <section class="container my-5">
+    <h3>Performance at Rapid React</h3>
+    <p>
+      The Rapid React robot performed exceptionally well, thanks to the precise shooting mechanism and efficient software integration. During the matches, the robot consistently tracked the goal, adjusted its hood and flywheel settings on-the-fly, and achieved high scoring rates.
+    </p>
+    <p>
+      The team overcame challenges with turret stability and flywheel control, ensuring that even under high-stress conditions, the shooter performed accurately. The Limelight camera system significantly contributed by providing real-time trajectory corrections.
+    </p>
+  </section>
+
+  <!-- Back to Projects Button -->
+  <section class="container my-5 text-center">
+    <a href="index.html#projects" class="btn btn-primary">Back to Projects</a>
+  </section>
+
+  <script src="scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

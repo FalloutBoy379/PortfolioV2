@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matrix 20870 - FTC Powerplay Journey</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">Ansh Mehta</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="resume.pdf">Resume</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Title Section -->
+  <section class="container my-5">
+    <h2 class="section-title">Matrix 20870 - FTC Powerplay</h2>
+    <p class="lead">
+      From prototype to finalist, Matrix 20870 embodies the spirit of iteration, innovation, and teamwork, securing a place in the Finals of the Asia Pacific Open Championship 2023.
+    </p>
+  </section>
+
+  <!-- FTC Powerplay Overview -->
+  <section class="container my-5">
+    <h3>About FTC Powerplay</h3>
+    <p>
+      FTC Powerplay is an annual robotics competition organized by FIRST Tech Challenge (FTC), where teams build robots to perform tasks on a dynamic field. In 2023, teams competed to collect and stack cones on poles of varying heights spread across the field. The match includes autonomous and driver-controlled periods, challenging participants to design robots that are fast, reliable, and precise under time constraints.
+    </p>
+  </section>
+
+  <!-- Matrix V1 Section -->
+  <section class="container my-5">
+    <h3>Matrix V1: The Initial Prototype</h3>
+    <p>
+      Matrix V1 served as the foundation for the team’s journey. This version featured key mechanical and software elements that were refined for later iterations.
+    </p>
+    <ul>
+      <li><strong>Mecanum Drive:</strong> Enabled omnidirectional movement, helping the robot navigate tight spaces.</li>
+      <li><strong>Turret System:</strong> Equipped with external encoders for precise rotational control.</li>
+      <li><strong>Dual Stage Lift Mechanism:</strong> Allowed stacking cones at different pole heights.</li>
+    </ul>
+    <figure class="text-center my-4">
+      <img src="assets/images/Matrix/V1.png" class="img-fluid" alt="Matrix V1">
+      <figcaption>Matrix V1 Prototype in extended mode.</figcaption>
+    </figure>
+  </section>
+
+  <!-- Matrix V2 Section -->
+  <section class="container my-5">
+    <h3>Matrix V2: A Redesigned Powerhouse</h3>
+    <p>
+      Matrix V2 was the result of rigorous testing and refinement, leading to significant improvements across hardware, software, and electronics.
+    </p>
+
+    <h4>Key Hardware Upgrades</h4>
+    <ul>
+      <li><strong>Constant Force Springs:</strong> Assisted the lift mechanism, enhancing motor efficiency.</li>
+      <li><strong>Pole Aligner with Beam Sensors:</strong> Improved accuracy during cone stacking.</li>
+      <li><strong>Lower Gear Ratios:</strong> Increased speed for faster traversal across the field.</li>
+    </ul>
+
+    <h4>Software Architecture</h4>
+    <ul>
+      <li><strong>Localization with Rotation Matrices:</strong> Tracked the robot's position using odometry data.</li>
+      <li><strong>Finite State Machines:</strong> Managed the robot’s behavior during autonomous and teleop periods.</li>
+      <li><strong>Trajectory Generation:</strong> Implemented custom splines for smooth movement.</li>
+      <li><strong>Modular Software: </strong> Modularity in software allowed other robots to be tested rapidly. These robots can be seen in the figure below.</li>
+    </ul>
+    <figure class="text-center my-4">
+        <img src="assets/images/Matrix/Robotssss.jpg" class="img-fluid" alt="Matrix V1">
+        <figcaption>Robots tested on a similar codebase, established for 20870.</figcaption>
+      </figure>
+    <!-- <div class="code-container my-4">
+      <code class="language-java">
+        public Pose2d getRobotPose() { <br>
+          double deltaX = (deltaLeft + deltaRight) / 2;<br>
+          double deltaY = deltaFront - FORWARD_OFFSET * ((deltaLeft - deltaRight) / L);<br>
+          heading += deltaTheta;<br>
+          fieldX += (deltaX * Math.cos(heading)) - (deltaY * Math.sin(heading));<br>
+          return new Pose2d(fieldX, fieldY, heading);<br>
+        }
+      </code>
+    </div> -->
+
+    <figure class="text-center my-4">
+      <img src="assets/images/Matrix/V2.png" class="img-fluid" alt="Matrix V2">
+      <figcaption>Matrix V2: Engineered for precision and speed.</figcaption>
+    </figure>
+  </section>
+
+  <!-- Video Gallery Section -->
+  <section class="container my-5">
+    <h3 class="section-title">Gallery: Matrix 20870 in Action</h3>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="embed-responsive embed-responsive-16by9">
+          <video class="embed-responsive-item" controls autoplay loop muted>
+            <source src="assets/images/Matrix/8mb.video-1bV-sY7etS6b.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <figcaption class="text-center mt-2">Autonomous Period - High Pole</figcaption>
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <div class="embed-responsive embed-responsive-16by9">
+          <video class="embed-responsive-item" controls autoplay loop muted>
+            <source src="assets/images/Matrix/mid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <figcaption class="text-center mt-2">Autonomous Period - Mid Pole</figcaption>
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <div class="embed-responsive embed-responsive-16by9">
+          <video class="embed-responsive-item" controls autoplay loop muted>
+            <source src="assets/images/Matrix/Eureka.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <figcaption class="text-center mt-2">20871 vs 20870 Autonomous on Common High Junction</figcaption>
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" 
+                  src="https://www.youtube.com/embed/wm6FNAoSxAI?start=5837" 
+                  allowfullscreen></iframe>
+        </div>
+        <figcaption class="text-center mt-2">Asia Pacific Open Championship Match 28</figcaption>
+      </div>
+
+      <div class="col-md-6 mb-4">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" 
+                  src="https://www.youtube.com/embed/wm6FNAoSxAI?si=UzXq2gvRIjiSIxkR&amp;start=39410" 
+                  allowfullscreen></iframe>
+        </div>
+        <figcaption class="text-center mt-2">Asia Pacific Open Championship Finals Match 2</figcaption>
+      </div>
+
+
+   
+    </div>
+  </section>
+
+  <!-- Competition Highlights -->
+  <section class="container my-5">
+    <h3>Performance at the Asia Pacific Open Championship</h3>
+    <p>
+      Matrix 20870’s refined design and software propelled it to the Finals at the Asia Pacific Open Championship, achieving minimal autonomous failures. Despite falling short to its sister team, Eureka 20871, Matrix 20870 earned its place in the Finalist Alliance, marking an exceptional achievement in the season.
+    </p>
+  </section>
+
+  <!-- Back to Projects Button -->
+  <section class="container my-5 text-center">
+    <a href="index.html#projects" class="btn btn-primary">Back to Projects</a>
+  </section>
+
+  <script src="scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

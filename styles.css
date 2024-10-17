@@ -285,7 +285,19 @@ body {
     color: #00FFFF !important;
   }
   
-  
+/* Chevron Arrow Styling */
+.chevron {
+  font-size: 1.5rem;
+  cursor: pointer;  /* Pointer on hover */
+  transition: transform 0.3s ease;  /* Smooth transition */
+}
+
+/* Rotate the chevron when expanded */
+.rotate {
+  transform: rotate(180deg);
+}
+
+
   
   /* Misc */
   ul {
@@ -422,4 +434,21 @@ body {
 
 .experience-item a:hover {
   text-decoration: underline;
+}
+
+/* Container for Code */
+.code-container {
+  background-color: #1e1e1e;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  overflow-x: auto;
+}
+
+/* Styling for Code */
+.inline-code {
+  font-family: 'Courier New', Courier, monospace;
+  color: #f8f8f2;
+  font-size: 1rem;
+  white-space: pre-wrap;  /* Keep formatting */
 }

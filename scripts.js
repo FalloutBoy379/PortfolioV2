@@ -105,3 +105,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const accordionItems = document.querySelectorAll("#coursesAccordion .card");
+
+  accordionItems.forEach((item, index) => {
+    const chevron = item.querySelector(".chevron");
+    const button = item.querySelector(".btn-link");
+    const collapseElement = item.querySelector(".collapse");
+
+    // On page load, check if the first section is expanded and rotate its chevron
+    if (index === 0 && collapseElement.classList.contains("show")) {
+      chevron.classList.add("rotate");
+    }
+
+    // Add click event to both the button and chevron
+    [button, chevron].forEach((element) => {
+      element.addEventListener("click", () => {
+        const isExpanded = collapseElement.classList.contains("show");
+        chevron.classList.toggle("rotate", !isExpanded);
+      });
+    });
+
+    // Handle state when accordion toggles using Bootstrap events
+    collapseElement.addEventListener("shown.bs.collapse", () => {
+      chevron.classList.add("rotate");
+    });
+
+    collapseElement.addEventListener("hidden.bs.collapse", () => {
+      chevron.classList.remove("rotate");
+    });
+  });
+});
