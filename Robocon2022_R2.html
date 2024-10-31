@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABU Robocon 2022 - R2</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Hover effects and animation for interactivity */
+    .microcontroller-info, .theme-info {
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border-radius: 8px;
+    }
+    .microcontroller-info:hover, .theme-info:hover {
+      transform: scale(1.03);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      background-color: rgb(55, 54, 54);
+    }
+    .microcontroller-info h5, .theme-info h5 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 600;
+    }
+    .microcontroller-info .collapse-content, .theme-info .collapse-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .microcontroller-info.open .collapse-content, .theme-info.open .collapse-content {
+      max-height: 300px;
+    }
+    .microcontroller-info.open h5 i, .theme-info.open h5 i {
+      transform: rotate(180deg);
+    }
+
+        /* Theme card styling */
+        .theme-info {
+      background-color: #333;
+      color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+    .theme-info iframe {
+      width: 100%;
+      height: 315px;
+      border-bottom: 2px solid #444;
+    }
+    .theme-info .card-body {
+      padding: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">Ansh Mehta</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="assets/docs/Resume_Portfolio.pdf">Resume</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content Section -->
+  <section class="container my-5">
+    <div class="row">
+      <!-- Main Content -->
+      <div class="col-lg-8">
+        <h2 class="section-title">ABU Robocon 2022 - R2</h2>
+        <p class="lead">
+          The R2 robot was designed to excel in the dynamic and challenging tasks required by the
+          <strong>ABU Robocon 2022</strong> competition. This robot combined precision mechanics,
+          high-speed control systems, and advanced sensors to perform in the high-pressure environment
+          of the event.
+        </p>
+
+        <!-- My Role and Contributions -->
+        <h3>My Role and Contributions</h3>
+        <p>
+          The robot was developed over almost a year, starting in September 2021, with the competition held in July 2022. In 2021, I was a senior member of the team and went on to lead the Embedded Systems and Software team in 2022.
+        </p>
+        <p>
+          Our first goal in August 2021 was to publicize the team and generate excitement about robotics. We achieved this by hosting a Robotics Workshop, where we taught 120 students how to build their own IoT-enabled line-following robots, using a kit developed by my team and me.
+        </p>
+        <p>
+          A recruitment drive was then held to bring new members into the team. I recruited 20 members under me, with the number narrowing down to 6 by the end of October. I mentored and taught them Embedded C, Arduino, MATLAB, and debugging concepts, along with topics like sensor fusion, path planning, obstacle avoidance, and best practices using Git.
+        </p>
+        <p>
+          While helping the new recruits get up to speed, the mechanical team began designing the robot according to the competition's problem statement. I started testing various control methods, microcontrollers, algorithms, and also took on side projects to help fund the team.
+        </p>
+        <p>
+          Additionally, I developed low-level code modules to enable us to focus on higher-level software later. These modules were designed to interact with every hardware component available to the team, including RoboClaw Motor Drivers, Benewake LiDAR sensors (TF02, TF03, TF Mini, TF Luna), SICK laser distance sensors, VNH2SP30 motor drivers, custom in-house motor control boards, pneumatic controls, gyroscopes, and more.
+        </p>
+
+        <!-- Autonomous Drivetrain Development -->
+        <h3>Autonomous Drivetrain Development</h3>
+        <p>
+          As the competition grew closer, I started developing autonomous software for the drivetrain.
+        </p>
+        <figure class="text-center my-4">
+          <video class="embed-responsive-item" controls autoplay loop muted>
+            <source src="assets/videos/drivetrain_testing.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <figcaption>Drivetrain testing with autonomous software.</figcaption>
+        </figure>
+        <p>
+          I tested various paths for the competition using a cascaded PID controller to control acceleration, velocity, and position of the drivetrain in three degrees of freedom (X, Y, and Yaw). I used a quadratic function to calculate the optimal path for the robot, as seen in the video.
+        </p>
+        <p>
+          I faced issues like an uneven surface, causing the LiDAR sensors to detect above the arena fence, giving false distance values. Another challenge was drift from the Inertial Measurement Unit (IMU). I solved these issues by filtering out spikes in the data over a large interval for the laser measurements and using two IMUs mounted on damping materials in opposite orientations. This configuration helped balance out the drift, achieving a resultant drift of less than 1 degree over 5 minutes.
+        </p>
+      </div>
+
+        <!-- Side Cards -->
+        <div class="col-lg-4">
+          <!-- Theme Card -->
+          <div class="card theme-info bg-dark text-light mb-4" onclick="toggleContent(this)">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/TQLF8w71ePk?si=Ve2vAFkXSQ6KwAF8&amp;start=96" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+             <div class="card-body">
+              <h5>Theme: ABU Robocon 2022 - Lagori <i class="fas fa-chevron-down"></i></h5>
+              <div class="collapse-content">
+                <p><strong>ABU Robocon 2022</strong> was held in Delhi, India, inspired by the traditional game of <strong>Lagori</strong>.</p>
+                <ul>
+                  <li><strong>Seeker:</strong> Breaks and rebuilds stone piles while carrying a ball on its head.</li>
+                  <li><strong>Hitter:</strong> Attempts to knock the ball off the Seeker’s head with their own balls.</li>
+                  <li>Points are awarded based on stones displaced and rebuilt.</li>
+                </ul>
+                <figure class="text-center my-3">
+                  <img src="assets/images/Robocon22_R2/balls.jpg" class="img-fluid" alt="Lagori Balls">
+                  <figcaption>Lagori game setup.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+
+        <!-- Microcontrollers Card -->
+        <div class="card bg-dark text-light mb-4">
+          <div class="card-body">
+            <h4 class="card-title">Microcontrollers Evaluated</h4>
+            <p>These microcontrollers were tested to determine the best fit, balancing ease of use for new members and performance requirements:</p>
+
+            <!-- AtMega 2560 -->
+            <div class="microcontroller-info mt-4" onclick="toggleContent(this)">
+              <h5>AtMega 2560 <i class="fas fa-chevron-down"></i></h5>
+              <div class="collapse-content">
+                <p><strong>Architecture:</strong> 8-bit AVR RISC</p>
+                <p><strong>Clock Speed:</strong> Up to 16 MHz</p>
+                <p><strong>Memory:</strong> 256 KB Flash, 8 KB SRAM</p>
+                <p><strong>Features:</strong> Extensive I/O, PWM; suited for control tasks.</p>
+              </div>
+            </div>
+
+            <!-- AVR128DA48 -->
+            <div class="microcontroller-info mt-4" onclick="toggleContent(this)">
+              <h5>AVR128DA48 <i class="fas fa-chevron-down"></i></h5>
+              <div class="collapse-content">
+                <p><strong>Architecture:</strong> 8-bit AVR</p>
+                <p><strong>Clock Speed:</strong> 24 MHz</p>
+                <p><strong>Features:</strong> High-speed I/O, multi-channel ADC; excellent power efficiency.</p>
+              </div>
+            </div>
+
+            <!-- STM32F407VG -->
+            <div class="microcontroller-info mt-4" onclick="toggleContent(this)">
+              <h5>STM32F407VG <i class="fas fa-chevron-down"></i></h5>
+              <div class="collapse-content">
+                <p><strong>Architecture:</strong> 32-bit ARM Cortex-M4</p>
+                <p><strong>Clock Speed:</strong> 168 MHz</p>
+                <p><strong>Features:</strong> DSP, high-speed comms, versatile peripherals; suited for intensive tasks.</p>
+              </div>
+            </div>
+
+            <!-- STM32F103C8T6 -->
+            <div class="microcontroller-info mt-4" onclick="toggleContent(this)">
+              <h5>STM32F103C8T6 <i class="fas fa-chevron-down"></i></h5>
+              <div class="collapse-content">
+                <p><strong>Architecture:</strong> ARM Cortex-M3</p>
+                <p><strong>Clock Speed:</strong> 72 MHz</p>
+                <p><strong>Features:</strong> Cost-effective; balances performance with flexibility.</p>
+              </div>
+            </div>
+
+            <!-- AtMega 128P -->
+            <div class="microcontroller-info mt-4" onclick="toggleContent(this)">
+              <h5>AtMega 128P <i class="fas fa-chevron-down"></i></h5>
+              <div class="collapse-content">
+                <p><strong>Architecture:</strong> 8-bit AVR</p>
+                <p><strong>Clock Speed:</strong> 16 MHz</p>
+                <p><strong>Features:</strong> Low-power operation; suitable for simpler control tasks.</p>
+              </div>
+            </div>
+
+            <!-- ESP8266 -->
+            <div class="microcontroller-info mt-4" onclick="toggleContent(this)">
+              <h5>ESP8266 <i class="fas fa-chevron-down"></i></h5>
+              <div class="collapse-content">
+                <p><strong>Architecture:</strong> 32-bit Tensilica</p>
+                <p><strong>Clock Speed:</strong> 80 MHz</p>
+                <p><strong>Features:</strong> Wi-Fi capabilities; tested for wireless interfacing.</p>
+              </div>
+            </div>
+
+            <!-- ESP32-S3 -->
+            <div class="microcontroller-info mt-4" onclick="toggleContent(this)">
+              <h5>ESP32-S3 <i class="fas fa-chevron-down"></i></h5>
+              <div class="collapse-content">
+                <p><strong>Architecture:</strong> 32-bit dual-core Xtensa</p>
+                <p><strong>Clock Speed:</strong> Up to 240 MHz</p>
+                <p><strong>Features:</strong> Enhanced communication and high-performance computing; explored for controller interfacing.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Toggle open class for expanding cards
+    function toggleContent(element) {
+      element.classList.toggle('open');
+    }
+  </script>
+</body>
+
+</html>
