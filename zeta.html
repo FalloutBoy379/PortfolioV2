@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zeta 3D Printer</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">Ansh Mehta</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="assets/docs/Resume_Portfolio.pdf">Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content Section -->
+  <section class="container my-5">
+    <div class="row">
+      <!-- Main Content -->
+      <div class="col-lg-8">
+        <h2 class="section-title">Zeta 3D Printer</h2>
+        <p class="lead">
+          The Zeta 3D Printer is an advanced, high-precision 3D printer capable of producing ultra-fine details using a UV LED projection system. My contributions were pivotal in developing firmware, enhancing print quality, and upgrading the Zeta model for 4K capabilities.
+        </p>
+
+        <!-- My Role and Contributions -->
+        <h3>My Role and Contributions</h3>
+        <p>
+          My primary responsibility involved writing low-level firmware in Embedded C to control essential components, including stepper motors for multi-axis control, laser distance sensors, door sensors, and aesthetic LEDs for user feedback. The firmware was designed to support complex multitasking, allowing synchronous operation of various components without blocking tasks.
+        </p>
+        <p>
+          I created a custom serial command system to receive commands from a Linux-based control system, developed in Qt (C++), and displayed on a touchscreen UI. This system allowed efficient communication between the embedded firmware and control software, significantly enhancing user interaction and control over the printing process.
+        </p>
+
+        <!-- Print Quality Enhancement -->
+        <h3>Enhancing Print Quality</h3>
+        <p>
+          I implemented image processing techniques to minimize visible lines on fine prints, providing a smoother surface finish. This was achieved by processing the projected images, allowing the UV LED projector to display refined images that improved print resolution. Additionally, I addressed tuning issues reported by international clients, optimizing the firmware in response to feedback.
+        </p>
+
+        <!-- Zeta 4K Upgrade and Client Support -->
+        <h3>Zeta 4K Upgrade and Client Support</h3>
+        <p>
+          With the release of the Zeta 4K model, I developed firmware to interface with a 4K UV LED Projector, allowing higher-resolution prints due to the increased pixel density. During my time, a Zeta 4K unit was shipped to a client in China, and I was responsible for resolving any bugs, including an issue where the printer wouldn’t immediately accept new parameter settings. I scheduled and led meetings with the client, pushing remote firmware updates as needed.
+        </p>
+
+        <!-- Linux Executables in Qt -->
+        <h3>Developing Linux Executables in Qt</h3>
+        <p>
+          I created production-ready Linux executables for the Zeta control software using Qt and CMake, packaging the software and dependencies into a single executable for efficient deployment. This approach streamlined the installation process and ensured compatibility with the client's systems.
+        </p>
+
+        <!-- Product Page Link -->
+        <p>Learn more about the Zeta 3D Printer on the official <a href="https://amprototyping.com/index.php/product/zeta-3d-printer/" target="_blank">AM Prototyping Labs product page</a>.</p>
+      </div>
+
+      <!-- Side Cards -->
+      <div class="col-lg-4">
+        <!-- Project Image -->
+        <div class="card bg-dark text-light mb-4">
+          <img src="assets/images/Zeta/Zeta_Main.jpg" class="card-img-top" alt="Zeta 3D Printer">
+          <div class="card-body">
+            <p class="text-center">The Zeta 3D Printer</p>
+          </div>
+        </div>
+
+        <div class="card bg-dark text-light mb-4">
+            <img src="assets/images/Zeta/JMAIIE_2024.jpg" class="card-img-top" alt="Zeta 3D Printer">
+            <div class="card-body">
+              <p class="text-center">Zeta 4K at JMAIIE 2024</p>
+            </div>
+          </div>
+
+        <!-- Project Video -->
+        <div class="card bg-dark text-light mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Watch the Zeta 3D Printer in Action</h5>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/xnv81pC7L1A" title="Zeta 3D Printer Overview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <!-- Technology Card -->
+        <div class="card bg-dark text-light mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Technologies Used</h5>
+            <ul>
+              <li><strong>Embedded C</strong>: Low-level firmware for motor control and sensor integration.</li>
+              <li><strong>Qt (C++)</strong>: Control software development for a Linux-based UI.</li>
+              <li><strong>4K UV LED Projector</strong>: Integration for ultra-high-resolution 3D printing.</li>
+              <li><strong>CMake</strong>: Packaging and deployment of Linux executables.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Client Testimonials or Challenges -->
+        <div class="card bg-dark text-light mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Client Experience</h5>
+            <p>Collaborated with international clients in China and Germany, addressing real-time issues and implementing tuning improvements based on their feedback.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
