@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team KJSCE Robocon 2021: Arrow in Pot</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .info-card { background-color: #1a1a1a; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; transition: 0.3s ease; cursor: pointer; }
+    .info-card:hover { transform: translateY(-3px); box-shadow: 0 4px 15px rgba(0,255,255,0.2); }
+    .collapse-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .open .collapse-content { max-height: 500px; }
+    .collapse-toggle i { transition: transform 0.3s ease; }
+    .open .collapse-toggle i { transform: rotate(180deg); }
+    .highlight { background-color: #222; border-left: 4px solid #00FFFF; padding: 1rem; margin-bottom: 1.5rem; }
+    h3.section-header { color: #00FFFF; margin-top: 2rem; font-weight: 600; }
+    p { line-height: 1.6; margin-bottom: 1rem; }
+    .tech-list li { margin-bottom: 0.5rem; }
+  </style>
+</head>
+
+<body class="bg-dark text-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+    <a class="navbar-brand" href="#">Ansh Mehta</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="assets/docs/Resume_Portfolio.pdf">Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="container my-5">
+    <div class="row">
+      <!-- Main Narrative Column -->
+      <div class="col-lg-8">
+        <h2 class="section-title text-center text-uppercase mb-4" style="color:#00FFFF;">Team KJSCE Robocon 2021: Arrow in Pot</h2>
+
+        <div class="highlight">
+          Unveiled in early 2021, “Arrow in Pot” challenged us to build an autonomous robot capable of navigating a maze of crates, discovering a hidden arrow, and depositing it into a pot with millimeter precision. This is the story of how sensor fusion, real-time planning, and unyielding teamwork brought our vision to life.
+        </div>
+
+        <!-- Section: Early Tests & Realizations -->
+        <h3 class="section-header">Early Tests &amp; Realizations</h3>
+        <p>
+          The first prototype rolled onto our makeshift arena with cautious optimism. A wall of crates hid the target arrow, and as the robot crept forward, onboard sensors scanned furiously—only to produce erratic readings. That pause in motion was our first wake-up call: in high-stakes autonomy, data integrity is everything.
+        </p>
+
+        <!-- Section: Sensor Fusion & IMU Filtering -->
+        <h3 class="section-header">Sensor Fusion &amp; IMU Filtering</h3>
+        <p>
+          To conquer noisy motion data, I installed dual MPU9250 IMUs on damping mounts, feeding raw accelerations and gyro readings into a hand-crafted Extended Kalman Filter on the STM32F407VG. Over multiple runs, the filter adapted to tossing out spikes and drift, delivering stable orientation estimates accurate to within one degree—even under vibration and abrupt turns.
+        </p>
+
+        <!-- Section: Environmental Scanning & LiDAR Integration -->
+        <h3 class="section-header">Environmental Scanning &amp; LiDAR Integration</h3>
+        <p>
+          Parallel to orientation, spatial awareness came from a hybrid LiDAR array: a SICK DT35 for long-range sweeps and Benewake TF02/TF03 sensors for close-in details. I wrote C drivers that applied median and low-pass filters at 40 Hz, converting noisy point returns into crisp 3D obstacle maps. Suddenly, phantom crates vanished, and open pathways glowed clearly on our displays.
+        </p>
+
+        <!-- Section: Path Planning & Control -->
+        <h3 class="section-header">Path Planning &amp; Control</h3>
+        <p>
+          With reliable maps, I shifted focus to navigation. On the Atmega2560’s bare-metal C environment, I implemented A* search on a dynamic grid, recalculating the fastest route whenever sensor data shifted. Pilot tests in MATLAB helped tune our cascaded PID loops on an STM32F103C8T6—balancing responsiveness and stability across X, Y, and yaw control axes.
+        </p>
+
+        <!-- Section: Architecture & Fail-Safe Design -->
+        <h3 class="section-header">Architecture &amp; Fail-Safe Design</h3>
+        <p>
+          The brain of our robot was distributed: AVR units handled motor outputs, STM32 cores monitored system health, and a Jetson Nano ran ROS-based vision tasks. A custom UART protocol—complete with headers, payloads, and CRC-8 checks—ensured sub-millisecond messaging and prioritized critical E-Stop commands. Real-time current sensing via ACS712 modules and hardware watchdogs on the STM32 delivered safety safeguards, cutting power within fifty milliseconds during overcurrent events.
+        </p>
+
+        <!-- Section: Agile Development & CI/CD -->
+        <h3 class="section-header">Agile Development &amp; CI/CD</h3>
+        <p>
+          Our workflow mirrored professional software teams: Git feature branches, peer reviews, and two-week sprints. We built automated test benches using the Unity Test Framework and Bash scripts, catching regressions before they reached the hardware. Live sprint demos exposed issues—Jetson CPU spikes blocking UART or mismatched data formats—allowing us to iterate rapidly in the lab.
+        </p>
+
+        <!-- Section: Match Day -->
+        <h3 class="section-header">Match Day</h3>
+        <p>
+          On competition day, the robot awakened under harsh lighting and uneven flooring. It slid into motion, recalculated around crates, pinpointed the arrow, and deposited it into the pot with millimeter-level accuracy. The crowd’s cheers faded into the background when suddenly, at the final second, an ACS712 threshold misalignment tripped our emergency stop—ending a near-perfect run but underscoring our commitment to safety.
+        </p>
+
+        <!-- Section: Lessons & Legacy -->
+        <h3 class="section-header">Lessons &amp; Legacy</h3>
+        <p>
+          The Arrow in Pot journey was more than a competition—it was a masterclass in merging hardware grit with software craftsmanship. It taught me that robust autonomy depends on trust in every sensor reading, resilience in every code path, and humility in every setback. Those principles now drive every automation challenge I embrace.
+        </p>
+      </div>
+
+      <!-- Sidebar Info Cards -->
+      <div class="col-lg-4">
+        <div class="info-card" onclick="toggleContent(this)">
+          <h5 class="d-flex justify-content-between">Tech &amp; Tools <span class="collapse-toggle"><i class="fas fa-chevron-down"></i></span></h5>
+          <div class="collapse-content mt-2">
+            <ul class="tech-list pl-3">
+              <li><strong>Languages:</strong> C, C++, Python, MATLAB</li>
+              <li><strong>Microcontrollers:</strong> Atmega328p/2560, STM32F103/F407 (CMSIS & HAL)</li>
+              <li><strong>SBC:</strong> Nvidia Jetson Nano (Ubuntu 18.04, ROS Melodic)</li>
+              <li><strong>Sensors:</strong> MPU9250 IMUs, SICK LMS200, Benewake TF02/TF03 LiDARs</li>
+              <li><strong>Controls:</strong> Cascaded PID, ACS712 current sensing, emergency E-Stop</li>
+              <li><strong>Frameworks:</strong> FreeRTOS, Unity Test Framework, ROS</li>
+              <li><strong>Tools:</strong> Git, MATLAB/Simulink, Qt Creator, OpenCV (C++)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="info-card" onclick="toggleContent(this)">
+          <h5 class="d-flex justify-content-between">Theme Snapshot <span class="collapse-toggle"><i class="fas fa-chevron-down"></i></span></h5>
+          <div class="collapse-content mt-2">
+            <p>
+              <strong>Objective:</strong> Autonomously locate, retrieve, and deposit an arrow under dynamic obstacles.
+              <br>
+              <strong>Challenges:</strong> Noisy sensors, variable lighting, uneven surfaces, real-time replanning.
+              <br>
+              <strong>Outcome:</strong> Achieved millimeter accuracy in navigation and placement; learned critical safety design lessons.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    function toggleContent(el) { el.classList.toggle('open'); }
+  </script>
+</body>
+
+</html>
