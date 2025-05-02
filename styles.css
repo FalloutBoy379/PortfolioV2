@@ -209,7 +209,11 @@ body {
     overflow: hidden;
     background-color: #1a1a1a; /* Match background to card */
     padding: 0 !important; /* Ensure no padding around the image */
-    border-bottom: 2px solid #00FFFF !important;
+    /* border-bottom: 2px solid #00FFFF !important; */
+  }
+
+  .project-card:hover .card-img-container {
+    border-bottom: 2px solid #00FFFF !important; /* Neon glow effect on hover */
   }
   
   .card-img-container img {
@@ -270,7 +274,7 @@ body {
   /* Image container for hover effect */
   .card-img-container {
     overflow: hidden !important;
-    border-bottom: 2px solid #00FFFF !important;
+    /* border-bottom: 2px solid #00FFFF !important; */
     transition: border-color 0.3s !important;
   }
   

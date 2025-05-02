@@ -217,12 +217,11 @@
       <p class="text-muted text-center mt-2">RRT* planner in action: path from start to goal around a spherical obstacle.</p>
     </section>
 
-    <!-- 6. Simulator Visualization -->
+    <!-- 6. Simulator & Visualizer -->
     <section class="mb-5">
-      <h2>5. Simulator Visualization</h2>
+      <h2>5. Simulator & Visualizer</h2>
       <p>
-        A desktop-based simulator replicates the workspace and allows for trajectory planning tests without hardware, showing cable attachment points, obstacles, and target waypoints.
-      </p>
+        A desktop-based simulator replicates the workspace and allows for trajectory planning tests without hardware, showing cable attachment points, obstacles, and target waypoints. When connected to the robot, the simulator automatically becomes a visualizer, and displays the actual robot position using data from the motion capture SDK, along with the expected position as calculated from the encoders. This setup thus allows for initial tuning of the sensors without any additional configuration.      </p>
       <figure class="text-center mt-3">
         <img src="assets/images/MCCR/Simulator.png" class="img-fluid rounded" alt="Workspace simulator interface">
         <figcaption class="text-muted">Simulation GUI showing workspace, calculated rope lengths, and calculated position vs actual location</figcaption>

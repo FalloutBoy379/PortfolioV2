@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-42WERCMLWM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
+    gtag('config', 'G-42WERCMLWM');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4-Wire Bioimpedance Analyzer | Ansh Mehta</title>
+
+  <!-- Bootstrap & Fonts -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0d0d0d;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar, footer {
+      background-color: #111 !important;
+    }
+    .navbar-brand { color: #00FFFF !important; }
+    .nav-link { color: #e0e0e0 !important; }
+    .jumbotron {
+      background: url('assets/images/BIA/banner.jpg') center/cover no-repeat;
+      color: #fff;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+      border-radius: 0;
+      margin-bottom: 0;
+    }
+    h2, h3 { color: #00FFFF; }
+    a { color: #00FFFF; }
+    a:hover { text-decoration: underline; }
+    .img-fluid {
+      max-height: 400px;
+      object-fit: contain;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      color: #00FFFF;
+    }
+    .layout-img { max-height: 700px; }
+    .video-container iframe,
+    model-viewer {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      display: block;
+      margin: 1rem auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    table th, table td {
+      border: 1px solid #333;
+      padding: 0.5rem;
+      text-align: center;
+      font-weight: 300;
+    }
+    table th {
+      background: #111;
+      color: #00FFFF;
+    }
+    footer {
+      color: #888;
+      padding: 20px 0;
+      text-align: center;
+    }
+    footer a { color: #00FFFF; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <a class="navbar-brand" href="#">Ansh Mehta</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="assets/docs/Resume_Portfolio.pdf">Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Jumbotron -->
+  <div class="jumbotron jumbotron-fluid text-center">
+    <div class="container">
+      <h1 class="display-4">4-Wire Bioimpedance Analyzer</h1>
+      <p class="lead">STM32F411CEU6 + AD5941 switch-matrix for precise tissue impedance measurements</p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container py-5">
+
+    <!-- Abstract -->
+    <section id="abstract" class="mb-5">
+      <h2 class="section-title">Abstract</h2>
+      <p>This project implements four-wire bioimpedance analysis (BIA) using an STM32F411CEU6 microcontroller and an AD5941 analog front end. By routing excitation through CE0 and switching sense electrodes via AIN1/AIN2/AIN3, we achieve measurements with <1% error across frequencies from 100 Hz to 50 kHz.</p>
+    </section>
+
+    <!-- Motivation & Overview -->
+    <section id="overview" class="mb-5">
+      <h2 class="section-title">Motivation &amp; Overview</h2>
+      <p>BIA is widely used for body composition and tissue characterization. Four-wire measurement eliminates lead resistance errors inherent in two-wire methods, improving accuracy. We designed a compact wearable PCB (40 mm×40 mm) to switch between electrode pairs and capture impedance magnitude and phase in real time.</p>
+    </section>
+
+    <!-- Hardware -->
+    <section id="hardware" class="mb-5">
+      <h2 class="section-title">Hardware Components</h2>
+      <ul>
+        <li><strong>AD5941:</strong> Onboard DFT, programmable switch-matrix, calibration features, wide frequency range.</li>
+        <li><strong>AP7215:</strong> 3.3 V regulator with 55 μA quiescent current (vs. 5 mA for AMS1117).</li>
+        <li><strong>STM32F411CEU6:</strong> Chosen for available dev hardware and proven peripheral support.</li>
+        <li><strong>Solder Bridges:</strong> LED disable and BOOT0 selection for power savings and programming flexibility.</li>
+        <li><strong>Edge Connector:</strong> SWD programming interface.</li>
+        <li><strong>Battery Slot:</strong> Fits 100 mAh Li-ion for up to ~20 h operation.</li>
+        <li><strong>Wearable PCB:</strong> 40 × 40 mm form factor with 1 mm square pads for electrode connectors.</li>
+      </ul>
+    </section>
+
+    <!-- Circuit Design -->
+    <section id="circuit" class="mb-5">
+      <h2 class="section-title">Circuit Design</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Schematic</h3>
+          <figure class="text-center">
+            <img src="assets/images/BIA/Schematic_HustleTask_Nocturnal_2025-02-25.svg" class="img-fluid rounded" alt="AD5941 BIA Schematic">
+            <figcaption class="text-muted">AD5941 switch-matrix and power circuitry</figcaption>
+          </figure>
+        </div>
+        <div class="col-md-6">
+          <h3>Board Layout</h3>
+          <figure class="text-center">
+            <img src="assets/images/BIA/PCB_PCB_HustleTask_Nocturnal_2025-02-25.svg" class="img-fluid layout-img rounded" alt="PCB Layout">
+            <figcaption class="text-muted">Compact 40 × 40 mm wearable PCB</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Battery Life Estimation -->
+    <section id="battery-life" class="mb-5">
+      <h2 class="section-title">Battery Life Estimation</h2>
+      <p>Using <em>Battery Life = Battery Capacity (mAh) / Current Consumption (mA)</em>:</p>
+      <ul>
+        <li><strong>Active (40 mA):</strong> 100 mAh / 40 mA ≈ 2.5 h</li>
+        <li><strong>Mixed (avg 22.5 mA):</strong> 100 mAh / 22.5 mA ≈ 4.4 h</li>
+        <li><strong>Idle (5 mA):</strong> 100 mAh / 5 mA = 20 h</li>
+      </ul>
+    </section>
+
+    <!-- Switching Technique -->
+    <section id="switching-technique" class="mb-5">
+      <h2 class="section-title">Switching Technique</h2>
+      <p>The AD5941 SWCON register configures excitation (CE0) and sense pairs (AIN1, AIN2, AIN3):</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Measurement Pair</th><th>Excitation (CE0)</th><th>V+</th><th>V−</th><th>Return</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Pair 1</td><td>CE0</td><td>AIN1</td><td>AIN2</td><td>AIN3</td></tr>
+          <tr><td>Pair 2</td><td>CE0</td><td>AIN1</td><td>AIN3</td><td>AIN2</td></tr>
+          <tr><td>Pair 3</td><td>CE0</td><td>AIN2</td><td>AIN3</td><td>AIN1</td></tr>
+          <tr><td>Calibration</td><td>CE0</td><td>RCAL+</td><td>RCAL−</td><td>AIN3</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Test Methodology -->
+    <section id="test-methodology" class="mb-5">
+      <h2 class="section-title">Test Methodology</h2>
+      <ol>
+        <li>Verify SPI comms: read register 0x0404 ⇒ expect 0x5502.</li>
+        <li>Switch to calibration mode (RCAL = 1 kΩ), measure at 1 kHz, compute gain/phase corrections.</li>
+        <li>Test known resistors (500 Ω, 1 kΩ, 10 kΩ) across 100 Hz–50 kHz.</li>
+        <li>Compare measured vs. expected magnitude & phase.</li>
+      </ol>
+    </section>
+
+    <!-- Validation & Development -->
+    <section id="validation-development" class="mb-5">
+      <h2 class="section-title">Validation &amp; Development</h2>
+      <p><strong>Validation on Human Body:</strong> Electrodes placed on forearm and calf yielded tissue impedance profiles matching literature values, confirming safe (<10 μA) and accurate performance across all measured frequencies.</p>
+      <p><strong>Design & Development Process:</strong> A custom AD5941 driver was written in C after vendor libraries proved unreliable. An SWD edge connector was added in the second PCB revision for easier programming. All design choices—component selection, layout, and guarding—adhere to IEC 60601 medical safety standards.</p>
+    </section>
+
+    <!-- Resources & Links -->
+    <section id="resources" class="mb-5 text-center">
+      <h2 class="section-title">Resources</h2>
+      <p>
+        <a href="https://github.com/FalloutBoy379/Impedance-Analyzer" target="_blank">GitHub Repository</a> |
+        <a href="assets/docs/README.pdf" target="_blank">Detailed README</a>
+      </p>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Ansh Mehta — <a href="mailto:ansh@bu.edu">ansh@bu.edu</a></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

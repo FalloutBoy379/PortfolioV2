@@ -2,36 +2,35 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-42WERCMLWM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-42WERCMLWM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-42WERCMLWM');
+  </script>
 
-  gtag('config', 'G-42WERCMLWM');
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ansh Mehta | Portfolio</title>
 
-    <!-- Open Graph Meta Tags for Social Sharing -->
-    <meta property="og:title" content="Ansh Mehta | Portfolio">
-    <meta property="og:description" content="Explore my portfolio, featuring projects in Robotics, Embedded Systems, and Control Systems.">
-    <meta property="og:image" content="assets/images/Main.jpg">
-    <meta property="og:url" content="https://anshmmehta.com">
-    <meta property="og:type" content="website">
-  
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ansh Mehta | Portfolio">
-    <meta name="twitter:description" content="Explore my work in Robotics and Embedded Systems.">
-    <meta name="twitter:image" content="assets/images/Main.jpg">
+  <!-- Open Graph Meta Tags for Social Sharing -->
+  <meta property="og:title" content="Ansh Mehta | Portfolio">
+  <meta property="og:description" content="Explore my portfolio, featuring projects in Robotics, Embedded Systems, and Control Systems.">
+  <meta property="og:image" content="assets/images/Main.jpg">
+  <meta property="og:url" content="https://anshmmehta.com">
+  <meta property="og:type" content="website">
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ansh Mehta | Portfolio">
+  <meta name="twitter:description" content="Explore my work in Robotics and Embedded Systems.">
+  <meta name="twitter:image" content="assets/images/Main.jpg">
 
-    
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <base href="/">
+
   <style>
     .projects-grid {
       display: grid;
@@ -40,7 +39,6 @@
       margin-top: 2rem;
     }
     .project-card {
-      /* background: #ffffff; */
       border-radius: 8px;
       overflow: hidden;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -69,7 +67,7 @@
       margin-bottom: 0.5rem;
       font-size: 1.25rem;
     }
-    .project-card .bubbles {
+    .project-card .work-bubbles {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
@@ -82,26 +80,17 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <a class="navbar-brand" href="#">Ansh Mehta</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About Me</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#courses">Courses</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#experience">Experience</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/assets/docs/Resume_Portfolio.pdf">Resume</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="/assets/docs/Resume_Portfolio.pdf">Resume</a></li>
       </ul>
     </div>
   </nav>
@@ -139,8 +128,9 @@
       <span class="filter-btn" data-filter="mechanical">Mechanical Design</span>
     </div>
 
+    <!-- Row 1 -->
     <div class="projects-grid">
-      <!-- Project 1 -->
+      <!-- Motion Capture Calibration Robot -->
       <div class="project-card" data-category="electronics software firmware controls mechanical">
         <a href="mccr.html" class="project-link">
           <div class="card">
@@ -149,7 +139,7 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">Motion Capture Calibration Robot</h5>
-              <div class="work-bubbles mt-3">
+              <div class="work-bubbles">
                 <span class="bubble electronics">Electronics</span>
                 <span class="bubble software">Software</span>
                 <span class="bubble firmware">Firmware</span>
@@ -160,20 +150,18 @@
           </div>
         </a>
       </div>
-
-      <!-- Project 2 -->
+      <!-- Soft Robotic Starfish -->
       <div class="project-card" data-category="electronics firmware mechanical">
         <a href="starfish.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
               <video class="card-img-top" autoplay loop muted playsinline>
                 <source src="assets/images/Starfish/submission (1).mp4" type="video/mp4">
-                Your browser does not support the video tag.
               </video>
             </div>
             <div class="card-body">
               <h5 class="card-title">Soft Robotic Starfish</h5>
-              <div class="work-bubbles mt-3">
+              <div class="work-bubbles">
                 <span class="bubble electronics">Electronics</span>
                 <span class="bubble firmware">Firmware</span>
                 <span class="bubble mechanical">Mechanical Design</span>
@@ -182,24 +170,19 @@
           </div>
         </a>
       </div>
-
-      <!-- Project 3 -->
-      <div class="project-card" data-category="electronics software firmware mechanical">
-        <a href="wristrehab.html" class="project-link">
+      <!-- 4-Wire Bioimpedance Analyzer -->
+      <div class="project-card" data-category="electronics firmware software">
+        <a href="bia.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
-              <video class="card-img-top" autoplay loop muted playsinline>
-                <source src="assets/images/Wrist Rehab/8mb.video-eQc-0f6aAQAN.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
+              <img src="assets/images/BIA/PCB_PCB_HustleTask_Nocturnal_2025-02-25.svg" class="card-img-top" alt="4-Wire Bioimpedance Analyzer PCB Layout">
             </div>
             <div class="card-body">
-              <h5 class="card-title">Wrist Rehabilitation Robot</h5>
-              <div class="work-bubbles mt-3">
+              <h5 class="card-title">4-Wire Bioimpedance Analyzer</h5>
+              <div class="work-bubbles">
                 <span class="bubble electronics">Electronics</span>
-                <span class="bubble software">Software</span>
                 <span class="bubble firmware">Firmware</span>
-                <span class="bubble mechanical">Mechanical Design</span>
+                <span class="bubble software">Software</span>
               </div>
             </div>
           </div>
@@ -207,8 +190,9 @@
       </div>
     </div>
 
+    <!-- Row 2 -->
     <div class="projects-grid">
-      <!-- Project 4 -->
+      <!-- Swarm Robotics using ROS -->
       <div class="project-card" data-category="software controls">
         <a href="swarm.html" class="project-link">
           <div class="card">
@@ -217,7 +201,7 @@
             </div>
             <div class="card-body">
               <h5 class="card-title">Swarm Robotics using ROS</h5>
-              <div class="work-bubbles mt-3">
+              <div class="work-bubbles">
                 <span class="bubble software">Software</span>
                 <span class="bubble controls">Controls</span>
               </div>
@@ -225,20 +209,18 @@
           </div>
         </a>
       </div>
-
-      <!-- Project 5 -->
+      <!-- FTC Powerplay Robot – Matrix 20870 -->
       <div class="project-card" data-category="electronics software firmware controls">
         <a href="matrix.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
               <video class="card-img-top" autoplay loop muted playsinline>
                 <source src="assets/images/Matrix/8mb.video-1bV-sY7etS6b.mp4" type="video/mp4">
-                Your browser does not support the video tag.
               </video>
             </div>
             <div class="card-body">
-              <h5 class="card-title">FTC Powerplay Robot - Matrix 20870</h5>(APOC, Sydney - Finalist Allliance)
-              <div class="work-bubbles mt-3">
+              <h5 class="card-title">FTC Powerplay Robot – Matrix 20870</h5>
+              <div class="work-bubbles">
                 <span class="bubble electronics">Electronics</span>
                 <span class="bubble software">Software</span>
                 <span class="bubble firmware">Firmware</span>
@@ -248,22 +230,22 @@
           </div>
         </a>
       </div>
-
-      <!-- Project 6 -->
-      <div class="project-card" data-category="firmware controls">
-        <a href="ballLaunching.html" class="project-link">
+      <!-- Wrist Rehabilitation Robot -->
+      <div class="project-card" data-category="electronics software firmware mechanical">
+        <a href="wristrehab.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
               <video class="card-img-top" autoplay loop muted playsinline>
-                <source src="assets/images/FRC_Ball/FRC_Ball_Shooter.mp4" type="video/mp4">
-                Your browser does not support the video tag.
+                <source src="assets/images/Wrist Rehab/8mb.video-eQc-0f6aAQAN.mp4" type="video/mp4">
               </video>
             </div>
             <div class="card-body">
-              <h5 class="card-title">Autonomous Ball Launching Mechanism</h5>
-              <div class="work-bubbles mt-3">
+              <h5 class="card-title">Wrist Rehabilitation Robot</h5>
+              <div class="work-bubbles">
+                <span class="bubble electronics">Electronics</span>
+                <span class="bubble software">Software</span>
                 <span class="bubble firmware">Firmware</span>
-                <span class="bubble controls">Controls</span>
+                <span class="bubble mechanical">Mechanical Design</span>
               </div>
             </div>
           </div>
@@ -271,20 +253,20 @@
       </div>
     </div>
 
+    <!-- Row 3 -->
     <div class="projects-grid">
-      <!-- Project 7 -->
+      <!-- ABU Robocon 2022 – R2 -->
       <div class="project-card" data-category="electronics software firmware controls">
         <a href="Robocon2022_R2.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
               <video class="card-img-top" autoplay loop muted playsinline>
                 <source src="assets/images/Robocon22_R2/8mb.video-sFB-INxXNh6V.mp4" type="video/mp4">
-                Your browser does not support the video tag.
               </video>
             </div>
             <div class="card-body">
-              <h5 class="card-title">ABU Robocon 2022 - R2</h5>
-              <div class="work-bubbles mt-3">
+              <h5 class="card-title">ABU Robocon 2022 – R2</h5>
+              <div class="work-bubbles">
                 <span class="bubble electronics">Electronics</span>
                 <span class="bubble software">Software</span>
                 <span class="bubble firmware">Firmware</span>
@@ -294,20 +276,18 @@
           </div>
         </a>
       </div>
-
-      <!-- Project 8 -->
+      <!-- ABU Robocon 2022 – R1 -->
       <div class="project-card" data-category="electronics software firmware controls">
         <a href="under-construction.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
               <video class="card-img-top" autoplay loop muted playsinline>
                 <source src="assets/images/Robocon22_R1/8mb.video-1zF-NTlHXiwy.mp4" type="video/mp4">
-                Your browser does not support the video tag.
               </video>
             </div>
             <div class="card-body">
-              <h5 class="card-title">ABU Robocon 2022 - R1</h5>
-              <div class="work-bubbles mt-3">
+              <h5 class="card-title">ABU Robocon 2022 – R1</h5>
+              <div class="work-bubbles">
                 <span class="bubble electronics">Electronics</span>
                 <span class="bubble software">Software</span>
                 <span class="bubble firmware">Firmware</span>
@@ -317,20 +297,18 @@
           </div>
         </a>
       </div>
-
-      <!-- Project 9 -->
+      <!-- ABU Robocon 2021 – Throwing Robot -->
       <div class="project-card" data-category="electronics software firmware controls">
         <a href="under-construction.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
               <video class="card-img-top" autoplay loop muted playsinline>
                 <source src="assets/images/Robocon21_TR/8mb.video-4yD-pP6IqjTW.mp4" type="video/mp4">
-                Your browser does not support the video tag.
               </video>
             </div>
             <div class="card-body">
-              <h5 class="card-title">ABU Robocon 2021 - Throwing Robot</h5>
-              <div class="work-bubbles mt-3">
+              <h5 class="card-title">ABU Robocon 2021 – Throwing Robot</h5>
+              <div class="work-bubbles">
                 <span class="bubble electronics">Electronics</span>
                 <span class="bubble software">Software</span>
                 <span class="bubble firmware">Firmware</span>
@@ -342,59 +320,57 @@
       </div>
     </div>
 
+    <!-- Row 4 -->
     <div class="projects-grid">
-      <!-- Project 10 -->
+            <!-- Autonomous Ball Launching Mechanism -->
+            <div class="project-card" data-category="firmware controls">
+              <a href="ballLaunching.html" class="project-link">
+                <div class="card">
+                  <div class="card-img-container">
+                    <video class="card-img-top" autoplay loop muted playsinline>
+                      <source src="assets/images/FRC_Ball/FRC_Ball_Shooter.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Autonomous Ball Launching Mechanism</h5>
+                    <div class="work-bubbles">
+                      <span class="bubble firmware">Firmware</span>
+                      <span class="bubble controls">Controls</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+      <!-- x86 Assembly – Maze Solving Robot -->
       <div class="project-card" data-category="firmware">
         <a href="x86.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
               <video class="card-img-top" autoplay loop muted playsinline>
                 <source src="assets/images/8086_Maze/8mb.video-TSK-UoRoZCAH.mp4" type="video/mp4">
-                Your browser does not support the video tag.
               </video>
             </div>
             <div class="card-body">
-              <h5 class="card-title">x86 Assembly - Maze Solving Robot</h5>
-              <div class="work-bubbles mt-3">
+              <h5 class="card-title">x86 Assembly – Maze Solving Robot</h5>
+              <div class="work-bubbles">
                 <span class="bubble firmware">Firmware</span>
               </div>
             </div>
           </div>
         </a>
       </div>
-
-      <!-- Project 11 -->
-      <div class="project-card" data-category="electronics firmware controls">
-        <a href="under-construction.html" class="project-link">
-          <div class="card">
-            <div class="card-img-container">
-              <img src="assets/images/abu_robocon.jpg" class="card-img-top" alt="ABU Robocon 2022">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">ABU Robocon 2020</h5>
-              <div class="work-bubbles mt-3">
-                <span class="bubble electronics">Electronics</span>
-                <span class="bubble firmware">Firmware</span>
-                <span class="bubble controls">Controls</span>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Project 12 -->
+      <!-- Zeta DLP 3D Printer -->
       <div class="project-card" data-category="electronics software firmware">
         <a href="zeta.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
               <video class="card-img-top" autoplay loop muted playsinline>
                 <source src="assets/images/Zeta/Main_Show.mp4" type="video/mp4">
-                Your browser does not support the video tag.
               </video>
             </div>
             <div class="card-body">
               <h5 class="card-title">Zeta DLP 3D Printer</h5>
-              <div class="work-bubbles mt-3">
+              <div class="work-bubbles">
                 <span class="bubble electronics">Electronics</span>
                 <span class="bubble software">Software</span>
                 <span class="bubble firmware">Firmware</span>
@@ -405,388 +381,354 @@
       </div>
     </div>
 
+    <!-- Row 5 -->
     <div class="projects-grid">
-      <!-- Project 13 -->
-      <div class="project-card" data-category="electronics firmware controls mechanical">
-        <a href="under-construction_with_youtube.html" class="project-link">
-          <div class="card">
-            <div class="card-img-container">
-              <img src="assets/images/6DOF/IMG_20200709_213923.jpg" class="card-img-top" alt="Articulated 6 DOF Robotic Arm">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Articulated 6 DOF Robotic Arm</h5>
-              <div class="work-bubbles mt-3">
-                <span class="bubble electronics">Electronics</span>
-                <span class="bubble firmware">Firmware</span>
-                <span class="bubble controls">Controls</span>
-                <span class="bubble mechanical">Mechanical Design</span>
-              </div>
+    <!-- Project 13 -->
+    <div class="project-card" data-category="electronics firmware controls mechanical">
+      <a href="under-construction_with_youtube.html" class="project-link">
+        <div class="card">
+          <div class="card-img-container">
+            <img src="assets/images/6DOF/IMG_20200709_213923.jpg" class="card-img-top" alt="Articulated 6 DOF Robotic Arm">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Articulated 6 DOF Robotic Arm</h5>
+            <div class="work-bubbles mt-3">
+              <span class="bubble electronics">Electronics</span>
+              <span class="bubble firmware">Firmware</span>
+              <span class="bubble controls">Controls</span>
+              <span class="bubble mechanical">Mechanical Design</span>
             </div>
           </div>
-        </a>
-      </div>
-
-      <!-- Project 14 -->
-      <div class="project-card" data-category="electronics software firmware controls mechanical">
-        <a href="under-construction.html" class="project-link">
-          <div class="card">
-            <div class="card-img-container">
-              <img src="assets/images/Mobile Robotic Platform/IMG_20220504_004817.jpg" class="card-img-top" alt="Autonomous Mobile Robot">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Autonomous Mobile Robot</h5>
-              <div class="work-bubbles mt-3">
-                <span class="bubble electronics">Electronics</span>
-                <span class="bubble software">Software</span>
-                <span class="bubble firmware">Firmware</span>
-                <span class="bubble controls">Controls</span>
-                <span class="bubble mechanical">Mechanical Design</span>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Project 15 -->
-      <div class="project-card" data-category="electronics software firmware">
-        <a href="beast.html" class="project-link">
-          <div class="card">
-            <div class="card-img-container">
-              <video class="card-img-top" autoplay loop muted playsinline>
-                <source src="assets/images/Beast/Beast.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">BEAST Electric Delivery Truck</h5>
-              <div class="work-bubbles mt-3">
-                <span class="bubble electronics">Electronics</span>
-                <span class="bubble software">Software</span>
-                <span class="bubble firmware">Firmware</span>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="projects-grid">
-      <!-- Project 16 -->
-      <div class="project-card" data-category="electronics software firmware">
-        <a href="under-construction.html" class="project-link">
-          <div class="card">
-            <div class="card-img-container">
-              <video class="card-img-top" autoplay loop muted playsinline>
-                <source src="assets/images/ISAAC/ISAAC.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">ISAAC Electric Shuttle</h5>
-              <div class="work-bubbles mt-3">
-                <span class="bubble electronics">Electronics</span>
-                <span class="bubble software">Software</span>
-                <span class="bubble firmware">Firmware</span>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Project 17 -->
-      <div class="project-card" data-category="software firmware controls">
-        <a href="under-construction.html" class="project-link">
-          <div class="card">
-            <div class="card-img-container">
-              <video class="card-img-top" autoplay loop muted playsinline>
-                <source src="assets/images/Turret_Robu/Pellet_Vid.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Autonomous BB Pellet Turret</h5>
-              <div class="work-bubbles mt-3">
-                <span class="bubble software">Software</span>
-                <span class="bubble firmware">Firmware</span>
-                <span class="bubble controls">Controls</span>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Project 18 -->
-      <div class="project-card" data-category="electronics firmware controls">
-        <a href="under-construction.html" class="project-link">
-          <div class="card">
-            <div class="card-img-container">
-              <img src="assets/images/Mercury/image_2024-09-27_104021073.png" class="card-img-top" alt="Pneumatic Robot Quadruped">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Pneumatic Robot Quadruped</h5>
-              <div class="work-bubbles mt-3">
-                <span class="bubble electronics">Electronics</span>
-                <span class="bubble firmware">Firmware</span>
-                <span class="bubble controls">Controls</span>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="projects-grid">
-      <!-- Project 19 -->
-      <div class="project-card" data-category="electronics firmware controls mechanical">
-        <a href="under-construction.html" class="project-link">
-          <div class="card">
-            <div class="card-img-container">
-              <video class="card-img-top" autoplay loop muted playsinline>
-                <source src="assets/images/SCARA/WhatsApp Video 2024-09-27 at 11.05.09_42fcab70 (online-video-cutter.com).mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">SCARA Robotic Arm</h5>
-              <div class="work-bubbles mt-3">
-                <span class="bubble electronics">Electronics</span>
-                <span class="bubble firmware">Firmware</span>
-                <span class="bubble controls">Controls</span>
-                <span class="bubble mechanical">Mechanical Design</span>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Project 20 -->
-      <div class="project-card" data-category="electronics firmware">
-        <a href="under-construction.html" class="project-link">
-          <div class="card">
-            <div class="card-img-container">
-              <img src="assets/images/Rymo/image_2024-09-26_201504227.png" class="card-img-top" alt="Robotic Rehabilitation Companion">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Robotic Rehabilitation Companion</h5>
-              <div class="work-bubbles mt-3">
-                <span class="bubble electronics">Electronics</span>
-                <span class="bubble firmware">Firmware</span>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Project 21 -->
-      <div class="project-card" data-category="mechanical">
-        <a href="under-construction.html" class="project-link">
-          <div class="card">
-            <div class="card-img-container">
-              <img src="assets/images/Humanoid/frame.png" class="card-img-top" alt="Humanoid Robot Leg">
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Humanoid Robot Leg</h5>
-              <div class="work-bubbles mt-3">
-                <span class="bubble mechanical">Mechanical Design</span>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-<!-- Courses Section -->
-<section class="container my-5" id="courses">
-  <h2 class="section-title">Courses</h2>
-
-  <div id="coursesAccordion">
-    <div class="card">
-      <div class="card-header d-flex justify-content-between align-items-center" id="headingCollege1">
-        <h5 class="mb-0">
-          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseCollege1" 
-                  aria-expanded="true" aria-controls="collapseCollege1">
-            Boston University, College of Engineering
-          </button>
-        </h5>
-        <span class="chevron" data-toggle="collapse" data-target="#collapseCollege1" aria-expanded="true" 
-              aria-controls="collapseCollege1">&#9662;</span> <!-- Chevron element -->
-      </div>
-
-      <div id="collapseCollege1" class="collapse show" aria-labelledby="headingCollege1" data-parent="#coursesAccordion">
-        <div class="card-body">
-          <h3>MS Robotics and Autonomous Systems</h3>
-          <!-- <p><strong>GPA:</strong> 3.4/4.0</p> -->
-          <p><strong>Duration:</strong> September 2023 - December 2024</p>
-          <h4>Courses Taken:</h4>
-          <ul>
-            <li>Robot Motion Planning</li>
-            <li>Introduction to Embedded Systems</li>
-            <li>Cyberphysical Systems</li>
-            <li>Learning from Data</li>
-            <li>Advanced Engineering Mathematics</li>
-            <li>Medical Robotics</li>
-            <li>Soft Robotics</li>
-          </ul>
         </div>
-      </div>
+      </a>
     </div>
 
-    <div class="card">
-      <div class="card-header d-flex justify-content-between align-items-center" id="headingCollege2">
-        <h5 class="mb-0">
-          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseCollege2" 
-                  aria-expanded="false" aria-controls="collapseCollege2">
-            Mumbai University, K.J. Somaiya College of Engineering
-          </button>
-        </h5>
-        <span class="chevron" data-toggle="collapse" data-target="#collapseCollege2" aria-expanded="false" 
-              aria-controls="collapseCollege2">&#9662;</span> <!-- Chevron element -->
-      </div>
-
-      <div id="collapseCollege2" class="collapse" aria-labelledby="headingCollege2" data-parent="#coursesAccordion">
-        <div class="card-body">
-          <h3>BTech Electronics Engineering</h3>
-          <!-- <p><strong>GPA:</strong> 3.3/4.0</p> -->
-          <p><strong>Duration:</strong> August 2019 - May 2023</p>
-          <h4>Courses Taken:</h4>
-          <ul>
-            <li>Speech Processing and Applications</li>
-            <li>Embedded System Design</li>
-            <li>Robotics</li>
-            <li>3D Printing</li>
-            <li>Industrial Product Design</li>
-            <li>Industrial Standards</li>
-            <li>Digital Signal Processing</li>
-            <li>VLSI Design</li>
-            <li>Microprocessors and Peripherals</li>
-          </ul>
+    <!-- Project 14 -->
+    <div class="project-card" data-category="electronics software firmware controls mechanical">
+      <a href="under-construction.html" class="project-link">
+        <div class="card">
+          <div class="card-img-container">
+            <img src="assets/images/Mobile Robotic Platform/IMG_20220504_004817.jpg" class="card-img-top" alt="Autonomous Mobile Robot">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Autonomous Mobile Robot</h5>
+            <div class="work-bubbles mt-3">
+              <span class="bubble electronics">Electronics</span>
+              <span class="bubble software">Software</span>
+              <span class="bubble firmware">Firmware</span>
+              <span class="bubble controls">Controls</span>
+              <span class="bubble mechanical">Mechanical Design</span>
+            </div>
+          </div>
         </div>
-      </div>
+      </a>
+    </div>
+
+    <!-- Project 15 -->
+    <div class="project-card" data-category="electronics software firmware">
+      <a href="beast.html" class="project-link">
+        <div class="card">
+          <div class="card-img-container">
+            <video class="card-img-top" autoplay loop muted playsinline>
+              <source src="assets/images/Beast/Beast.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">BEAST Electric Delivery Truck</h5>
+            <div class="work-bubbles mt-3">
+              <span class="bubble electronics">Electronics</span>
+              <span class="bubble software">Software</span>
+              <span class="bubble firmware">Firmware</span>
+            </div>
+          </div>
+        </div>
+      </a>
     </div>
   </div>
-</section>
+</div>
 
+<!-- Row 6 -->
+<div class="projects-grid">
+    <!-- Project 16 -->
+    <div class="project-card" data-category="electronics software firmware">
+      <a href="under-construction.html" class="project-link">
+        <div class="card">
+          <div class="card-img-container">
+            <video class="card-img-top" autoplay loop muted playsinline>
+              <source src="assets/images/ISAAC/ISAAC.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">ISAAC Electric Shuttle</h5>
+            <div class="work-bubbles mt-3">
+              <span class="bubble electronics">Electronics</span>
+              <span class="bubble software">Software</span>
+              <span class="bubble firmware">Firmware</span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Project 17 -->
+    <div class="project-card" data-category="software firmware controls">
+      <a href="under-construction.html" class="project-link">
+        <div class="card">
+          <div class="card-img-container">
+            <video class="card-img-top" autoplay loop muted playsinline>
+              <source src="assets/images/Turret_Robu/Pellet_Vid.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Autonomous BB Pellet Turret</h5>
+            <div class="work-bubbles mt-3">
+              <span class="bubble software">Software</span>
+              <span class="bubble firmware">Firmware</span>
+              <span class="bubble controls">Controls</span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Project 18 -->
+    <div class="project-card" data-category="electronics firmware controls">
+      <a href="under-construction.html" class="project-link">
+        <div class="card">
+          <div class="card-img-container">
+            <img src="assets/images/Mercury/image_2024-09-27_104021073.png" class="card-img-top" alt="Pneumatic Robot Quadruped">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Pneumatic Robot Quadruped</h5>
+            <div class="work-bubbles mt-3">
+              <span class="bubble electronics">Electronics</span>
+              <span class="bubble firmware">Firmware</span>
+              <span class="bubble controls">Controls</span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="projects-grid">
+  <!-- Project 19 -->
+  <div class="project-card" data-category="electronics firmware controls mechanical">
+    <a href="under-construction.html" class="project-link">
+      <div class="card">
+        <div class="card-img-container">
+          <video class="card-img-top" autoplay loop muted playsinline>
+            <source src="assets/images/SCARA/WhatsApp Video 2024-09-27 at 11.05.09_42fcab70 (online-video-cutter.com).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">SCARA Robotic Arm</h5>
+          <div class="work-bubbles mt-3">
+            <span class="bubble electronics">Electronics</span>
+            <span class="bubble firmware">Firmware</span>
+            <span class="bubble controls">Controls</span>
+            <span class="bubble mechanical">Mechanical Design</span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Project 20 -->
+  <div class="project-card" data-category="electronics firmware">
+    <a href="under-construction.html" class="project-link">
+      <div class="card">
+        <div class="card-img-container">
+          <img src="assets/images/Rymo/image_2024-09-26_201504227.png" class="card-img-top" alt="Robotic Rehabilitation Companion">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Robotic Rehabilitation Companion</h5>
+          <div class="work-bubbles mt-3">
+            <span class="bubble electronics">Electronics</span>
+            <span class="bubble firmware">Firmware</span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Project 21 -->
+  <div class="project-card" data-category="mechanical">
+    <a href="under-construction.html" class="project-link">
+      <div class="card">
+        <div class="card-img-container">
+          <img src="assets/images/Humanoid/frame.png" class="card-img-top" alt="Humanoid Robot Leg">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Humanoid Robot Leg</h5>
+          <div class="work-bubbles mt-3">
+            <span class="bubble mechanical">Mechanical Design</span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+</div>
+  </section>
+
+  <!-- Courses Section -->
+  <section class="container my-5" id="courses">
+    <h2 class="section-title">Courses</h2>
+    <div id="coursesAccordion">
+      <!-- Boston University -->
+      <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center" id="headingCollege1">
+          <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseCollege1" 
+                    aria-expanded="true" aria-controls="collapseCollege1">
+              Boston University, College of Engineering
+            </button>
+          </h5>
+          <span class="chevron" data-toggle="collapse" data-target="#collapseCollege1" aria-expanded="true" 
+                aria-controls="collapseCollege1">&#9662;</span>
+        </div>
+        <div id="collapseCollege1" class="collapse show" aria-labelledby="headingCollege1" data-parent="#coursesAccordion">
+          <div class="card-body">
+            <h3>MS Robotics and Autonomous Systems</h3>
+            <p><strong>Duration:</strong> September 2023 - December 2024</p>
+            <h4>Courses Taken:</h4>
+            <ul>
+              <li>Robot Motion Planning</li>
+              <li>Introduction to Embedded Systems</li>
+              <li>Cyberphysical Systems</li>
+              <li>Learning from Data</li>
+              <li>Advanced Engineering Mathematics</li>
+              <li>Medical Robotics</li>
+              <li>Soft Robotics</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Mumbai University -->
+      <div class="card">
+        <div class="card-header d-flex justify-content-between align-items-center" id="headingCollege2">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseCollege2" 
+                    aria-expanded="false" aria-controls="collapseCollege2">
+              Mumbai University, K.J. Somaiya College of Engineering
+            </button>
+          </h5>
+          <span class="chevron" data-toggle="collapse" data-target="#collapseCollege2" aria-expanded="false" 
+                aria-controls="collapseCollege2">&#9662;</span>
+        </div>
+        <div id="collapseCollege2" class="collapse" aria-labelledby="headingCollege2" data-parent="#coursesAccordion">
+          <div class="card-body">
+            <h3>BTech Electronics Engineering</h3>
+            <p><strong>Duration:</strong> August 2019 - May 2023</p>
+            <h4>Courses Taken:</h4>
+            <ul>
+              <li>Speech Processing and Applications</li>
+              <li>Embedded System Design</li>
+              <li>Robotics</li>
+              <li>3D Printing</li>
+              <li>Industrial Product Design</li>
+              <li>Industrial Standards</li>
+              <li>Digital Signal Processing</li>
+              <li>VLSI Design</li>
+              <li>Microprocessors and Peripherals</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </section>
 
   <!-- Experience Section -->
   <section class="container my-5" id="experience">
     <h2 class="section-title">Experience</h2>
 
     <div class="experience-item">
-      <h3>Graduate Teaching Assistant - EK307 (Circuits), Boston University, Boston, MA</h3>
-      <p> Sept 2024 - December 2024</p>
-      <p><strong>Responsibilities:</strong></p>
+      <h3>Graduate Teaching Assistant – EK307 (Circuits), Boston University, Boston, MA</h3>
+      <p>Sept 2024 – Present</p>
       <ul>
-        <li>Assisted with grading and developing solutions for problems. </li>
+        <li>Assisted with grading and developing solutions for problems.</li>
         <li>Conducted dedicated sessions three times a week to answer questions and doubts.</li>
-        <li>Taught concepts like Thevenin & Norton, OpAmp Circuits, RLC Circuits, Frequency and Time Domain Analysis, and Phasors</li>
+        <li>Taught concepts like Thevenin & Norton, OpAmp circuits, RLC circuits, frequency & time domain analysis, and phasors.</li>
       </ul>
     </div>
 
     <div class="experience-item">
       <h3>Robotics Research Assistant, RASTIC, Boston University, Boston, MA</h3>
-      <p> June 2024 - December 2024</p>
-      <p><strong>Responsibilities:</strong></p>
+      <p>June 2024 – Present</p>
       <ul>
-        <li>Developed a Wi-Fi enabled motion-capture calibration robot using an ESP32 and precision winches, achieving sub-centimeter payload positioning.</li>
-        <li>Designed and hosted an embedded web server to display real-time telemetry, system diagnostics, and calibration controls to remote users.</li>
-        <li>Integrated closed-loop PIDF control, driven by real-time feedback, to maintain positional accuracy under dynamic loads.</li>
-        <li>Implemented secure OTA firmware updates, reducing onsite maintenance by 40%.</li>
-        <li>Modeled system dynamics in MATLAB and authored an RRT* planner for safe, efficient path generation across a 6 × 6 m arena.</li>
-      </ul>
-      <p><strong>Related Projects:</strong></p>
-      <ul>
-        <li><a href="mccr.html">Motion Capture Calibration Robot</a></li>
+        <li>Developed Wi-Fi enabled motion-capture calibration robot using ESP32 & precision winches, achieving sub-centimeter payload positioning.</li>
+        <li>Hosted embedded web server to display real-time telemetry, system diagnostics, and calibration controls to remote users.</li>
+        <li>Integrated closed-loop PIDF control with real-time feedback to maintain positional accuracy under dynamic loads.</li>
       </ul>
     </div>
 
     <div class="experience-item">
       <h3>Robotics Programming Intern & FIRST Robotics Mentor, The Innovation Story, Mumbai</h3>
-      <p> June 2022 - July 2023</p>
-      <p><strong>Responsibilities:</strong></p>
+      <p>June 2022 – July 2023</p>
       <ul>
-        <li>Organized and maintained a Unified Object Framework across the entire organization, ensuring seamless cross-compatibility, and standardized communication protocols between all robotic systems.</li>
-        <li>Optimized for time in robot software, achieving an 85% improvement in loop times, directly boosting localization and autonomous trajectory following, without compromising on maximum velocity.</li>
-        <li>Designed perception and control systems to achieve autonomous task completion repeatably in a limited time frame.</li>
-      </ul>
-      <p><strong>Related Projects:</strong></p>
-      <ul>
-        <li><a href="mccr.html">FTC Powerplay Robot - Matrix 20870</a></li>
-        <li><a href="mccr.html">Autonomous Ball Launching Mechanism</a></li>
+        <li>Standardized communication protocols across multiple robotic platforms, reducing integration bugs by 30%.</li>
+        <li>Optimized control-loop execution by 85%, boosting localization and autonomous trajectory following.</li>
+        <li>Designed perception & autonomy pipelines (OpenCV + C++) for repeatable task completion under 30 s cycle times.</li>
       </ul>
     </div>
 
     <div class="experience-item">
       <h3>Electronics Systems Intern, Accelo Mobility, Mumbai</h3>
-      <p> March 2022 - June 2022</p>
-      <p><strong>Responsibilities:</strong></p>
+      <p>March 2022 – June 2022</p>
       <ul>
-        <li>Engineered the ECU and wiring harness for two EV Vehicles, a <a href="BEAST.html">delivery truck</a>, and a <a href="ISAAC.html">shuttle</a>.</li>
-        <li>Tracked the vehicle’s GPS coordinates periodically and pushed the same to the cloud-based server for an API</li>
-        <li>Scripted programs to fetch data from custom data logger, saving it to a cloud-based data management system.</li>
-      </ul>
-      <p><strong>Related Projects:</strong></p>
-      <ul>
-        <li><a href="BEAST.html">BEAST Electric Delivery Truck</a></li>
-        <li><a href="ISAAC.html">ISAAC Electric Shuttle</a></li>
+        <li>Engineered ECU & wiring harness for two EVs (delivery truck & shuttle).</li>
+        <li>Tracked GPS coordinates & pushed data to cloud server via API.</li>
+        <li>Scripted data-fetch programs for custom logger, integrating cloud data management.</li>
       </ul>
     </div>
 
     <div class="experience-item">
-      <h3>Embedded Systems and Software Team Lead, Team KJSCE Robocon, Mumbai</h3>
-      <p><strong>Duration:</strong> August 2021 - August 2022</p>
+      <h3>Embedded Systems & Software Team Lead, Team KJSCE Robocon, Mumbai</h3>
+      <p>August 2021 – August 2022</p>
       <ul>
-        <li>Spearheaded the development of control and embedded software for complex robotic systems, ensuring seamless integration across multiple platforms.</li>
-        <li>Led and mentored a team of 35 engineers, fostering technical growth through hands-on training with new tools, languages, and technologies.</li>
-        <li>Orchestrated the implementation of ROS to simulate and test robotic systems and drivetrains, optimizing for performance and precision.</li>
-        <li>Developed firmware for advanced quadruped robots, enhancing mobility and stability under dynamic conditions.</li>
-        <li>Designed and deployed computer vision solutions using OpenCV, enabling autonomous navigation and task execution.</li>
-        <li>Managed large-scale robotics events, driving community engagement and fostering knowledge sharing as a core team member.</li>
-        <li>Engineered low-level drivers for various microcontrollers, including AVR128DA64, STM32 series, ESP32, and Raspberry Pi, ensuring reliable real-time performance.</li>
-        <li>Harnessed the power of SBCs like the NVIDIA Jetson Nano for computationally intensive tasks, elevating robotic capabilities.</li>
-      </ul>
-      <p><strong>Related Projects:</strong></p>
-      <ul>
-        <li><a href="BEAST.html">ABU Robocon 2022 - R2</a></li>
-        <li><a href="BEAST.html">ABU Robocon 2022 - R1</a></li>
-        <li><a href="ISAAC.html">ABU Robocon 2021 - TR</a></li>
-        <li><a href="BEAST.html">Pneumatic Robot Quadruped</a></li>
-        <li><a href="BEAST.html">Autonomous BB Pellet Turret</a></li>
+        <li>Led 35-engineer cross-functional team to All-India Rank 6 at DD Robocon 2022 through iterative firmware & control refinements.</li>
+        <li>Architected bare-metal STM32 & AVR firmware for sensor/actuator interfaces, ensuring deterministic performance.</li>
+        <li>Introduced ROS simulation workflows for rapid prototyping & virtual validation of kinematics & control strategies.</li>
       </ul>
     </div>
-    
-  
+
     <div class="experience-item">
       <h3>Embedded Software Intern, AM Prototyping Labs, Mumbai</h3>
-      <p>June 2021 - August 2021</p>
+      <p>June 2021 – August 2021</p>
       <ul>
-        <li>Developed improved firmware and control UI for industrial DLP resin-based 3D printers, enhancing print quality.</li>
-        <li>Implemented low-level firmware to control motors, projectors, and sensors, achieving resolutions up to 38 microns.</li>
-        <li>Created Linux software for analyzing printer settings, user interface development, and print layer processing using OpenCV.</li>
+        <li>Developed Linux-based C++ diagnostic UI for DLP resin 3D printer, streamlining parameter tuning & error analysis.</li>
+        <li>Implemented low-level firmware (I2C, UART) for motors, projectors & sensors, achieving 38 μm layer resolution.</li>
+        <li>Built OpenCV print-layer inspection tool, reducing failed prints by 25%.</li>
       </ul>
     </div>
-  
+
     <div class="experience-item">
       <h3>Embedded Software Intern, Rymo Technologies, Mumbai</h3>
-      <p>April 2021 - May 2021</p>
+      <p>April 2021 – May 2021</p>
       <ul>
-        <li>Engineered an embedded solution for interfacing sensors and actuators to monitor patients’ elbow movements.</li>
-        <li>Utilized AVR C to monitor sensor feedback and track recovery metrics to assist with rehabilitation.</li>
-        <li>Optimized data flow using SPI, leading to faster information exchange with other devices.</li>
+        <li>Engineered AVR-based embedded solution for elbow rehabilitation monitoring.</li>
+        <li>Optimized SPI pipelines, increasing throughput by 40%.</li>
       </ul>
     </div>
 
     <div class="experience-item">
       <h3>Robotics Mentor, K.J. Somaiya College of Engineering, Mumbai</h3>
-      <p>May 2020 - July 2020</p>
+      <p>May 2020 – July 2020</p>
       <ul>
-        <li>Mentored and taught a batch of 25 Students Arduino Programming and Basic Electronics.</li>
-        <li>Guided the students towards developing a wall following robot.</li>
+        <li>Mentored 25 students in Arduino programming & basic electronics.</li>
+        <li>Guided development of wall-following robot.</li>
       </ul>
     </div>
-
   </section>
 
+  <!-- Scripts -->
   <script src="scripts.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
