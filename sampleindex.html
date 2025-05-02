@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ansh Mehta | Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg: #f9f9f9;
+      --color-primary: #00bcd4;
+      --color-text: #333333;
+      --color-light: #ffffff;
+      --font-sans: 'Poppins', sans-serif;
+      --spacing: 1.5rem;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+    a { color: var(--color-primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Header/Nav */
+    header {
+      background: var(--color-light);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky; top: 0; z-index: 100;
+    }
+    .nav-container {
+      max-width: 1200px; margin: 0 auto; display: flex;
+      justify-content: space-between; align-items: center;
+      padding: var(--spacing);
+    }
+    .nav-brand { font-weight: 600; font-size: 1.5rem; color: var(--color-primary); }
+    .nav-links { list-style: none; display: flex; gap: var(--spacing); }
+    .nav-links li a { font-weight: 500; }
+
+    /* Hero */
+    .hero {
+      min-height: 80vh;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center;
+      padding: var(--spacing);
+    }
+    .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.25rem; margin-bottom: 2rem; }
+    .btn-primary {
+      background: var(--color-primary);
+      color: var(--color-light);
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .btn-primary:hover { background: #0097a7; }
+
+    /* Sections */
+    section { max-width: 1200px; margin: 0 auto; padding: var(--spacing); }
+    .section-title { font-size: 2rem; margin-bottom: var(--spacing); color: var(--color-primary); text-align: center; }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--spacing);
+    }
+    .project-card {
+      background: var(--color-light);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+    }
+    .project-card img,
+    .project-card video {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .card-body {
+      padding: 1rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card-body h5 { margin-bottom: 0.5rem; font-size: 1.25rem; color: var(--color-primary); }
+    .bubbles { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+    .bubble {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.75rem;
+      background: #e0f7fa;
+      color: var(--color-primary);
+      border-radius: 16px;
+      font-weight: 500;
+    }
+
+    /* About & Experience */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing);
+      align-items: center;
+    }
+    .two-col img { width: 100%; border-radius: 8px; }
+    .experience-item, .course-item {
+      background: var(--color-light);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: var(--spacing);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .experience-item h3, .course-item h3 { color: var(--color-primary); margin-bottom: 0.5rem; }
+    .experience-item ul, .course-item ul { list-style: disc; margin-left: 1.25rem; }
+
+    /* Footer */
+    footer { text-align: center; padding: var(--spacing); font-size: 0.9rem; color: #666; }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="#home" class="nav-brand">Ansh Mehta</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="assets/docs/Resume_Portfolio.pdf">Resume</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <h1>Hello, I'm Ansh Mehta</h1>
+    <p>Robotics & Embedded Systems Engineer</p>
+    <a href="assets/docs/Resume_Portfolio.pdf" class="btn-primary">Download Resume</a>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="two-col">
+      <div>
+        <p>I’m a passionate Robotics and Embedded Systems Engineer with hands-on experience in innovative solutions, control systems design, and complex problem solving. My work spans firmware development, mechanical design, and advanced control algorithms.</p>
+      </div>
+      <img src="assets/images/Main.jpg" alt="Ansh Mehta">
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="assets/images/MCCR/PXL_20240806_055029847.png" alt="Motion Capture Calibration Robot">
+        <div class="card-body">
+          <h5>Motion Capture Calibration Robot</h5>
+          <div class="bubbles">
+            <span class="bubble">Electronics</span>
+            <span class="bubble">Firmware</span>
+            <span class="bubble">Controls</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="assets/images/Starfish/submission (1).jpg" alt="Soft Robotic Starfish">
+        <div class="card-body">
+          <h5>Soft Robotic Starfish</h5>
+          <div class="bubbles">
+            <span class="bubble">Electronics</span>
+            <span class="bubble">Firmware</span>
+            <span class="bubble">Mechanical Design</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <video src="assets/images/Wrist Rehab/8mb.video-eQc-0f6aAQAN.mp4" autoplay loop muted playsinline></video>
+        <div class="card-body">
+          <h5>Wrist Rehabilitation Robot</h5>
+          <div class="bubbles">
+            <span class="bubble">Electronics</span>
+            <span class="bubble">Software</span>
+            <span class="bubble">Firmware</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="assets/images/Swarm Robot/Main.jpg" alt="Swarm Robotics using ROS">
+        <div class="card-body">
+          <h5>Swarm Robotics using ROS</h5>
+          <div class="bubbles">
+            <span class="bubble">Software</span>
+            <span class="bubble">Controls</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <video src="assets/images/Matrix/8mb.video-1bV-sY7etS6b.mp4" autoplay loop muted playsinline></video>
+        <div class="card-body">
+          <h5>FTC Powerplay Robot - Matrix 20870</h5>
+          <div class="bubbles">
+            <span class="bubble">Electronics</span>
+            <span class="bubble">Software</span>
+            <span class="bubble">Firmware</span>
+            <span class="bubble">Controls</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <video src="assets/images/FRC_Ball/FRC_Ball_Shooter.mp4" autoplay loop muted playsinline></video>
+        <div class="card-body">
+          <h5>Autonomous Ball Launching Mechanism</h5>
+          <div class="bubbles">
+            <span class="bubble">Firmware</span>
+            <span class="bubble">Controls</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <video src="assets/images/Robocon22_R2/8mb.video-sFB-INxXNh6V.mp4" autoplay loop muted playsinline></video>
+        <div class="card-body">
+          <h5>ABU Robocon 2022 - R2</h5>
+          <div class="bubbles">
+            <span class="bubble">Electronics</span>
+            <span class="bubble">Software</span>
+            <span class="bubble">Firmware</span>
+            <span class="bubble">Controls</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="courses">
+    <h2 class="section-title">Courses</h2>
+    <div class="course-item">
+      <h3>MS Robotics & Autonomous Systems</h3>
+      <ul>
+        <li>Robot Motion Planning</li>
+        <li>Embedded Systems Design</li>
+        <li>Medical Robotics</li>
+      </ul>
+    </div>
+    <div class="course-item">
+      <h3>BTech Electronics Engineering</h3>
+      <ul>
+        <li>Embedded System Design</li>
+        <li>Robotics</li>
+        <li>VLSI Design</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2 class="section-title">Experience</h2>
+    <div class="experience-item">
+      <h3>Robotics Research Assistant, RASTIC</h3>
+      <ul>
+        <li>Developed a motion capture calibration robot for sub-millimeter accuracy.</li>
+        <li>Designed control architecture in MATLAB, managed embedded firmware.</li>
+      </ul>
+    </div>
+    <div class="experience-item">
+      <h3>Embedded Systems Team Lead, Team KJSCE Robocon</h3>
+      <ul>
+        <li>Led firmware and controls development for ABU Robocon robots.</li>
+        <li>Mentored 35 engineers on ROS integration and sensor fusion.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Ansh Mehta • Built with passion
+  </footer>
+
+</body>
+</html>

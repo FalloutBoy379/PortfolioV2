@@ -2,105 +2,276 @@
 <html lang="en">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-42WERCMLWM"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-42WERCMLWM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
+    gtag('config', 'G-42WERCMLWM');
+  </script>
 
-  gtag('config', 'G-42WERCMLWM');
-</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Motion Capture Calibration Robot | Ansh Mehta</title>
+
+  <!-- Bootstrap & Fonts -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <!-- model-viewer component -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0d0d0d;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar, footer {
+      background-color: #111 !important;
+    }
+    .navbar-brand { color: #00FFFF !important; }
+    .nav-link { color: #e0e0e0 !important; }
+    .jumbotron {
+      background: url('assets/images/MCCR/banner.jpg') center/cover no-repeat;
+      color: #fff;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+      border-radius: 0;
+      margin-bottom: 0;
+    }
+    h2, h3 { color: #00FFFF; }
+    a { color: #00FFFF; }
+    a:hover { text-decoration: underline; }
+    .img-fluid {
+      max-height: 400px;
+      object-fit: contain;
+    }
+    .video-container iframe,
+    model-viewer {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      display: block;
+      margin: 1rem auto;
+    }
+    footer {
+      color: #888;
+      padding: 20px 0;
+      text-align: center;
+    }
+    footer a { color: #00FFFF; }
+  </style>
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <a class="navbar-brand" href="#">Ansh Mehta</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html#home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="index.html#projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="assets/docs/Resume_Portfolio.pdf">Resume</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="assets/docs/Resume_Portfolio.pdf">Resume</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Project Title Section -->
-  <section class="container my-5">
-    <h2 class="section-title">Motion Capture Calibration Robot</h2>
-    <p class="lead">A detailed description of the Motion Capture Calibration Robot used for accurate motion tracking calibration in the OptiTrack MoCap room.</p>
-  </section>
+  <!-- Hero Jumbotron -->
+  <div class="jumbotron jumbotron-fluid text-center">
+    <div class="container">
+      <h1 class="display-4">Motion Capture Calibration Robot</h1>
+      <p class="lead">Automating OptiTrack calibration with a cable-suspended parallel robot</p>
+    </div>
+  </div>
 
-  <!-- Project Image/Video Section -->
-  <section class="container my-5">
-    <img src="assets/images/MCCR/PXL_20240806_055029847.jpg" class="img-fluid mb-4" alt="Motion Capture Calibration Robot">
-  </section>
+  <!-- Main Content -->
+  <div class="container py-5">
+    <!-- 1. Abstract -->
+    <section class="mb-5">
+      <h2>Abstract</h2>
+      <p>
+        This project implements precise path planning and real-time control for a custom CSPR to calibrate a 6×9 m motion-capture space. Leveraging NEMA 17 motors, AS5600 encoders, Dyneema SK99 cables, and an ESP32S3-based controller, the system executes closed-loop trajectories while avoiding obstacles via RRT*. Detailed methodologies and experimental validation are in the
+        <a href="assets/docs/ME570___Final_Report__5_.pdf" target="_blank">technical report</a>.
+      </p>
+    </section>
 
-  <!-- Project Description Section -->
-  <section class="container my-5">
-    <h3>Overview</h3>
-    <p>
-      The Motion Capture Calibration Robot was developed to improve the accuracy of motion tracking systems within the OptiTrack setup. This robot consists of four control motors that adjust the position of a reflective sphere within a predefined workspace. Each motor controls the tension and length of the cables attached to the sphere, which can be positioned in 3D space using precise control algorithms.
-    </p>
+    <!-- 2. Introduction -->
+    <section class="mb-5">
+      <h2>1. Introduction</h2>
+      <p>
+        Cable-driven parallel robots provide large workspaces and high payload-to-weight ratios. This CSPR positions a reflective pendant at known waypoints within an OptiTrack MoCap room for calibration routines.
+        Challenges included maintaining cable tension, real-time IK computation, and collision avoidance amid support structures.
+      </p>
+    </section>
 
-    <h3>Key Features</h3>
-    <ul>
-      <li>Precise calibration for motion capture systems</li>
-      <li>Supports 3 degrees of freedom control</li>
-      <li>Uses NEMA 17 stepper motors with TB6600 drivers</li>
-      <li>Control via an embedded system with real-time feedback</li>
-    </ul>
-
-    <h3>Challenges</h3>
-    <p>
-      One of the primary challenges was ensuring consistent cable tension to avoid sagging, which could affect accuracy. This was addressed by using load cells to monitor the tension in each cable and adjust the system in real-time.
-    </p>
-
-    <h3>Technical Specifications</h3>
-    <ul>
-      <li>Dimensions: 6x9 meters workspace</li>
-      <li>Motors: NEMA 17 stepper motors with micro-stepping enabled</li>
-      <li>Drivers: TB6600 motor drivers</li>
-      <li>Materials: Reflective sphere with tension-controlled cables</li>
-    </ul>
-  </section>
-
-  <!-- Technical Documents Section -->
-  <section class="container my-5">
-    <h3 class="section-title text-center">Technical Documents</h3>
-    <p class="text-center mb-4">Click below to download or view the technical documents related to this project.</p>
-
-    <div class="row justify-content-center">
-      <!-- Example Document 1 -->
-      <div class="col-md-4 text-center mb-4">
-        
-        <a href="assets/docs/D12-MAX-99-020216.pdf" class="document-link" target="_blank">
-          <img src="assets/icons/pdf.png" alt="Dyneema SK99 Technical Specifications PDF" class="document-icon">
-          <p class="document-title">Dyneema SK99 Technical Specifications</p>
-        </a>
+    <!-- 3. Mechanical Design -->
+    <section class="mb-5">
+      <h2>2. Mechanical Design</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <h3>2.1 Drum & Cable Interface</h3>
+          <p>
+            Custom PLA “squircle” drum (40 mm Ø, 1.32 mm groove) printed at 0.1 mm, with acrylic endplates and nylon standoffs for slippage-free winding.
+          </p>
+          <figure class="text-center mt-3">
+            <img src="assets/images/MCCR/drum.jpg" class="img-fluid rounded" alt="Drum and Motor Assembly">
+            <figcaption class="text-muted">Drum & Motor Assembly</figcaption>
+          </figure>
+        </div>
+        <div class="col-md-6">
+          <h3>2.2 Cable Selection</h3>
+          <p>
+            Dyneema SK99 (1.3 mm) demonstrated <0.5% elongation under 10 N loads and <±2 mm deviation across the workspace.
+            <a href="assets/docs/D12-MAX-99-020216.pdf" target="_blank">Dyneema Specs</a>.
+          </p>
+          <figure class="text-center mt-4">
+            <img src="assets/images/MCCR/heatmap.png" class="img-fluid rounded" alt="Deviation heatmap">
+            <figcaption class="text-muted">Deviation heatmap at z = 1.5 m</figcaption>
+          </figure>
+        </div>
       </div>
-  </section>
+      <h3 class="mt-4">2.1.1 Drum Slot Evolution</h3>
+      <p>
+        The groove profile went through multiple iterations—square, circular, and hybrid “squircle”—to perfectly cradle the Dyneema rope without deforming its cross-section under load.
+      </p>
+      <figure class="text-center mb-4">
+        <img src="assets/images/MCCR/Treads.jpg" class="img-fluid rounded" alt="Evolution of drum slot geometry">
+        <figcaption class="text-muted">Evolution of drum slot geometry ensuring snug Dyneema fit (Left → Right)</figcaption>
+      </figure>
 
-  <!-- Back to Projects Button -->
-  <section class="container my-5 text-center">
-    <a href="index.html#projects" class="btn btn-primary">Back to Projects</a>
-  </section>
+      <h3 class="mt-5">2.3 Room Corner Setup</h3>
+      <p>
+        This image shows one corner of the OptiTrack MoCap room with the sample mass (reflective pendant) attached via the cable system, illustrating the initial calibration position.
+      </p>
+      <figure class="text-center mt-3">
+        <img src="assets/images/MCCR/corner_mass.jpg" class="img-fluid rounded" alt="Room corner with sample mass attached">
+        <figcaption class="text-muted">Corner of MoCap room with sample mass</figcaption>
+      </figure>
+    </section>
 
+    <!-- 4. Electronics & Firmware -->
+    <section class="mb-5">
+      <h2>3. Electronics & Firmware</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <h3>3.1 AS5600 Interface</h3>
+          <p>
+            Custom PCB with PH-4 connectors, pull-ups, and decoupling for stable 1 kHz encoder sampling.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <h3>3.2 Main Control Board</h3>
+          <ul>
+            <li>ESP32S3 (FreeRTOS, dual-core)</li>
+            <li>TB6600 drivers (1/64 micro-stepping, 1.5 A RMS)</li>
+            <li>Web dashboard: live pendant position & telemetry</li>
+          </ul>
+        </div>
+      </div>
+      <figure class="text-center mt-4">
+        <img src="assets/images/MCCR/Electronics.jpg" class="img-fluid rounded" alt="Control PCB and driver">
+        <figcaption class="text-muted">Control PCB & TB6600 driver pairing</figcaption>
+      </figure>
+
+      <h3 class="mt-5">3.3 Interactive PCB Model</h3>
+      <model-viewer
+        src="assets/models/pcb.glb"
+        alt="3D model of Control PCB"
+        camera-controls
+        auto-rotate
+        environment-image="neutral"
+        shadow-intensity="1"
+        exposure="1">
+      </model-viewer>
+      <p class="text-muted text-center">Rotate, zoom, and inspect the PCB right in your browser.</p>
+    </section>
+
+    <!-- 5. Control & Kinematics -->
+    <section class="mb-5">
+      <h2>4. Control & Kinematics</h2>
+      <h3>4.1 Inverse Kinematics & PID</h3>
+      <p>
+        Using NatNet streaming, target coordinates feed IK module to compute cable lengths and velocities.
+        A PID loop (50 ms) corrects length errors for smooth tracking.
+      </p>
+      <h3>4.2 RRT* Path Planning</h3>
+      <p>
+        RRT* generates collision-free trajectories around obstacles (sphere radius r<sub>j</sub>).
+        Once the goal threshold (50 mm) is met, the optimized path is executed.
+      </p>
+      <div class="video-container embed-responsive embed-responsive-16by9 mt-4">
+        <iframe
+          class="embed-responsive-item"
+          src="https://drive.google.com/file/d/1HOLVAQPxJ3mUVo-yUiwuQqRTWKWMGNot/preview"
+          allow="autoplay; encrypted-media"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p class="text-muted text-center mt-2">RRT* planner in action: path from start to goal around a spherical obstacle.</p>
+    </section>
+
+    <!-- 6. Simulator Visualization -->
+    <section class="mb-5">
+      <h2>5. Simulator Visualization</h2>
+      <p>
+        A desktop-based simulator replicates the workspace and allows for trajectory planning tests without hardware, showing cable attachment points, obstacles, and target waypoints.
+      </p>
+      <figure class="text-center mt-3">
+        <img src="assets/images/MCCR/Simulator.png" class="img-fluid rounded" alt="Workspace simulator interface">
+        <figcaption class="text-muted">Simulation GUI showing workspace, calculated rope lengths, and calculated position vs actual location</figcaption>
+      </figure>
+    </section>
+
+    <!-- 7. Experimental Results -->
+    <section class="mb-5">
+      <h2>6. Experimental Results</h2>
+      <p>
+        Square-path tests (2 m side) yielded <35 mm RMS error under dynamic loads up to 10 N.
+      </p>
+      <figure class="text-center mt-4">
+        <img src="assets/images/MCCR/square.png" class="img-fluid rounded" alt="Executed square path trajectory">
+        <figcaption class="text-muted">Executed square path: planned vs. actual trajectory overlay</figcaption>
+      </figure>
+    </section>
+
+    <!-- 8. Future Work -->
+    <section class="mb-5">
+      <h2>7. Future Work</h2>
+      <ul>
+        <li>Active tensioners for continuous balancing</li>
+        <li>RRT*+LQR integration</li>
+        <li>Full 6-DoF orientation control</li>
+      </ul>
+    </section>
+
+    <!-- 9. References -->
+    <section class="mb-5">
+      <h2>8. References</h2>
+      <ol>
+        <li>Mehta, A. (2025). <em>Design and Path Planning for a Cable-Suspended Parallel Robot</em>. BU ME570 Final Report. <a href="assets/docs/ME570___Final_Report__5_.pdf" target="_blank">PDF</a>.</li>
+        <li>Dyneema. (2024). <em>SK99 HMPE Fiber Tech Specs</em>. <a href="assets/docs/D12-MAX-99-020216.pdf" target="_blank">PDF</a>.</li>
+        <li>Pott & Bruckmann. (2013). <em>Cable-driven parallel robots</em>. Springer.</li>
+        <li>Zi & Qian. (2017). <em>Cable-driven parallel manipulators</em>. Springer.</li>
+      </ol>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Ansh Mehta — <a href="mailto:ansh@bu.edu">ansh@bu.edu</a></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
   <script src="scripts.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>

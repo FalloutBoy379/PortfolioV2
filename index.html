@@ -32,6 +32,50 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <base href="/">
+  <style>
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .project-card {
+      /* background: #ffffff; */
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      transition: transform .2s;
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+    }
+    .project-card img,
+    .project-card video {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .project-card .card-body {
+      padding: 1rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .project-card .card-body h5 {
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+    }
+    .project-card .bubbles {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+  </style>
 </head>
 <body>
 
@@ -95,9 +139,9 @@
       <span class="filter-btn" data-filter="mechanical">Mechanical Design</span>
     </div>
 
-    <div class="row projects mt-4">
+    <div class="projects-grid">
       <!-- Project 1 -->
-      <div class="col-md-4 project-card" data-category="electronics software firmware controls mechanical">
+      <div class="project-card" data-category="electronics software firmware controls mechanical">
         <a href="mccr.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -118,7 +162,7 @@
       </div>
 
       <!-- Project 2 -->
-      <div class="col-md-4 project-card" data-category="electronics firmware mechanical">
+      <div class="project-card" data-category="electronics firmware mechanical">
         <a href="starfish.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -140,7 +184,7 @@
       </div>
 
       <!-- Project 3 -->
-      <div class="col-md-4 project-card" data-category="electronics software firmware mechanical">
+      <div class="project-card" data-category="electronics software firmware mechanical">
         <a href="wristrehab.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -163,9 +207,9 @@
       </div>
     </div>
 
-    <div class="row projects mt-4">
+    <div class="projects-grid">
       <!-- Project 4 -->
-      <div class="col-md-4 project-card" data-category="software controls">
+      <div class="project-card" data-category="software controls">
         <a href="swarm.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -183,7 +227,7 @@
       </div>
 
       <!-- Project 5 -->
-      <div class="col-md-4 project-card" data-category="electronics software firmware controls">
+      <div class="project-card" data-category="electronics software firmware controls">
         <a href="matrix.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -206,7 +250,7 @@
       </div>
 
       <!-- Project 6 -->
-      <div class="col-md-4 project-card" data-category="firmware controls">
+      <div class="project-card" data-category="firmware controls">
         <a href="ballLaunching.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -227,9 +271,9 @@
       </div>
     </div>
 
-    <div class="row projects mt-4">
+    <div class="projects-grid">
       <!-- Project 7 -->
-      <div class="col-md-4 project-card" data-category="electronics software firmware controls">
+      <div class="project-card" data-category="electronics software firmware controls">
         <a href="Robocon2022_R2.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -252,7 +296,7 @@
       </div>
 
       <!-- Project 8 -->
-      <div class="col-md-4 project-card" data-category="electronics software firmware controls">
+      <div class="project-card" data-category="electronics software firmware controls">
         <a href="under-construction.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -275,7 +319,7 @@
       </div>
 
       <!-- Project 9 -->
-      <div class="col-md-4 project-card" data-category="electronics software firmware controls">
+      <div class="project-card" data-category="electronics software firmware controls">
         <a href="under-construction.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -298,9 +342,9 @@
       </div>
     </div>
 
-    <div class="row projects mt-4">
+    <div class="projects-grid">
       <!-- Project 10 -->
-      <div class="col-md-4 project-card" data-category="firmware">
+      <div class="project-card" data-category="firmware">
         <a href="x86.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -320,7 +364,7 @@
       </div>
 
       <!-- Project 11 -->
-      <div class="col-md-4 project-card" data-category="electronics firmware controls">
+      <div class="project-card" data-category="electronics firmware controls">
         <a href="under-construction.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -339,7 +383,7 @@
       </div>
 
       <!-- Project 12 -->
-      <div class="col-md-4 project-card" data-category="electronics software firmware">
+      <div class="project-card" data-category="electronics software firmware">
         <a href="zeta.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -361,9 +405,9 @@
       </div>
     </div>
 
-    <div class="row projects mt-4">
+    <div class="projects-grid">
       <!-- Project 13 -->
-      <div class="col-md-4 project-card" data-category="electronics firmware controls mechanical">
+      <div class="project-card" data-category="electronics firmware controls mechanical">
         <a href="under-construction_with_youtube.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -383,7 +427,7 @@
       </div>
 
       <!-- Project 14 -->
-      <div class="col-md-4 project-card" data-category="electronics software firmware controls mechanical">
+      <div class="project-card" data-category="electronics software firmware controls mechanical">
         <a href="under-construction.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -404,7 +448,7 @@
       </div>
 
       <!-- Project 15 -->
-      <div class="col-md-4 project-card" data-category="electronics software firmware">
+      <div class="project-card" data-category="electronics software firmware">
         <a href="beast.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -426,9 +470,9 @@
       </div>
     </div>
 
-    <div class="row projects mt-4">
+    <div class="projects-grid">
       <!-- Project 16 -->
-      <div class="col-md-4 project-card" data-category="electronics software firmware">
+      <div class="project-card" data-category="electronics software firmware">
         <a href="under-construction.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -450,7 +494,7 @@
       </div>
 
       <!-- Project 17 -->
-      <div class="col-md-4 project-card" data-category="software firmware controls">
+      <div class="project-card" data-category="software firmware controls">
         <a href="under-construction.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -472,7 +516,7 @@
       </div>
 
       <!-- Project 18 -->
-      <div class="col-md-4 project-card" data-category="electronics firmware controls">
+      <div class="project-card" data-category="electronics firmware controls">
         <a href="under-construction.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -491,9 +535,9 @@
       </div>
     </div>
 
-    <div class="row projects mt-4">
+    <div class="projects-grid">
       <!-- Project 19 -->
-      <div class="col-md-4 project-card" data-category="electronics firmware controls mechanical">
+      <div class="project-card" data-category="electronics firmware controls mechanical">
         <a href="under-construction.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -516,7 +560,7 @@
       </div>
 
       <!-- Project 20 -->
-      <div class="col-md-4 project-card" data-category="electronics firmware">
+      <div class="project-card" data-category="electronics firmware">
         <a href="under-construction.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -534,7 +578,7 @@
       </div>
 
       <!-- Project 21 -->
-      <div class="col-md-4 project-card" data-category="mechanical">
+      <div class="project-card" data-category="mechanical">
         <a href="under-construction.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
@@ -630,7 +674,7 @@
 
     <div class="experience-item">
       <h3>Graduate Teaching Assistant - EK307 (Circuits), Boston University, Boston, MA</h3>
-      <p> Sept 2024 - Present</p>
+      <p> Sept 2024 - December 2024</p>
       <p><strong>Responsibilities:</strong></p>
       <ul>
         <li>Assisted with grading and developing solutions for problems. </li>
@@ -641,12 +685,14 @@
 
     <div class="experience-item">
       <h3>Robotics Research Assistant, RASTIC, Boston University, Boston, MA</h3>
-      <p> June 2024 - Present</p>
+      <p> June 2024 - December 2024</p>
       <p><strong>Responsibilities:</strong></p>
       <ul>
-        <li>Developed a motion capture calibration robot, using four motor-driven winches to control a central reflector ball.</li>
-        <li>Modeled robot dynamics in MATLAB and designed the system architecture, targeting precise control.</li>
-        <li>Managed the electronics and controls to achieve real-time feedback and accurate positioning.</li>
+        <li>Developed a Wi-Fi enabled motion-capture calibration robot using an ESP32 and precision winches, achieving sub-centimeter payload positioning.</li>
+        <li>Designed and hosted an embedded web server to display real-time telemetry, system diagnostics, and calibration controls to remote users.</li>
+        <li>Integrated closed-loop PIDF control, driven by real-time feedback, to maintain positional accuracy under dynamic loads.</li>
+        <li>Implemented secure OTA firmware updates, reducing onsite maintenance by 40%.</li>
+        <li>Modeled system dynamics in MATLAB and authored an RRT* planner for safe, efficient path generation across a 6 × 6 m arena.</li>
       </ul>
       <p><strong>Related Projects:</strong></p>
       <ul>

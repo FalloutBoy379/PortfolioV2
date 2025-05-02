@@ -184,7 +184,7 @@ body {
 /* Project Cards */
 .project-card {
   background-color: #1a1a1a !important; /* Dark background */
-  border: 1px solid #333 !important;
+  border: 0px solid #333 !important;
   transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s !important;
   border-radius: 8px !important;
   overflow: hidden !important;
@@ -196,6 +196,13 @@ body {
     box-shadow: 0 4px 20px rgba(0, 255, 255, 0.3) !important;
     border-color: #00FFFF !important; /* Neon glow effect */
   }
+
+  /* strip out the default Bootstrap card border & background */
+.project-card .card {
+  border: none !important;
+  background-color: transparent !important;
+}
+
   
   /* Image container */
   .card-img-container {
