@@ -463,3 +463,141 @@ body {
   font-size: 1rem;
   white-space: pre-wrap;  /* Keep formatting */
 }
+
+
+
+
+
+
+
+
+.vertical-timeline {
+  position: relative;
+  margin: 3rem auto;
+  padding-left: 50px;
+  max-width: 900px;
+  border-left: 3px solid #00ffff99;
+}
+
+.year-header {
+  font-size: 1.8rem;
+  color: #00FFFF;
+  font-weight: 600;
+  margin: 2rem 0 1rem;
+  padding-left: 10px;
+  background-color: #0d0d0d;
+  border-left: 4px solid #00ffff44;
+  z-index: 2;
+}
+
+.year-header.sticky {
+  /* position: sticky; */
+  top: 80px;
+  background: #0d0d0d;
+}
+
+.timeline-block {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 16px;
+  height: 16px;
+  background-color: #00FFFF;
+  border: 3px solid #1a1a1a;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-content {
+  padding: 15px 20px;
+  background: #1a1a1a;
+  color: #e0e0e0;
+  border-radius: 6px;
+  border-left: 4px solid #00FFFF;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  max-height: 70px;
+}
+
+.timeline-content.open {
+  max-height: 500px;
+}
+
+.timeline-content.academia {
+  border-color: #2196f3;
+}
+
+.timeline-content.industry {
+  border-color: #ff9800;
+}
+
+.timeline-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #00FFFF;
+  cursor: pointer;
+  user-select: none;
+}
+
+.timeline-date {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+.timeline-desc {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.timeline-desc li::before {
+  content: "• ";
+  color: #00FFFF;
+  font-weight: bold;
+}
+
+.timeline-role {
+  color: #00FFFF;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
+.timeline-org {
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 300;
+  margin-bottom: 6px;
+}
+
+.timeline-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.timeline-title {
+  flex: 1 1 auto;
+  margin: 0;
+}
+
+.timeline-date {
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 2px;
+  font-style: italic;
+  white-space: nowrap;
+}
+
