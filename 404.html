@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>404 | Page Not Found</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .error-code {
+      font-size: 6rem;
+      font-weight: 700;
+      color: var(--color-accent);
+    }
+
+    .error-message {
+      font-size: 1.5rem;
+      color: var(--color-text);
+      margin-bottom: 1.5rem;
+    }
+
+    .action-links a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 10px 18px;
+      border: 1px solid var(--color-accent);
+      color: var(--color-accent);
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .action-links a:hover {
+      background-color: var(--color-accent);
+      color: var(--color-card);
+    }
+
+    .theme-toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+  </style>
+</head>
+<body>
+  <button id="themeToggleIcon" class="btn theme-toggle-btn" title="Toggle light/dark mode">🌙</button>
+
+  <div class="error-code">404</div>
+  <div class="error-message">Oops! The page you're looking for doesn't exist.</div>
+
+  <div class="action-links">
+    <a href="mailto:ansh@bu.edu"><i class="fas fa-envelope"></i> Contact Me</a>
+    <a href="https://github.com/FalloutBoy379" target="_blank"><i class="fab fa-github"></i> Visit GitHub</a>
+    <a href="/"><i class="fas fa-home"></i> Back to Home</a>
+  </div>
+
+  <script>
+    const themeToggleIcon = document.getElementById("themeToggleIcon");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    let isDark = localStorage.getItem("theme") === "dark" || (!localStorage.getItem("theme") && prefersDark);
+
+    function applyTheme(dark) {
+      document.body.classList.toggle("light-mode", !dark);
+      document.body.classList.toggle("dark-mode", dark);
+      themeToggleIcon.textContent = dark ? "🌙" : "☀️";
+      localStorage.setItem("theme", dark ? "dark" : "light");
+    }
+
+    themeToggleIcon.addEventListener("click", () => {
+      isDark = !isDark;
+      applyTheme(isDark);
+    });
+
+    applyTheme(isDark); // On page load
+  </script>
+</body>
+</html>

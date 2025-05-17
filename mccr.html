@@ -1,69 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Motion Capture Calibration Robot | Ansh Mehta</title>
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-42WERCMLWM"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
     gtag('config', 'G-42WERCMLWM');
   </script>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Motion Capture Calibration Robot | Ansh Mehta</title>
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 
-  <!-- Bootstrap & Fonts -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-
-  <!-- model-viewer component -->
+  <!-- 3D Viewer -->
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background: #0d0d0d;
-      color: #e0e0e0;
-      margin: 0;
-      padding: 0;
     }
-    .navbar, footer {
-      background-color: #111 !important;
-    }
-    .navbar-brand { color: #00FFFF !important; }
-    .nav-link { color: #e0e0e0 !important; }
     .jumbotron {
       background: url('assets/images/MCCR/banner.jpg') center/cover no-repeat;
-      color: #fff;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+      color: white;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
       border-radius: 0;
       margin-bottom: 0;
     }
-    h2, h3 { color: #00FFFF; }
-    a { color: #00FFFF; }
-    a:hover { text-decoration: underline; }
+    h2, h3 {
+      color: var(--color-accent);
+      margin-top: 2rem;
+    }
+    a {
+      color: var(--color-accent);
+    }
+    a:hover {
+      text-decoration: underline;
+    }
     .img-fluid {
       max-height: 400px;
       object-fit: contain;
+      border-radius: 8px;
+      margin: 1rem 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
     }
-    .video-container iframe,
     model-viewer {
       width: 100%;
       height: 400px;
-      border: none;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-      display: block;
-      margin: 1rem auto;
+      border-radius: 12px;
+      margin-top: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     }
     footer {
-      color: #888;
+      background-color: var(--color-card);
+      color: var(--color-text);
       padding: 20px 0;
       text-align: center;
+      border-top: 1px solid #333;
     }
-    footer a { color: #00FFFF; }
+    .section {
+      padding-top: 3rem;
+      padding-bottom: 2rem;
+    }
   </style>
 </head>
 <body>
@@ -80,11 +86,12 @@
         <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
         <li class="nav-item"><a class="nav-link" href="assets/docs/Resume_Portfolio.pdf">Resume</a></li>
       </ul>
+      <button id="themeToggleIcon" class="btn theme-toggle-btn ml-3" title="Toggle light/dark mode">🌙</button>
     </div>
   </nav>
 
-  <!-- Hero Jumbotron -->
-  <div class="jumbotron jumbotron-fluid text-center">
+  <!-- Hero -->
+  <div class="jumbotron text-center">
     <div class="container">
       <h1 class="display-4">Motion Capture Calibration Robot</h1>
       <p class="lead">Automating OptiTrack calibration with a cable-suspended parallel robot</p>
@@ -93,187 +100,161 @@
 
   <!-- Main Content -->
   <div class="container py-5">
-    <!-- 1. Abstract -->
-    <section class="mb-5">
+    <section class="section" data-aos="fade-up">
       <h2>Abstract</h2>
       <p>
-        This project implements precise path planning and real-time control for a custom CSPR to calibrate a 6×9 m motion-capture space. Leveraging NEMA 17 motors, AS5600 encoders, Dyneema SK99 cables, and an ESP32S3-based controller, the system executes closed-loop trajectories while avoiding obstacles via RRT*. Detailed methodologies and experimental validation are in the
-        <a href="assets/docs/ME570___Final_Report__5_.pdf" target="_blank">technical report</a>.
+        This project implements precise path planning and real-time control for a custom CSPR to calibrate a 6×9 m motion-capture space.
+        Leveraging NEMA 17 motors, AS5600 encoders, Dyneema SK99 cables, and an ESP32S3-based controller, the system executes closed-loop trajectories while avoiding obstacles via RRT*.
+        Full methodology is detailed in the <a href="assets/docs/ME570___Final_Report__5_.pdf" target="_blank">technical report</a>.
       </p>
     </section>
 
-    <!-- 2. Introduction -->
-    <section class="mb-5">
-      <h2>1. Introduction</h2>
-      <p>
-        Cable-driven parallel robots provide large workspaces and high payload-to-weight ratios. This CSPR positions a reflective pendant at known waypoints within an OptiTrack MoCap room for calibration routines.
-        Challenges included maintaining cable tension, real-time IK computation, and collision avoidance amid support structures.
-      </p>
-    </section>
-
-    <!-- 3. Mechanical Design -->
-    <section class="mb-5">
-      <h2>2. Mechanical Design</h2>
+    <section class="section" data-aos="fade-up">
+      <h2>Mechanical Design</h2>
       <div class="row">
         <div class="col-md-6">
-          <h3>2.1 Drum & Cable Interface</h3>
+          <h3>Drum & Cable Interface</h3>
           <p>
-            Custom PLA “squircle” drum (40 mm Ø, 1.32 mm groove) printed at 0.1 mm, with acrylic endplates and nylon standoffs for slippage-free winding.
+            PLA “squircle” drums with acrylic endplates and nylon standoffs enabled slippage-free winding.
           </p>
-          <figure class="text-center mt-3">
-            <img src="assets/images/MCCR/drum.jpg" class="img-fluid rounded" alt="Drum and Motor Assembly">
-            <figcaption class="text-muted">Drum & Motor Assembly</figcaption>
-          </figure>
+          <img src="assets/images/MCCR/drum.jpg" class="img-fluid" alt="Drum and Motor Assembly">
         </div>
         <div class="col-md-6">
-          <h3>2.2 Cable Selection</h3>
+          <h3>Cable Selection</h3>
           <p>
-            Dyneema SK99 (1.3 mm) demonstrated <0.5% elongation under 10 N loads and <±2 mm deviation across the workspace.
-            <a href="assets/docs/D12-MAX-99-020216.pdf" target="_blank">Dyneema Specs</a>.
+            Dyneema SK99 (1.3 mm) showed <0.5% elongation under 10 N. 
+            <a href="assets/docs/D12-MAX-99-020216.pdf" target="_blank">Datasheet</a>
           </p>
-          <figure class="text-center mt-4">
-            <img src="assets/images/MCCR/heatmap.png" class="img-fluid rounded" alt="Deviation heatmap">
-            <figcaption class="text-muted">Deviation heatmap at z = 1.5 m</figcaption>
-          </figure>
+          <img src="assets/images/MCCR/heatmap.png" class="img-fluid" alt="Deviation heatmap">
         </div>
       </div>
-      <h3 class="mt-4">2.1.1 Drum Slot Evolution</h3>
+      <h3>Drum Slot Evolution</h3>
       <p>
-        The groove profile went through multiple iterations—square, circular, and hybrid “squircle”—to perfectly cradle the Dyneema rope without deforming its cross-section under load.
+        Groove profiles iterated through square, round, and squircle to optimally cradle the rope.
       </p>
-      <figure class="text-center mb-4">
-        <img src="assets/images/MCCR/Treads.jpg" class="img-fluid rounded" alt="Evolution of drum slot geometry">
-        <figcaption class="text-muted">Evolution of drum slot geometry ensuring snug Dyneema fit (Left → Right)</figcaption>
-      </figure>
+      <img src="assets/images/MCCR/Treads.jpg" class="img-fluid" alt="Drum slot evolution">
 
-      <h3 class="mt-5">2.3 Room Corner Setup</h3>
-      <p>
-        This image shows one corner of the OptiTrack MoCap room with the sample mass (reflective pendant) attached via the cable system, illustrating the initial calibration position.
-      </p>
-      <figure class="text-center mt-3">
-        <img src="assets/images/MCCR/Assembly.jpg" class="img-fluid rounded" alt="Room corner with sample mass attached">
-        <figcaption class="text-muted">Corner of MoCap room with sample mass</figcaption>
-      </figure>
+      <h3>Room Corner Setup</h3>
+      <img src="assets/images/MCCR/Assembly.jpg" class="img-fluid" alt="Room corner">
     </section>
 
-    <!-- 4. Electronics & Firmware -->
-    <section class="mb-5">
-      <h2>3. Electronics & Firmware</h2>
+    <section class="section" data-aos="fade-up">
+      <h2>Electronics & Firmware</h2>
       <div class="row">
         <div class="col-md-6">
-          <h3>3.1 AS5600 Interface</h3>
-          <p>
-            Custom PCB with PH-4 connectors, pull-ups, and decoupling for stable 1 kHz encoder sampling.
-          </p>
+          <h3>AS5600 Interface</h3>
+          <p>Custom PCB with pull-ups, PH-4 headers, and stable 1 kHz I²C sampling.</p>
         </div>
         <div class="col-md-6">
-          <h3>3.2 Main Control Board</h3>
+          <h3>Main Control Board</h3>
           <ul>
-            <li>ESP32S3 (FreeRTOS, dual-core)</li>
-            <li>TB6600 drivers (1/64 micro-stepping, 1.5 A RMS)</li>
-            <li>Web dashboard: live pendant position & telemetry</li>
+            <li>ESP32S3 (dual-core, FreeRTOS)</li>
+            <li>TB6600 stepper drivers (1.5 A RMS)</li>
+            <li>Web dashboard with real-time telemetry</li>
           </ul>
         </div>
       </div>
-      <figure class="text-center mt-4">
-        <img src="assets/images/MCCR/Electronics.jpg" class="img-fluid rounded" alt="Control PCB and driver">
-        <figcaption class="text-muted">Control PCB & TB6600 driver pairing</figcaption>
-      </figure>
+      <img src="assets/images/MCCR/Electronics.jpg" class="img-fluid" alt="Control PCB">
 
-      <h3 class="mt-5">3.3 Interactive PCB Model</h3>
-      <model-viewer
+      <h3>Interactive PCB Viewer</h3>
+      <model-viewer 
         src="assets/models/pcb.glb"
-        alt="3D model of Control PCB"
-        camera-controls
-        auto-rotate
-        environment-image="neutral"
+        poster="assets/images/MCCR/poster_pcb.jpg"
+        camera-controls 
+        auto-rotate 
+        ar 
+        loading="lazy"
         shadow-intensity="1"
-        exposure="1">
+        environment-image="neutral"
+        alt="3D model of Control PCB">
       </model-viewer>
-      <p class="text-muted text-center">Rotate, zoom, and inspect the PCB right in your browser.</p>
+      <p class="text-muted text-center">Rotate, zoom, and inspect the PCB in-browser.</p>
     </section>
 
-    <!-- 5. Control & Kinematics -->
-    <section class="mb-5">
-      <h2>4. Control & Kinematics</h2>
-      <h3>4.1 Inverse Kinematics & PID</h3>
+    <section class="section" data-aos="fade-up">
+      <h2>Control & Kinematics</h2>
+      <h3>Inverse Kinematics & PID</h3>
       <p>
-        Using NatNet streaming, target coordinates feed IK module to compute cable lengths and velocities.
-        A PID loop (50 ms) corrects length errors for smooth tracking.
+        NatNet streaming feeds 3D position to an IK module that computes target cable lengths.
+        PIDF control loop (50 ms) ensures accurate tracking.
       </p>
-      <h3>4.2 RRT* Path Planning</h3>
+
+      <h3>RRT* Path Planning</h3>
       <p>
-        RRT* generates collision-free trajectories around obstacles (sphere radius r<sub>j</sub>).
-        Once the goal threshold (50 mm) is met, the optimized path is executed.
+        RRT* finds obstacle-free paths that respect workspace constraints and convergence goals.
       </p>
-      <div class="video-container embed-responsive embed-responsive-16by9 mt-4">
-        <iframe
-          class="embed-responsive-item"
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item"
           src="https://drive.google.com/file/d/1HOLVAQPxJ3mUVo-yUiwuQqRTWKWMGNot/preview"
-          allow="autoplay; encrypted-media"
-          allowfullscreen>
-        </iframe>
+          allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
-      <p class="text-muted text-center mt-2">RRT* planner in action: path from start to goal around a spherical obstacle.</p>
     </section>
 
-    <!-- 6. Simulator & Visualizer -->
-    <section class="mb-5">
-      <h2>5. Simulator & Visualizer</h2>
+    <section class="section" data-aos="fade-up">
+      <h2>Simulation & Validation</h2>
       <p>
-        A desktop-based simulator replicates the workspace and allows for trajectory planning tests without hardware, showing cable attachment points, obstacles, and target waypoints. When connected to the robot, the simulator automatically becomes a visualizer, and displays the actual robot position using data from the motion capture SDK, along with the expected position as calculated from the encoders. This setup thus allows for initial tuning of the sensors without any additional configuration.      </p>
-      <figure class="text-center mt-3">
-        <img src="assets/images/MCCR/Simulator.png" class="img-fluid rounded" alt="Workspace simulator interface">
-        <figcaption class="text-muted">Simulation GUI showing workspace, calculated rope lengths, and calculated position vs actual location</figcaption>
-      </figure>
-    </section>
-
-    <!-- 7. Experimental Results -->
-    <section class="mb-5">
-      <h2>6. Experimental Results</h2>
-      <p>
-        Square-path tests (2 m side) yielded <35 mm RMS error under dynamic loads up to 10 N.
+        Custom MATLAB-based simulator helps visualize planned vs executed paths and MoCap data.
       </p>
-      <figure class="text-center mt-4">
-        <img src="assets/images/MCCR/square.png" class="img-fluid rounded" alt="Executed square path trajectory">
-        <figcaption class="text-muted">Executed square path: planned vs. actual trajectory overlay</figcaption>
-      </figure>
+      <img src="assets/images/MCCR/Simulator.png" class="img-fluid" alt="Simulator">
+
+      <h3>Experimental Results</h3>
+      <p>
+        Square path (2 m) yielded &lt;35 mm RMS error under dynamic loading.
+      </p>
+      <img src="assets/images/MCCR/square.png" class="img-fluid" alt="Path Error">
     </section>
 
-    <!-- 8. Future Work -->
-    <section class="mb-5">
-      <h2>7. Future Work</h2>
+    <section class="section" data-aos="fade-up">
+      <h2>Future Work</h2>
       <ul>
-        <li>Active tensioners for continuous balancing</li>
-        <li>RRT*+LQR integration</li>
-        <li>Full 6-DoF orientation control</li>
+        <li>Real-time active tensioners</li>
+        <li>Hybrid RRT* + LQR planning</li>
+        <li>Full 6-DoF control</li>
       </ul>
     </section>
 
-    <!-- 9. References -->
-    <section class="mb-5">
-      <h2>8. References</h2>
+    <section class="section" data-aos="fade-up">
+      <h2>References</h2>
       <ol>
-        <li>Mehta, A. (2025). <em>Design and Path Planning for a Cable-Suspended Parallel Robot</em>. BU ME570 Final Report. <a href="assets/docs/ME570___Final_Report__5_.pdf" target="_blank">PDF</a>.</li>
-        <li>Dyneema. (2024). <em>SK99 HMPE Fiber Tech Specs</em>. <a href="assets/docs/D12-MAX-99-020216.pdf" target="_blank">PDF</a>.</li>
+        <li>Mehta, A. (2025). <em>Design and Path Planning for a Cable-Suspended Parallel Robot</em>. <a href="assets/docs/ME570___Final_Report__5_.pdf" target="_blank">PDF</a></li>
+        <li><a href="assets/docs/D12-MAX-99-020216.pdf" target="_blank">Dyneema SK99 Datasheet</a></li>
         <li>Pott & Bruckmann. (2013). <em>Cable-driven parallel robots</em>. Springer.</li>
         <li>Zi & Qian. (2017). <em>Cable-driven parallel manipulators</em>. Springer.</li>
       </ol>
     </section>
-
   </div>
 
   <!-- Footer -->
-  <footer>
+  <footer class="site-footer">
     <div class="container">
-      <p>© 2025 Ansh Mehta — <a href="mailto:ansh@bu.edu">ansh@bu.edu</a></p>
+      <p>&copy; 2025 Ansh Mehta | <a href="mailto:ansh@bu.edu">ansh@bu.edu</a></p>
+      <p>
+        <a href="https://www.linkedin.com/in/anshmmehta/" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/FalloutBoy379" target="_blank">GitHub</a>
+      </p>
     </div>
   </footer>
 
   <!-- Scripts -->
   <script src="scripts.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+
+    // Theme toggle
+    const toggleBtn = document.getElementById("themeToggleIcon");
+    const html = document.documentElement;
+    const stored = localStorage.getItem("theme") || "dark";
+    function setTheme(mode) {
+      document.body.classList.toggle("light-mode", mode === "light");
+      toggleBtn.textContent = mode === "light" ? "☀️" : "🌙";
+      localStorage.setItem("theme", mode);
+    }
+    toggleBtn.addEventListener("click", () => {
+      const next = localStorage.getItem("theme") === "light" ? "dark" : "light";
+      setTheme(next);
+    });
+    setTheme(stored);
+  </script>
 </body>
 </html>

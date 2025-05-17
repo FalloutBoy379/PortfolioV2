@@ -113,10 +113,12 @@
         <li class="nav-item"><a class="nav-link" href="#experience-timeline">Experience</a></li>
         <li class="nav-item"><a class="nav-link" href="/assets/docs/Resume_Portfolio.pdf">Resume</a></li>
         <!-- Theme Toggle Button in Navbar -->
-    <!-- Place this inside your navbar-collapse div, ideally after the <ul> -->
-    <button id="themeToggleIcon" class="btn theme-toggle-btn ml-lg-3" title="Toggle light/dark mode">
-      🌙
-    </button>
+        <!-- Place this inside your navbar-collapse div, ideally after the <ul> -->
+        <button id="themeToggleIcon" class="btn theme-toggle-btn ml-lg-3" title="Toggle light/dark mode"
+          aria-label="Toggle theme">
+          🌙
+        </button>
+
 
 
 
@@ -136,83 +138,90 @@
   </section>
 
   <!-- About Me Section -->
-<section class="container my-5" id="about">
-  <h2 class="section-title">About Me</h2>
-  <p>
-    I’m Ansh Mehta — a Robotics and Embedded Systems Engineer with a passion for building intelligent, resilient machines. My journey spans high-performance motor control, sensor fusion, real-time embedded software, and full-stack mechatronic systems that bridge hardware precision with algorithmic intelligence.
-  </p>
-  <p>
-    With hands-on experience across academic labs, startup teams, and competitive robotics, I’ve led multi-disciplinary projects involving everything from designing custom PCBs and writing bare-metal firmware to developing AI-driven robotic pipelines and advanced motion controllers. My systems have ranged from electric vehicles and 6-DOF robotic arms to motion capture calibration platforms and soft robotic grippers.
-  </p>
-  <p>
-    Whether it’s prototyping from scratch, debugging at the byte-level, or architecting full robotic workflows, I thrive at the intersection of hardware and software — solving tough problems with clean design and technical depth.
-  </p>
-</section>
+  <section class="container my-5" id="about">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      I’m Ansh Mehta — a Robotics and Embedded Systems Engineer with a passion for building intelligent, resilient
+      machines. My journey spans high-performance motor control, sensor fusion, real-time embedded software, and
+      full-stack mechatronic systems that bridge hardware precision with algorithmic intelligence.
+    </p>
+    <p>
+      With hands-on experience across academic labs, startup teams, and competitive robotics, I’ve led
+      multi-disciplinary projects involving everything from designing custom PCBs and writing bare-metal firmware to
+      developing AI-driven robotic pipelines and advanced motion controllers. My systems have ranged from electric
+      vehicles and 6-DOF robotic arms to motion capture calibration platforms and soft robotic grippers.
+    </p>
+    <p>
+      Whether it’s prototyping from scratch, debugging at the byte-level, or architecting full robotic workflows, I
+      thrive at the intersection of hardware and software — solving tough problems with clean design and technical
+      depth.
+    </p>
+  </section>
 
-<section class="container my-5" id="skills">
-  <h2 class="section-title">Skills</h2>
-  <div class="skills-grid">
-    <!-- Category 1: Programming -->
-    <div class="skill-category">
-      <h4><i class="fas fa-code"></i> Programming Languages</h4>
-      <div class="skill-bubbles">
-        <span class="bubble">C</span>
-        <span class="bubble">C++</span>
-        <span class="bubble">Python</span>
-        <span class="bubble">Embedded C</span>
-        <span class="bubble">x86 Assembly</span>
-        <span class="bubble">MATLAB</span>
-        <span class="bubble">Java</span>
-        <!-- <span class="bubble">Rust</span> -->
+  <section class="container my-5" id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <!-- Category 1: Programming -->
+      <div class="skill-category">
+        <h4><i class="fas fa-code"></i> Programming Languages</h4>
+        <div class="skill-bubbles">
+          <span class="bubble">C</span>
+          <span class="bubble">C++</span>
+          <span class="bubble">Python</span>
+          <span class="bubble">Embedded C</span>
+          <span class="bubble">x86 Assembly</span>
+          <span class="bubble">MATLAB</span>
+          <span class="bubble">Java</span>
+          <!-- <span class="bubble">Rust</span> -->
+        </div>
+      </div>
+
+      <!-- Category 2: Embedded & Electronics -->
+      <div class="skill-category">
+        <h4><i class="fas fa-microchip"></i> Embedded & Hardware</h4>
+        <div class="skill-bubbles">
+          <span class="bubble">STM32</span>
+          <span class="bubble">AVR</span>
+          <span class="bubble">ESP32</span>
+          <span class="bubble">I2C</span>
+          <span class="bubble">SPI</span>
+          <span class="bubble">UART</span>
+          <span class="bubble">PCB Design</span>
+          <span class="bubble">Soldering</span>
+          <span class="bubble">Sensors & Actuators</span>
+        </div>
+      </div>
+
+      <!-- Category 3: Robotics & Control -->
+      <div class="skill-category">
+        <h4><i class="fas fa-robot"></i> Robotics & Control</h4>
+        <div class="skill-bubbles">
+          <span class="bubble">ROS / ROS2</span>
+          <span class="bubble">PID / PIDF</span>
+          <span class="bubble">Trajectory Planning</span>
+          <span class="bubble">RRT*</span>
+          <span class="bubble">A*</span>
+          <span class="bubble">Kinematics</span>
+          <span class="bubble">Motion Control</span>
+        </div>
+      </div>
+
+      <!-- Category 4: Software & Tools -->
+      <div class="skill-category">
+        <h4><i class="fas fa-tools"></i> Software & Tools</h4>
+        <div class="skill-bubbles">
+          <span class="bubble">Git</span>
+          <span class="bubble">Linux</span>
+          <span class="bubble">Qt</span>
+          <span class="bubble">OpenCV</span>
+          <span class="bubble">FreeRTOS</span>
+          <span class="bubble">KiCAD</span>
+          <span class="bubble">SolidWorks</span>
+          <span class="bubble">Simulink</span>
+        </div>
       </div>
     </div>
-
-    <!-- Category 2: Embedded & Electronics -->
-    <div class="skill-category">
-      <h4><i class="fas fa-microchip"></i> Embedded & Hardware</h4>
-      <div class="skill-bubbles">
-        <span class="bubble">STM32</span>
-        <span class="bubble">AVR</span>
-        <span class="bubble">ESP32</span>
-        <span class="bubble">I2C</span>
-        <span class="bubble">SPI</span>
-        <span class="bubble">UART</span>
-        <span class="bubble">PCB Design</span>
-        <span class="bubble">Soldering</span>
-        <span class="bubble">Sensors & Actuators</span>
-      </div>
-    </div>
-
-    <!-- Category 3: Robotics & Control -->
-    <div class="skill-category">
-      <h4><i class="fas fa-robot"></i> Robotics & Control</h4>
-      <div class="skill-bubbles">
-        <span class="bubble">ROS / ROS2</span>
-        <span class="bubble">PID / PIDF</span>
-        <span class="bubble">Trajectory Planning</span>
-        <span class="bubble">RRT*</span>
-        <span class="bubble">A*</span>
-        <span class="bubble">Kinematics</span>
-        <span class="bubble">Motion Control</span>
-      </div>
-    </div>
-
-    <!-- Category 4: Software & Tools -->
-    <div class="skill-category">
-      <h4><i class="fas fa-tools"></i> Software & Tools</h4>
-      <div class="skill-bubbles">
-        <span class="bubble">Git</span>
-        <span class="bubble">Linux</span>
-        <span class="bubble">Qt</span>
-        <span class="bubble">OpenCV</span>
-        <span class="bubble">FreeRTOS</span>
-        <span class="bubble">KiCAD</span>
-        <span class="bubble">SolidWorks</span>
-        <span class="bubble">Simulink</span>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
 
 
@@ -237,7 +246,7 @@
         <a href="mccr.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
-              <img src="assets/images/MCCR/banner.png" class="card-img-top" alt="Motion Capture Calibration Robot">
+              <img src="assets/images/MCCR/banner.png" loading="lazy" card-img-top alt="Motion Capture Calibration Robot">
             </div>
             <div class="card-body">
               <h5 class="card-title">Motion Capture Calibration Robot</h5>
@@ -278,7 +287,7 @@
           <div class="card">
             <div class="card-img-container">
               <img src="assets/images/BIA/PCB_PCB_HustleTask_Nocturnal_2025-02-25.svg" class="card-img-top"
-                alt="4-Wire Bioimpedance Analyzer PCB Layout">
+                alt="4-Wire Bioimpedance Analyzer PCB Layout" loading="lazy">
             </div>
             <div class="card-body">
               <h5 class="card-title">4-Wire Bioimpedance Analyzer</h5>
@@ -300,7 +309,7 @@
         <a href="swarm.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
-              <img src="assets/images/Swarm Robot/Main.jpg" class="card-img-top" alt="Swarm Robotics using ROS">
+                <img src="assets/images/Swarm Robot/Main.jpg" class="card-img-top" alt="Swarm Robotics using ROS" loading="lazy">
             </div>
             <div class="card-body">
               <h5 class="card-title">Swarm Robotics using ROS</h5>
@@ -381,7 +390,7 @@
       </div>
       <!-- ABU Robocon 2022 – R1 -->
       <div class="project-card" data-category="electronics software firmware controls">
-        <a href="under-construction.html" class="project-link">
+        <a href="404.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
               <video class="card-img-top" autoplay loop muted playsinline>
@@ -402,7 +411,7 @@
       </div>
       <!-- ABU Robocon 2021 – Throwing Robot -->
       <div class="project-card" data-category="electronics software firmware controls">
-        <a href="under-construction.html" class="project-link">
+        <a href="404.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
               <video class="card-img-top" autoplay loop muted playsinline>
@@ -492,7 +501,7 @@
           <div class="card">
             <div class="card-img-container">
               <img src="assets/images/6DOF/IMG_20200709_213923.jpg" class="card-img-top"
-                alt="Articulated 6 DOF Robotic Arm">
+                alt="Articulated 6 DOF Robotic Arm" loading="lazy">
             </div>
             <div class="card-body">
               <h5 class="card-title">Articulated 6 DOF Robotic Arm</h5>
@@ -509,11 +518,11 @@
 
       <!-- Project 14 -->
       <div class="project-card" data-category="electronics software firmware controls mechanical">
-        <a href="under-construction.html" class="project-link">
+        <a href="404.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
               <img src="assets/images/Mobile Robotic Platform/IMG_20220504_004817.jpg" class="card-img-top"
-                alt="Autonomous Mobile Robot">
+                alt="Autonomous Mobile Robot" loading="lazy">
             </div>
             <div class="card-body">
               <h5 class="card-title">Autonomous Mobile Robot</h5>
@@ -557,7 +566,7 @@
     <div class="projects-grid">
       <!-- Project 16 -->
       <div class="project-card" data-category="electronics software firmware">
-        <a href="under-construction.html" class="project-link">
+        <a href="404.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
               <video class="card-img-top" autoplay loop muted playsinline>
@@ -579,7 +588,7 @@
 
       <!-- Project 17 -->
       <div class="project-card" data-category="software firmware controls">
-        <a href="under-construction.html" class="project-link">
+        <a href="404.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
               <video class="card-img-top" autoplay loop muted playsinline>
@@ -601,11 +610,11 @@
 
       <!-- Project 18 -->
       <div class="project-card" data-category="electronics firmware controls">
-        <a href="under-construction.html" class="project-link">
+        <a href="404.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
               <img src="assets/images/Mercury/image_2024-09-27_104021073.png" class="card-img-top"
-                alt="Pneumatic Robot Quadruped">
+                alt="Pneumatic Robot Quadruped" loading="lazy">
             </div>
             <div class="card-body">
               <h5 class="card-title">Pneumatic Robot Quadruped</h5>
@@ -623,7 +632,7 @@
     <div class="projects-grid">
       <!-- Project 19 -->
       <div class="project-card" data-category="electronics firmware controls mechanical">
-        <a href="under-construction.html" class="project-link">
+        <a href="404.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
               <video class="card-img-top" autoplay loop muted playsinline>
@@ -648,11 +657,11 @@
 
       <!-- Project 20 -->
       <div class="project-card" data-category="electronics firmware">
-        <a href="under-construction.html" class="project-link">
+        <a href="404.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
               <img src="assets/images/Rymo/image_2024-09-26_201504227.png" class="card-img-top"
-                alt="Robotic Rehabilitation Companion">
+                alt="Robotic Rehabilitation Companion" loading="lazy">
             </div>
             <div class="card-body">
               <h5 class="card-title">Robotic Rehabilitation Companion</h5>
@@ -667,10 +676,10 @@
 
       <!-- Project 21 -->
       <div class="project-card" data-category="mechanical">
-        <a href="under-construction.html" class="project-link">
+        <a href="404.html" class="project-link">
           <div class="card">
             <div class="card-img-container">
-              <img src="assets/images/Humanoid/frame.png" class="card-img-top" alt="Humanoid Robot Leg">
+              <img src="assets/images/Humanoid/frame.png" class="card-img-top" alt="Humanoid Robot Leg" loading="lazy">
             </div>
             <div class="card-body">
               <h5 class="card-title">Humanoid Robot Leg</h5>
@@ -760,12 +769,13 @@
     <div class="vertical-timeline" id="vertical-timeline"></div>
   </section>
 
-<footer class="site-footer text-center py-4">
-  <div class="container">
-    <p style="margin-bottom: 0;">&copy; 2025 Ansh Mehta | <a href="mailto:ansh@bu.edu">ansh@bu.edu</a></p>
-    <p><a href="https://www.linkedin.com/in/anshmmehta/" target="_blank">LinkedIn</a> | <a href="https://github.com/FalloutBoy379" target="_blank">GitHub</a></p>
-  </div>
-</footer>
+  <footer class="site-footer text-center py-4">
+    <div class="container">
+      <p style="margin-bottom: 0;">&copy; 2025 Ansh Mehta | <a href="mailto:ansh@bu.edu">ansh@bu.edu</a></p>
+      <p><a href="https://www.linkedin.com/in/anshmmehta/" target="_blank">LinkedIn</a> | <a
+          href="https://github.com/FalloutBoy379" target="_blank">GitHub</a></p>
+    </div>
+  </footer>
 
 
 

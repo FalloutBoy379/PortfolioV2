@@ -139,7 +139,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Light mode toggle
 document.addEventListener("DOMContentLoaded", function () {
-  const toggle = document.getElementById("themeToggle");
   const body = document.body;
 
   // Restore previous preference
@@ -173,6 +172,6 @@ themeToggleIcon.addEventListener("click", () => {
 });
 
 applyTheme(isDark); // On page load
-  
+
 
 

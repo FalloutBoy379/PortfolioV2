@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Life Expectancy Prediction | Ansh Mehta</title>
+
+  <!-- Bootstrap & Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    body.dark-mode {
+      background-color: #0d0d0d;
+      color: #e0e0e0;
+    }
+
+    body.light-mode {
+      background-color: #ffffff;
+      color: #111111;
+    }
+
+    .navbar {
+      background-color: #111111;
+    }
+
+    .light-mode .navbar {
+      background-color: #f8f9fa;
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: #00FFFF !important;
+    }
+
+    .light-mode .navbar-brand,
+    .light-mode .nav-link {
+      color: #0077aa !important;
+    }
+
+    .theme-toggle {
+      display: flex;
+      align-items: center;
+      margin-left: 1rem;
+    }
+
+    .theme-toggle span {
+      color: #00FFFF;
+      margin-right: 0.5rem;
+    }
+
+    .light-mode .theme-toggle span {
+      color: #0077aa;
+    }
+
+    .theme-toggle .switch {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+    }
+
+    .theme-toggle .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .theme-toggle .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #00FFFF;
+      transition: .4s;
+      border-radius: 34px;
+    }
+
+    .theme-toggle .slider:before {
+      position: absolute;
+      content: "";
+      height: 14px;
+      width: 14px;
+      left: 3px;
+      bottom: 3px;
+      background-color: #111;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    .theme-toggle input:checked + .slider {
+      background-color: #0077aa;
+    }
+
+    .theme-toggle input:checked + .slider:before {
+      transform: translateX(20px);
+    }
+
+    .section-title {
+      color: #00FFFF;
+    }
+
+    .light-mode .section-title {
+      color: #0077aa;
+    }
+
+    footer {
+      background-color: #111111;
+      color: #888;
+      padding: 20px 0;
+    }
+
+    .light-mode footer {
+      background-color: #f1f1f1;
+      color: #444;
+    }
+
+    a {
+      color: #00FFFF;
+    }
+
+    .light-mode a {
+      color: #0077aa;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body class="dark-mode">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <a class="navbar-brand" href="#">Ansh Mehta</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="assets/docs/Resume_Portfolio.pdf">Resume</a></li>
+      </ul>
+      <div class="theme-toggle ml-3">
+        <span>Light Mode</span>
+        <label class="switch mb-0">
+          <input type="checkbox" id="themeToggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container py-5">
+    <h1 class="mb-4 section-title">Life Expectancy Prediction using Machine Learning</h1>
+
+    <section class="mb-5">
+      <h3>Overview</h3>
+      <p>
+        This project leverages multiple machine learning techniques to predict life expectancy from global health indicators. Using a publicly available dataset from the WHO, we explored feature importance, regression modeling, and regularization techniques to improve generalizability.
+      </p>
+    </section>
+
+    <section class="mb-5">
+      <h3>Dataset & Preprocessing</h3>
+      <p>
+        The dataset included over 3,000 entries across countries and years, featuring predictors like GDP, schooling, BMI, immunization rates, and alcohol consumption. We handled missing data via mean/mode imputation and performed standardization to normalize feature scales.
+      </p>
+    </section>
+
+    <section class="mb-5">
+      <h3>Approach</h3>
+      <ul>
+        <li>Linear Regression (Baseline)</li>
+        <li>Ridge and Lasso Regression (for feature selection and regularization)</li>
+        <li>Principal Component Analysis (PCA) for dimensionality reduction</li>
+        <li>Cross-validation for hyperparameter tuning</li>
+      </ul>
+    </section>
+
+    <section class="mb-5">
+      <h3>Results</h3>
+      <p>
+        Our final model used Ridge Regression with tuned alpha = 2.5, achieving an R² of 0.87 on the test set. The most impactful features included schooling, BMI, HIV/AIDS rate, and income composition.
+      </p>
+    </section>
+
+    <section class="mb-5">
+      <h3>Conclusion</h3>
+      <p>
+        The project demonstrates the power of regularized regression in dealing with multicollinearity and identifying impactful predictors. With minimal preprocessing and tuning, our pipeline provides interpretable results while achieving high accuracy.
+      </p>
+    </section>
+
+    <section class="mb-5">
+      <h3>Project Report</h3>
+      <p>You can read the full technical report <a href="assets/docs/EC503_FinalReport.pdf" target="_blank">here (PDF)</a>.</p>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <p>&copy; 2025 Ansh Mehta — <a href="mailto:ansh@bu.edu">ansh@bu.edu</a></p>
+      <p><a href="https://www.linkedin.com/in/anshmmehta/" target="_blank">LinkedIn</a> | <a href="https://github.com/FalloutBoy379" target="_blank">GitHub</a></p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const themeToggle = document.getElementById("themeToggle");
+    const body = document.body;
+
+    // Restore saved mode
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "light") {
+      body.classList.remove("dark-mode");
+      body.classList.add("light-mode");
+      themeToggle.checked = true;
+    }
+
+    themeToggle.addEventListener("change", () => {
+      if (themeToggle.checked) {
+        body.classList.remove("dark-mode");
+        body.classList.add("light-mode");
+        localStorage.setItem("theme", "light");
+      } else {
+        body.classList.remove("light-mode");
+        body.classList.add("dark-mode");
+        localStorage.setItem("theme", "dark");
+      }
+    });
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

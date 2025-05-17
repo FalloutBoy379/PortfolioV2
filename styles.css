@@ -422,12 +422,18 @@ ul li {
 #coursesAccordion .btn-link {
   color: var(--color-accent);
   font-weight: 600;
+  font-size: 1rem;
+  padding: 2px 8px;
+  margin: 0 0 0 0;
+  transition: font-size 0.3s, padding 0.3s, letter-spacing 0.3s;
   text-decoration: none;
 }
 
 #coursesAccordion .btn-link:hover {
   color: var(--color-accent);
-  text-decoration: underline;
+  /* font-size: 1.1rem; */
+  letter-spacing: 0.2px;
+  text-decoration: none;
 }
 
 #coursesAccordion .card-body {
@@ -578,10 +584,18 @@ ul li {
   color: var(--color-text);
   border-radius: 6px;
   border-left: 4px solid var(--color-accent);
-  transition: all 0.4s ease;
+  transition: all 0.6s ease;
   overflow: hidden;
   max-height: 70px;
+  box-shadow: 0 2px 6px rgba(0, 255, 255, 0.05);
 }
+
+.timeline-content:hover {
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.25);
+  transform: translateY(-4px);
+  cursor: pointer;
+}
+
 
 .timeline-content.open {
   max-height: 500px;
